@@ -1,0 +1,138 @@
+.introduction {
+  display: flex;
+  align-items: center;
+  padding: 32px 0;
+  gap: 90px;
+}
+
+.banner-introduction {
+  max-width: 35%;
+}
+
+.explore-btn-text {
+  margin-right: 18px;
+  color: var(--secondary-color);
+}
+
+.explore-btn {
+  display: flex;
+  align-items: center;
+  background-color: var(--white-color);
+  box-shadow: var(--button-explore-box-shadow);
+}
+
+.explore-btn-icon {
+  width: 20px;
+  height: 20px;
+  background: url("../../assets/icons/explore-icon.svg") center/ auto no-repeat;
+}
+
+.introduction-title {
+  font-size: 69px;
+  font-weight: var(--default-font-weight);
+  line-height: var(--heading-line-height);
+  margin: 43px 0;
+}
+
+.introduction-highlight-title {
+  color: var(--secondary-color);
+}
+
+.introduction-description {
+  margin-bottom: 43px;
+  white-space: pre-line;
+}
+
+.introduction-btn {
+  display: flex;
+}
+
+.btn-start {
+  margin-right: 16px;
+  box-shadow: var(--button-start-box-shadow);
+}
+
+.btn-watch {
+  border: 1px solid var(--light-color);
+}
+
+.btn-watch-icon {
+  width: 23px;
+  height: 20px;
+  background: url("../../assets/icons/btn-watch-icon.svg") center / auto
+    no-repeat;
+}
+
+.btn-watch .btn-title {
+  margin-left: 8px;
+}
+
+.introduction-image {
+  gap: 32px;
+  position: relative;
+}
+
+.airport-icon {
+  position: absolute;
+  width: 772px;
+  height: 287px;
+  top: 0;
+}
+
+.introduction-image-list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 77px;
+  margin-right: 11px;
+}
+
+.introduction-image-column {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  z-index: 1;
+}
+
+.banner-icon {
+  display: flex;
+  margin: auto;
+  border-radius: var(--button-border-radius);
+  box-shadow: var(--icon-box-shadow);
+}
+
+.banner-icon.paper-plane {
+  width: 64px;
+  height: 64px;
+  background: url("../../assets/icons/paper-plane.svg") center / auto no-repeat;
+  position: absolute;
+  left: -32px;
+  top: calc(50% + 10px);
+  transform: translateY(calc(-50%));
+  background-position: center 0%;
+}
+
+.banner-icon.user-plus {
+  width: 64px;
+  height: 64px;
+  background: url("../../assets/icons/user-plus.svg") center / auto no-repeat;
+  position: absolute;
+  bottom: 0;
+  right: 20%;
+  transform: translateX(-20%);
+  background-position: center 0%;
+}
+
+.top-places-btn {
+  box-shadow: var(--button-top-places-box-shadow);
+  position: absolute;
+  transform: translateX(128%);
+  top: calc(50% + 137px);
+}
+
+.location-icon {
+  width: 24px;
+  height: 24px;
+  background: url("../../assets/icons/location-icon.svg") center / auto
+    no-repeat;
+}

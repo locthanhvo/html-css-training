@@ -1,0 +1,85 @@
+.footer {
+  position: relative;
+  padding-bottom: 64px;
+}
+
+.footer-image {
+  position: absolute;
+  bottom: 76%;
+  left: 100%;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.footer-name {
+  margin-left: 16px;
+  color: var(--text-highlight-color);
+}
+
+.footer-description {
+  margin-bottom: 64px;
+  color: var(--text-default-color);
+  white-space: pre-line;
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 32px;
+}
+
+.footer-social-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.facebook-icon {
+  background: url("../../assets/icons/facebook-icon.svg") center / auto
+    no-repeat;
+}
+
+.twitter-icon {
+  background: url("../../assets/icons/twitter-icon.svg") center / auto no-repeat;
+}
+
+.instagram-icon {
+  background: url("../../assets/icons/instagram-icon.svg") center / auto
+    no-repeat;
+}
+
+.footer-info {
+  display: flex;
+  gap: 32px;
+}
+
+.footer-info-column {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.footer-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.footer-info-link {
+  white-space: pre-line;
+}
+
+.footer-info-link:hover {
+  text-decoration: underline;
+}
+
+.footer-address {
+  font-style: normal;
+}

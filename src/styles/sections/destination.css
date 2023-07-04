@@ -1,0 +1,62 @@
+.destination {
+  padding: 64px 0;
+}
+
+.destination-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.destination-item {
+  border-radius: var(--icon-border-radius);
+  box-shadow: var(--card-box-shadow);
+  cursor: pointer;
+}
+
+.destination-item:hover .destination-image {
+  transform: scale(1.5);
+  transition: tranform 0.5s linear;
+}
+
+.destination-image-frame {
+  width: 373px;
+  height: 350;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: var(--icon-border-radius) var(--icon-border-radius) 0 0;
+}
+
+.destination-info {
+  display: flex;
+  padding: 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.destination-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.destination-name-price {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.destination-name {
+  flex: 0 0 75%;
+}
+
+.destination-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.destination-rating-number {
+  color: var(--warning-color);
+}

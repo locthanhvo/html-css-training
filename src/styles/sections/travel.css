@@ -1,0 +1,54 @@
+.travel {
+  max-width: 1440px;
+  position: relative;
+  padding: 64px 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.travel-content {
+  position: relative;
+}
+
+.travel-heading {
+  margin-bottom: 64px;
+}
+
+.travel-description {
+  white-space: pre-line;
+}
+
+.travel-image-star {
+  position: absolute;
+  width: 277px;
+  top: 200px;
+  left: 284px;
+}
+
+.travel-statistic {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-right: 190px;
+}
+
+.travel-detail {
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid var(--primary-border-color);
+  border-radius: var(--icon-border-radius);
+}
+
+.travel-number {
+  font-size: var(--travel-number-font);
+  color: var(--warning-color);
+}
+
+.travel-text {
+  color: var(--text-highlight-color);
+}

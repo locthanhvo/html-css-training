@@ -1,0 +1,25 @@
+/* Font */
+@import url("../styles/font.css");
+
+/* Base styles */
+@import url("../styles/base/reset.css");
+@import url("../styles/base/global.css");
+
+/* Abstracts styles */
+@import url("../styles/abstracts/variable.css");
+
+/* Component styles */
+@import url("../styles/components/text.css");
+@import url("../styles/components/button.css");
+
+/* Section styles */
+@import url("../styles/sections/header.css");
+@import url("../styles/sections/introduction.css");
+@import url("../styles/sections/website-list.css");
+@import url("../styles/sections/services.css");
+@import url("../styles/sections/destination.css");
+@import url("../styles/sections/travel.css");
+@import url("../styles/sections/feature.css");
+@import url("../styles/sections/testimonial.css");
+@import url("../styles/sections/subscribe.css");
+@import url("../styles/sections/footer.css");

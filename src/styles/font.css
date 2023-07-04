@@ -1,0 +1,15 @@
+@font-face {
+  font-family: CircularStd;
+  src: url("../assets/fonts/CircularStd/CircularStd-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: CircularStdMedium;
+  src: url("../assets/fonts/CircularStd/CircularStd-Medium.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: Inter;
+  src: url("../assets/fonts/Inter/Inter-Regular.ttf") format("truetype");
+}
