@@ -1,25 +1,28 @@
-/* Font */
-@import url("../styles/font.css");
+/* bases */
+@import url("../styles/bases/typography.css");
+@import url("../styles/bases/reset.css");
+@import url("../styles/bases/global.css");
 
-/* Base styles */
-@import url("../styles/base/reset.css");
-@import url("../styles/base/global.css");
+/* abstracts */
+@import url("../styles/abstracts/variables.css");
 
-/* Abstracts styles */
-@import url("../styles/abstracts/variable.css");
+/* layouts */
+@import url("../styles/layouts/header.css");
+@import url("../styles/layouts/footer.css");
 
-/* Component styles */
-@import url("../styles/components/text.css");
+/* components */
 @import url("../styles/components/button.css");
+@import url("../styles/components/text.css");
+@import url("../styles/components/input-group.css");
+@import url("../styles/components/card.css");
+@import url("../styles/components/category.css");
+@import url("../styles/components/box-logo.css");
 
-/* Section styles */
-@import url("../styles/sections/header.css");
-@import url("../styles/sections/introduction.css");
-@import url("../styles/sections/website-list.css");
-@import url("../styles/sections/services.css");
-@import url("../styles/sections/destination.css");
-@import url("../styles/sections/travel.css");
-@import url("../styles/sections/feature.css");
-@import url("../styles/sections/testimonial.css");
-@import url("../styles/sections/subscribe.css");
-@import url("../styles/sections/footer.css");
+/* sections */
+@import url("../styles/sections/banner.css");
+@import url("../styles/sections/quality-management.css");
+@import url("../styles/sections/test-management.css");
+@import url("../styles/sections/quality-management-blog.css");
+@import url("../styles/sections/banner.css");
+@import url("../styles/sections/contact.css");
+@import url("../styles/sections/reference.css");

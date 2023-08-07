@@ -1,0 +1,102 @@
+.test-management {
+  position: relative;
+  background-color: var(--color-secondary);
+  background-size: cover;
+  padding: 50px 20px;
+}
+
+.test-management:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  background-image: url("../../assets/images/service-image-mobile.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.test-management-content {
+  flex-direction: column;
+  text-align: center;
+}
+
+.test-management-heading {
+  font-family: ManropeExtraBold, sans-serif;
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-3lg);
+  color: var(--color-primary);
+}
+
+.test-management-description {
+  margin-top: 9px;
+  color: var(--color-primary);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-md);
+}
+
+.test-management-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+  text-align: center;
+  gap: 36px;
+  padding: 55px 60px;
+}
+
+.test-management-title {
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+}
+
+@media (min-width: 768px) {
+  .test-management {
+    padding: 50px 55px;
+  }
+
+  .test-management:before {
+    background-image: url("../../assets/images/service-image-tablet.webp");
+  }
+
+  .test-management-list {
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+    gap: 30px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .test-management-title {
+    text-align: left;
+    font-size: var(--font-size-2xs);
+    line-height: var(--line-height-3xs);
+  }
+
+  .test-management-image {
+    transform: rotate(-0.25turn);
+  }
+}
+
+@media (min-width: 1440px) {
+  .test-management {
+    padding-left: 174px;
+    padding-right: 174px;
+  }
+
+  .test-management:before {
+    background-image: url("../../assets/images/service-background-image.webp");
+  }
+
+  .test-management-list {
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+    gap: 25px;
+  }
+
+  .test-management-title {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-md);
+  }
+}

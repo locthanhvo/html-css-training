@@ -1,40 +1,10 @@
-.text-heading {
-  line-height: var(--heading-line-height);
+.text-title {
+  font-size: var(--font-size-3sm);
+  font-family: ManropeExtraBold, sans-serif;
 }
 
-.text-small {
-  font-size: var(--sm-font);
-}
-
-.text-medium {
-  font-size: var(--md-font);
-}
-
-.text-large {
-  font-size: var(--lg-font);
-}
-
-.text-heading.main-heading {
-  margin-bottom: 16px;
-  text-transform: uppercase;
-  color: var(--secondary-color);
-}
-
-.text-heading.sub-heading {
-  margin-bottom: 32px;
-  color: var(--text-highlight-color);
-}
-
-.text-default {
-  font-family: Inter;
-  color: var(--text-default-color);
-  font-weight: var(--text-font-weight);
-  line-height: var(--default-line-height);
-}
-
-.text-description-medium {
-  font-family: CircularStdMedium;
-  color: var(--text-default-color);
-  font-weight: 450;
-  line-height: var(--default-line-height);
+.text-sub-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-defaut);
+  line-height: var(--line-height-2sm);
 }
