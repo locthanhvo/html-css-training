@@ -1,6 +1,6 @@
 ### Overview
 
-- This document provides the requirement for HTML CSS practice one.
+- This document provides the requirement for HTML CSS practice two.
 - Design: [Figma](<https://www.figma.com/file/GVJ6xp9S1MUN1CPUGGxQ7e/Responsive-Web-Page-%F0%9F%8E%89-(Community)?type=design&node-id=0-1&mode=design&t=Xl1qopoxLM04Ig4a-0>)
 - Plan: [Plan Practice02](https://docs.google.com/document/d/158ZVkcfEaTw9HAB4lJrKMJcCZ_KAt1OGdyxmrRIFbGo/edit)
 
@@ -14,7 +14,7 @@
 
 ### Timeline
 
-- Estimate day: 7 days.
+- Estimate day: 7 days (2023/07/26 - 2023/08/03).
 - Techniques: HTML5/CSS3.
 - Editor: Visual Studio Code.
 - Supported browser: Chrome, MS Edge latest.
@@ -41,7 +41,7 @@
      ```
      $ git clone git@gitlab.asoft-python.com:loc.vo/html-css-training.git
      ```
-2. Step 2: Move practice-one project `$ cd .\html-css-training\practice-two\`
+2. Step 2: Move practice-two project `$ cd .\html-css-training\practice-two\`
 3. Step 3: Run project
    - Case 1: Use command `npm start`
    - Case 2: Ctrl + click `http://localhost:1234`
