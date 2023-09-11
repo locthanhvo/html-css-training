@@ -1,0 +1,108 @@
+.quality-management {
+  padding: 60px 20px;
+}
+
+.heading-content {
+  flex-direction: column;
+  text-align: center;
+}
+
+.quality-management-heading {
+  color: var(--color-black);
+}
+
+.quality-management-description {
+  margin-top: 15px;
+  color: var(--color-black);
+  font-size: var(--font-size-3xs);
+  line-height: var(--line-height-3xs);
+}
+
+.quality-management-category-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 80px;
+  margin-top: 40px;
+}
+
+.quality-management-category {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.quality-management-category:nth-child(2) .circle-icon {
+  background-color: var(--color-purple);
+  top: 5px;
+  right: 50%;
+}
+
+.quality-management-category:nth-child(3) .circle-icon {
+  background-color: var(--color-blue);
+  top: 5px;
+  right: calc(50% - 50px);
+}
+
+.quality-management-category:nth-child(4) .circle-icon {
+  background-color: var(--color-light-blue);
+  top: 5px;
+  right: calc(50% - 10px);
+}
+
+.quality-management-category:nth-child(5) .circle-icon {
+  background-color: var(--color-sunset-orange);
+  top: 0;
+  right: calc(50% - 45px);
+}
+
+.quality-management-category:nth-child(6) .circle-icon {
+  background-color: var(--color-yellow-orange);
+  top: -10px;
+  right: calc(50% - 35px);
+}
+
+@media (min-width: 768px) {
+  .quality-management {
+    padding: 120px 86px;
+  }
+
+  .quality-management-heading {
+    font-size: var(--font-size-md);
+  }
+
+  .quality-management-description {
+    margin-top: 30px;
+    font-size: var(--font-size-3sm);
+    line-height: var(--line-height-lg);
+  }
+
+  .quality-management-category-list {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 90px;
+  }
+
+  .quality-management-category {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .quality-management {
+    padding-left: 144px;
+    padding-right: 144px;
+  }
+
+  .quality-management-description {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .quality-management-category {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .quality-management-category-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
