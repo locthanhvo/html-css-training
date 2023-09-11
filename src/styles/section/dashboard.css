@@ -1,0 +1,145 @@
+.dashboard {
+  display: flex;
+}
+
+.nav-drawer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-left: 32px;
+  padding-top: 40px;
+  gap: 56px;
+  background-color: var(--color-secondary);
+}
+
+.nav-item {
+  display: flex;
+  padding-right: 90px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  border-right: 4px solid var(--color-blue-berry);
+}
+
+.dashboard-content {
+  width: 100%;
+  padding: 40px 20px;
+  background-color: var(--color-white-smoke);
+}
+
+.user-help {
+  margin-top: 16px;
+}
+
+.line-nav-drawer {
+  position: absolute;
+}
+
+.text-logo {
+  font-family: OpenSansBold, sans-serif;
+  color: var(--color-red-dark);
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-lg);
+}
+
+.text-nav {
+  color: var(--color-blue-berry);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-md);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.title-list {
+  font-family: OpenSansBold, sans-serif;
+  color: var(--color-blue-berry);
+  font-size: var(--font-size-2xl);
+  line-height: var(--line-height-normal);
+}
+
+.user-search {
+  display: flex;
+  background-color: var(--color-secondary);
+  padding: 12px 20px;
+  width: 808px;
+  border-radius: var(--border-radius-sm);
+}
+
+.input-search {
+  width: 100%;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-add {
+  padding: 20px;
+}
+
+.add-icon {
+  padding-left: 10px;
+}
+
+.search-icon {
+  cursor: pointer;
+}
+
+.list-content {
+  margin-top: 25px;
+  border-radius: var(--border-radius-sm);
+  background-color: var(--color-secondary);
+}
+
+.text-title-list {
+  padding: 20px;
+}
+
+.table-user {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.cell-action {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.female {
+  background-color: var(--color-blue-dodger);
+  color: var(--color-secondary);
+}
+
+.male {
+  background-color: var(--color-blue-alice);
+  color: var(--color-blue-rock);
+}
+
+.gender-tag {
+  padding: 7px 0;
+  border-radius: var(--border-radius-xs);
+  text-align: center;
+  font-size: var(--font-size-xs);
+  text-transform: capitalize;
+}
+
+.table-cell-username {
+  padding: 20px 58px;
+}
+
+.btn-next,
+.btn-previous,
+.number-record,
+.btn-delete,
+.btn-edit {
+  cursor: pointer;
+}
+
+.btn-delete,
+.btn-edit {
+  background-color: transparent;
+  padding: 10px;
+}

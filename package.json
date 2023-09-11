@@ -1,13 +1,27 @@
 {
-  "name": "practice-two",
-  "source": "src/index.html",
-  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "name": "javascript-training",
+  "version": "1.0.0",
+  "description": "- This document provides requirements and estimation for JavaScript, TypeScript practice.\r - Design: [Figma](<https://www.figma.com/file/hArsyvx1eOGsDcQyfbO1Xq/User-Management-CMS-(Community)?node-id=212%3A698&mode=dev>)\r - Plan: [Plan Practice](https://docs.google.com/document/d/14kzcSwZdbs5HEXRxqZLw0jmi6H5iVzFuMuBvbPLSBCU/edit)",
   "scripts": {
-    "start": "parcel",
-    "dev": "parcel ./src/index.html",
-    "build": "parcel build"
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.asoft-python.com/loc.vo/javascript-training"
+  },
+  "author": "Loc Vo",
+  "license": "ISC",
   "dependencies": {
     "parcel": "^2.9.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "parcel-reporter-static-files-copy": "^1.5.0",
+    "eslint": "^8.47.0",
+    "husky": "^8.0.3",
+    "dotenv": "^16.3.1"
   }
 }

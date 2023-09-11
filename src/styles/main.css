@@ -1,28 +1,23 @@
-/* bases */
-@import url("../styles/bases/typography.css");
-@import url("../styles/bases/reset.css");
-@import url("../styles/bases/global.css");
+/* base */
+@import url('../styles/base/reset.css');
+@import url('../styles/base/typography.css');
+@import url('../styles/base/global.css');
 
 /* abstracts */
-@import url("../styles/abstracts/variables.css");
-
-/* layouts */
-@import url("../styles/layouts/header.css");
-@import url("../styles/layouts/footer.css");
+@import url('../styles/abstracts/variables.css');
 
 /* components */
-@import url("../styles/components/button.css");
-@import url("../styles/components/text.css");
-@import url("../styles/components/input-group.css");
-@import url("../styles/components/card.css");
-@import url("../styles/components/category.css");
-@import url("../styles/components/box-logo.css");
+@import url('../styles/component/button.css');
+@import url('../styles/component/text.css');
+@import url('../styles/component/checkbox.css');
+@import url('../styles/component/selectbox.css');
+@import url('../styles/component/modal-user.css');
+@import url('../styles/component/form-user.css');
+@import url('../styles/component/table.css');
+@import url('../styles/component/error-message.css');
+@import url('../styles/component/snack-bar.css');
+@import url('../styles/component/pagination.css');
+@import url('../styles/component/confirm.css');
 
 /* sections */
-@import url("../styles/sections/banner.css");
-@import url("../styles/sections/quality-management.css");
-@import url("../styles/sections/test-management.css");
-@import url("../styles/sections/quality-management-blog.css");
-@import url("../styles/sections/banner.css");
-@import url("../styles/sections/contact.css");
-@import url("../styles/sections/reference.css");
+@import url('../styles/section/dashboard.css');

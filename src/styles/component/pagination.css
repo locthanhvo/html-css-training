@@ -1,0 +1,26 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  gap: 40px;
+}
+
+.number-record {
+  background-color: var(--color-white-smoke);
+  border: none;
+  border-bottom: 1px solid var(--color-gray-dim);
+  width: 40px;
+  color: var(--color-gray-dim);
+  font-size: var(--font-size-3xs);
+}
+
+.btn-pagination {
+  display: flex;
+  gap: 35px;
+}
+
+.text-item-page {
+  color: var(--color-gray-dim);
+  font-size: var(--font-size-3xs);
+}
