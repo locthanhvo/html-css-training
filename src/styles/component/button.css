@@ -1,0 +1,18 @@
+.btn {
+  padding: 20px 30px;
+  border-radius: var(--border-radius-xs);
+  font-weight: var(--font-weight-semi-bold);
+  line-height: var(--line-height-sm);
+  font-size: var(--font-size-3sm);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--color-blue-berry);
+  color: var(--color-secondary);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-blue-rock);
+}

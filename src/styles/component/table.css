@@ -1,0 +1,35 @@
+.table-heading {
+  text-align: start;
+  color: var(--color-blue-rock);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semi-bold);
+  line-height: var(--line-height-sm);
+  background-color: var(--color-blue-alice);
+  padding: 22px 30px;
+}
+
+.table-cell {
+  padding: 22px 30px;
+}
+
+.table-row {
+  position: relative;
+}
+
+.table-row::before {
+  content: '';
+  display: inline-block;
+  border-bottom: 1px solid var(--color-blue-alice);
+  width: 95%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 24px;
+}
+
+.cell-name {
+  text-transform: capitalize;
+  color: var(--color-blue-dark);
+  font-size: var(--font-size-2xs);
+  line-height: var(--font-size-sm);
+}
