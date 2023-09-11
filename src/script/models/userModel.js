@@ -15,16 +15,12 @@ export class UserModel {
     return this.httpsService.post(user);
   }
 
-  getList(query) {
-    return this.httpsService.getList(query);
+  get(id, query) {
+    return this.httpsService.get(id, query);
   }
 
   deleteUser(id) {
     return this.httpsService.delete(id);
-  }
-
-  getUserDetail(id) {
-    return this.httpsService.get(id);
   }
 
   updateUser(id, data) {

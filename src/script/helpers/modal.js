@@ -6,10 +6,10 @@ export const displayModal = ({ template, handler }) => {
   modalElement.innerHTML = template;
   mainElement.appendChild(modalElement);
 
-  modalElement.onclick = async (e) => {
+  modalElement.onclick = (e) => {
     const target = e.target;
     const btnClose = target.closest('.btn-close');
-    const iconClose = target.closest('.close-icon');
+    const iconClose = target.closest('.icon-close');
     const btnCancel = target.closest('.btn-cancel');
     const btnConfirm = target.closest('.btn-confirm');
 

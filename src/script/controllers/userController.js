@@ -6,7 +6,8 @@
  */
 
 import { SNACKBAR_MESSAGE } from '../constants';
-import { SnackBar, buildQueryString } from '../helpers';
+import { SnackBar } from '../helpers';
+import { buildQueryString } from '../utils';
 
 export class UserController {
   snackBar = new SnackBar();
@@ -33,7 +34,7 @@ export class UserController {
       this.snackBar.handleSnackBarSuccess(SNACKBAR_MESSAGE.addSuccess);
       await this.showUserList(this.userView.query);
     } catch (error) {
-      this.snackBar.handleSnackBarError(error);
+      this.snackBar.handleSnackBarError(SNACKBAR_MESSAGE.addFailed);
     }
   };
 
@@ -43,27 +44,27 @@ export class UserController {
       await this.showUserList(this.userView.query);
       this.snackBar.handleSnackBarSuccess(SNACKBAR_MESSAGE.removeSuccess);
     } catch (error) {
-      this.snackBar.handleSnackBarError(error);
+      this.snackBar.handleSnackBarError(SNACKBAR_MESSAGE.removeFailed);
     }
   };
 
   showUserList = async (query) => {
     try {
       const queryString = buildQueryString(query);
-      const data = await this.userModel.getList(queryString);
+      const data = await this.userModel.get('', queryString);
 
       this.userView.renderUserList(data);
     } catch (error) {
-      this.snackBar.handleSnackBarError(error);
+      this.snackBar.handleSnackBarError(SNACKBAR_MESSAGE.getFailed);
     }
   };
 
   showUserModal = async (id) => {
     try {
-      const data = await this.userModel.getUserDetail(id);
+      const data = await this.userModel.get(id);
       await this.userView.renderUserDetail(data);
     } catch (error) {
-      this.snackBar.handleSnackBarError(error);
+      this.snackBar.handleSnackBarError(SNACKBAR_MESSAGE.getFailed);
     }
   };
 
@@ -73,7 +74,7 @@ export class UserController {
       await this.showUserList(this.userView.query);
       this.snackBar.handleSnackBarSuccess(SNACKBAR_MESSAGE.updateSuccess);
     } catch (error) {
-      this.snackBar.handleSnackBarError(error);
+      this.snackBar.handleSnackBarError(SNACKBAR_MESSAGE.updateFailed);
     }
   };
 }

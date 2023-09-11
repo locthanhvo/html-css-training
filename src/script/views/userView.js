@@ -1,4 +1,6 @@
 import {
+  COLOR_NEXT_PAGE,
+  COLOR_PREVIOUS_PAGE,
   CONFIRM_MESSAGE,
   DEBOUNCE_DURATION,
   LIMIT_DEFAULT,
@@ -6,18 +8,14 @@ import {
   PAGE_DEFAULT,
   SORT_DEFAULT,
 } from '../constants';
-import {
-  debounce,
-  getFormValues,
-  permissionFields,
-  displayModal,
-} from '../helpers';
+import { displayModal } from '../helpers';
 import {
   getConfirmModalTemplate,
   getUserDashBoardTemplate,
   getUserFormTemplate,
 } from '../templates';
 import { getUserListTemplate } from '../templates/userListTemplate';
+import { debounce, getFormValues, permissionFields } from '../utils';
 import { removeErrorMessage, showErrorMessage } from '../validators/form-error';
 import { validateForm } from '../validators/validate-form';
 
@@ -110,7 +108,7 @@ export class UserView {
     const searchInput = this.mainElement.querySelector('.input-search');
 
     const debounceSearch = debounce(async (e) => {
-      this.query.filter = e.target.value;
+      this.query.firstName = e.target.value;
       await handler(this.query);
     }, DEBOUNCE_DURATION);
 
@@ -136,16 +134,34 @@ export class UserView {
     });
   }
 
+  async getNextPageRowCount() {
+    const nextPageTableRows = document.querySelectorAll(
+      '.table-user .table-row'
+    );
+
+    const rowCount = nextPageTableRows.length - 1;
+
+    return rowCount;
+  }
+
   async bindNextButton(handler) {
     const nextBtn = this.mainElement.querySelector('.btn-next');
+    const previousBtn = this.mainElement.querySelector('.btn-previous');
 
     nextBtn.addEventListener('click', async (e) => {
-      const tableRows = document.querySelectorAll('.table-user .table-row');
-      const itemPerPage = tableRows.length - 1;
+      let itemPerPage = await this.getNextPageRowCount();
 
       if (itemPerPage === parseInt(this.query.limit)) {
         this.query.page = (parseInt(this.query.page) + 1).toString();
+
         await handler(this.query);
+
+        itemPerPage = await this.getNextPageRowCount();
+        if (itemPerPage < parseInt(this.query.limit)) {
+          nextBtn.style.filter = COLOR_NEXT_PAGE;
+        }
+
+        previousBtn.style.filter = COLOR_PREVIOUS_PAGE;
       } else {
         e.preventDefault();
       }
@@ -154,10 +170,19 @@ export class UserView {
 
   async bindPreviousButton(handler) {
     const previousBtn = this.mainElement.querySelector('.btn-previous');
-    previousBtn.addEventListener('click', async () => {
+    const nextBtn = this.mainElement.querySelector('.btn-next');
+
+    previousBtn.addEventListener('click', async (e) => {
       if (parseInt(this.query.page) > 1) {
+        nextBtn.style.filter = '';
         this.query.page = (parseInt(this.query.page) - 1).toString();
         await handler(this.query);
+
+        if (parseInt(this.query.page) === 1) {
+          previousBtn.style.filter = '';
+        }
+      } else {
+        e.preventDefault();
       }
     });
   }

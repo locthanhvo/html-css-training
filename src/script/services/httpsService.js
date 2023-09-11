@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
-import { commonHttpRequest } from '../constants';
+import { commonHttpRequest } from '../utils';
+import { HTTP_METHOD } from '../constants';
 dotenv.config();
 
 /**
@@ -17,31 +18,20 @@ export class HttpsService {
    *
    */
 
-  post = (data) => {
-    return commonHttpRequest('POST', this.fullPath, data);
-  };
-
-  /**
-   * @description get data from server
-   * @param {String} path request path
-   * @query {filter, page, limit, sortBy, order}
-   * @returns data after request
-   */
-  getList = async (query) => {
-    const url = `${this.fullPath}?${query}`;
-
-    return commonHttpRequest('GET', url);
+  post = async (data) => {
+    return await commonHttpRequest(HTTP_METHOD.POST, this.fullPath, data);
   };
 
   /**
    * @description get data detail by id from server
    * @param {String} path request path
+   * @query {filter, page, limit, sortBy, order}
    * @returns data after request
    */
-  get = async (path) => {
-    const url = `${this.fullPath}/${path}`;
+  get = async (path, query) => {
+    const url = `${this.fullPath}/${path}?${query}`;
 
-    return commonHttpRequest('GET', url);
+    return await commonHttpRequest(HTTP_METHOD.GET, url);
   };
 
   /**
@@ -52,7 +42,7 @@ export class HttpsService {
   delete = async (path) => {
     const url = `${this.fullPath}/${path}`;
 
-    return commonHttpRequest('DELETE', url);
+    return await commonHttpRequest(HTTP_METHOD.DELETE, url);
   };
 
   /**
@@ -61,9 +51,9 @@ export class HttpsService {
    * @body {object} data
    */
 
-  put = (path, data) => {
+  put = async (path, data) => {
     const url = `${this.fullPath}/${path}`;
 
-    return commonHttpRequest('PUT', url, data);
+    return await commonHttpRequest(HTTP_METHOD.PUT, url, data);
   };
 }

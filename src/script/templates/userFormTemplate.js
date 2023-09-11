@@ -1,6 +1,19 @@
 import { ACTIONS, PERMISSION_FIELDS } from '../constants';
 
 export const getUserFormTemplate = (user) => {
+  const {
+    id,
+    firstName,
+    lastName,
+    username,
+    email,
+    phone,
+    gender,
+    password,
+    confirmPassword,
+    permissions,
+  } = user || {};
+
   const rows = PERMISSION_FIELDS.map(
     (item) =>
       `<tr class="table-row">
@@ -10,7 +23,7 @@ export const getUserFormTemplate = (user) => {
             <input name="${
               item + 'Read'
             }" type="checkbox" class="checkbox-item" ${
-        user?.permissions[item]?.read ? 'checked' : ''
+        permissions?.[item]?.read ? 'checked' : ''
       }/>
           </div>
         </td>
@@ -19,7 +32,7 @@ export const getUserFormTemplate = (user) => {
             <input name="${
               item + 'Write'
             }" type="checkbox" class="checkbox-item" ${
-        user?.permissions[item]?.write ? 'checked' : ''
+        permissions?.[item]?.write ? 'checked' : ''
       }/>
           </div>
         </td>
@@ -28,7 +41,7 @@ export const getUserFormTemplate = (user) => {
             <input name="${
               item + 'Delete'
             }" type="checkbox" class="checkbox-item"
-            ${user?.permissions[item]?.delete ? 'checked' : ''}/>
+            ${permissions?.[item]?.delete ? 'checked' : ''}/>
           </div>
         </td>
       </tr>`
@@ -41,8 +54,8 @@ export const getUserFormTemplate = (user) => {
   return `
   <div class="form-modal">
     <div class="flex-between modal-header">
-      <h2 class="text-title">${!user?.id ? 'Add User' : 'Update User'}</h2>
-      <div class="close-icon">
+      <h2 class="text-title">${!id ? 'Add User' : 'Update User'}</h2>
+      <div class="icon-close">
         <img src="/svgs/close-icon.svg" alt="close icon" />
       </div>
     </div>
@@ -60,7 +73,7 @@ export const getUserFormTemplate = (user) => {
                 class="form-item item-validate"
                 id="firstName"
                 placeholder="First Name *"
-                value='${user?.firstName || ''}'
+                value='${firstName || ''}'
               />
               <span class="firstName-error error-message"></span>
             </div>
@@ -72,7 +85,7 @@ export const getUserFormTemplate = (user) => {
                 id="lastName"
                 class="form-item item-validate"
                 placeholder="Last Name *"
-                value='${user?.lastName || ''}'
+                value='${lastName || ''}'
               />
               <span class="lastName-error error-message"></span>
             </div>
@@ -86,7 +99,7 @@ export const getUserFormTemplate = (user) => {
                 id="email"
                 class="form-item item-validate"
                 placeholder="Email *"
-                value='${user?.email || ''}'
+                value='${email || ''}'
               />
               <span class="email-error error-message"></span>
             </div>
@@ -98,7 +111,7 @@ export const getUserFormTemplate = (user) => {
                 id="phone"
                 class="form-item item-validate"
                 placeholder="Phone *"
-                value='${user?.phone || ''}'
+                value='${phone || ''}'
               />
               <span class="phone-error error-message"></span>
             </div>
@@ -111,10 +124,10 @@ export const getUserFormTemplate = (user) => {
               >
                 <option class="select-item" value="">Select Gender</option>
                 <option class="select-item" value="male" ${
-                  user?.gender === 'male' ? 'selected' : ''
+                  gender === 'male' ? 'selected' : ''
                 }>Male</option>
                 <option class="select-item" value="female" ${
-                  user?.gender === 'female' ? 'selected' : ''
+                  gender === 'female' ? 'selected' : ''
                 }>Female</option>
               </select>
               <span class="gender-error error-message"></span>
@@ -129,7 +142,7 @@ export const getUserFormTemplate = (user) => {
                 id="username"
                 type="text"
                 placeholder="Username *"
-                value='${user?.username || ''}'
+                value='${username || ''}'
               />
               <span class="username-error error-message"></span>
             </div>
@@ -140,7 +153,7 @@ export const getUserFormTemplate = (user) => {
                 id="password"
                 type="password"
                 placeholder="Password *"
-                value='${user?.password || ''}'
+                value='${password || ''}'
               />
               <span class="password-error error-message"></span>
             </div>
@@ -151,7 +164,7 @@ export const getUserFormTemplate = (user) => {
                 id="confirmPassword"
                 type="password"
                 placeholder="Confirm Password *"
-                value='${user?.confirmPassword || ''}'
+                value='${confirmPassword || ''}'
               />
               <span class="confirmPassword-error error-message"></span>
             </div>
@@ -167,9 +180,9 @@ export const getUserFormTemplate = (user) => {
 
       <div class="modal-footer">
         <button type="submit" class="btn btn-primary ${
-          !user?.id ? 'btn-add-user' : 'btn-update-user'
+          !id ? 'btn-add-user' : 'btn-update-user'
         } ">
-        ${!user?.id ? 'Add User' : 'Update User'}
+        ${!id ? 'Add User' : 'Update User'}
         </button>
         <button type="button" class="btn btn-secondary btn-close">Cancel</button>
       </div>

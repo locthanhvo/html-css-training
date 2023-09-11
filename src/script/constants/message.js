@@ -14,8 +14,12 @@ export const VALIDATE_MESSAGE = {
 
 export const SNACKBAR_MESSAGE = {
   addSuccess: 'Added user successfully',
+  addFailed: 'Added user failed',
   removeSuccess: 'Deleted user successfully',
+  removeFailed: 'Deleted user failed',
   updateSuccess: 'Updated user successfully',
+  updateFailed: 'Updated user failed',
+  getFailed: 'Get user failed',
 };
 
 export const CONFIRM_MESSAGE = {
