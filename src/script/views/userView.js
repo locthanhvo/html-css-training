@@ -94,7 +94,19 @@ export class UserView {
 
   renderUserList(data) {
     const tableElement = document.querySelector('.table-user');
+    const nextBtn = this.mainElement.querySelector('.btn-next');
     const userListTemplate = getUserListTemplate(data);
+    const queryLimit = this.query.limit;
+
+    if (data.length < queryLimit) {
+      this.disablePaginationBtn(nextBtn);
+    } else {
+      this.enablePaginationBtn(nextBtn);
+    }
+
+    if (data.length < queryLimit) {
+      this.disablePaginationBtn(nextBtn);
+    }
 
     tableElement.innerHTML = userListTemplate;
     this.users = data;
@@ -125,7 +137,7 @@ export class UserView {
     const limitSelect = this.mainElement.querySelector('.number-record');
 
     limitSelect.addEventListener('change', async (e) => {
-      this.query.limit = e.target.value;
+      this.query.limit = parseInt(e.target.value);
       await handler(this.query);
     });
   }
@@ -134,7 +146,7 @@ export class UserView {
     const nextBtn = this.mainElement.querySelector('.btn-next');
     const previousBtn = this.mainElement.querySelector('.btn-previous');
     const itemFisrtPage = this.users.length;
-    const queryLimit = parseInt(this.query.limit);
+    const queryLimit = this.query.limit;
 
     if (itemFisrtPage < queryLimit) {
       this.disablePaginationBtn(nextBtn);
@@ -144,7 +156,7 @@ export class UserView {
       const itemCurrentPage = this.users.length;
 
       if (itemCurrentPage === queryLimit) {
-        this.query.page = (parseInt(this.query.page) + 1).toString();
+        this.query.page = this.query.page + 1;
 
         await handler(this.query);
         this.enablePaginationBtn(previousBtn);
@@ -162,19 +174,19 @@ export class UserView {
     const previousBtn = this.mainElement.querySelector('.btn-previous');
     const nextBtn = this.mainElement.querySelector('.btn-next');
 
-    if (parseInt(this.query.page) === 1) {
+    if (this.query.page === 1) {
       this.disablePaginationBtn(previousBtn);
     }
 
     previousBtn.addEventListener('click', async (e) => {
-      if (parseInt(this.query.page) > 1) {
+      if (this.query.page > 1) {
         this.enablePaginationBtn(nextBtn);
 
-        this.query.page = (parseInt(this.query.page) - 1).toString();
+        this.query.page = this.query.page - 1;
         await handler(this.query);
       }
 
-      if (parseInt(this.query.page) === 1) {
+      if (this.query.page === 1) {
         this.disablePaginationBtn(previousBtn);
         e.preventDefault();
       }

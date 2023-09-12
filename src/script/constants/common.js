@@ -9,7 +9,7 @@ export const HEADER_TABLE_LIST = [
   'Action',
 ];
 
-export const OPTION_RECORDS = ['5', '10', '25', '50', '100'];
+export const OPTION_RECORDS = [5, 10, 25, 50, 100];
 
 export const PAGE_DEFAULT = 1;
 export const LIMIT_DEFAULT = 5;
