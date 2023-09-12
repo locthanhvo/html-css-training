@@ -1,6 +1,4 @@
 import {
-  COLOR_NEXT_PAGE,
-  COLOR_PREVIOUS_PAGE,
   CONFIRM_MESSAGE,
   DEBOUNCE_DURATION,
   LIMIT_DEFAULT,
@@ -28,6 +26,7 @@ export class UserView {
   constructor() {
     this.mainElement = document.querySelector('.main-content');
     this.sectionElement = null;
+    this.users = null;
     this.query = {
       page: PAGE_DEFAULT,
       limit: LIMIT_DEFAULT,
@@ -95,13 +94,10 @@ export class UserView {
 
   renderUserList(data) {
     const tableElement = document.querySelector('.table-user');
-
-    if (data.length === 0) {
-      tableElement.innerHTML = '';
-    }
-
     const userListTemplate = getUserListTemplate(data);
+
     tableElement.innerHTML = userListTemplate;
+    this.users = data;
   }
 
   async bindSearchInput(handler) {
@@ -134,35 +130,29 @@ export class UserView {
     });
   }
 
-  async getNextPageRowCount() {
-    const nextPageTableRows = document.querySelectorAll(
-      '.table-user .table-row'
-    );
-
-    const rowCount = nextPageTableRows.length - 1;
-
-    return rowCount;
-  }
-
   async bindNextButton(handler) {
     const nextBtn = this.mainElement.querySelector('.btn-next');
     const previousBtn = this.mainElement.querySelector('.btn-previous');
+    const itemFisrtPage = this.users.length;
+    const queryLimit = parseInt(this.query.limit);
+
+    if (itemFisrtPage < queryLimit) {
+      this.disablePaginationBtn(nextBtn);
+    }
 
     nextBtn.addEventListener('click', async (e) => {
-      let itemPerPage = await this.getNextPageRowCount();
+      const itemCurrentPage = this.users.length;
 
-      if (itemPerPage === parseInt(this.query.limit)) {
+      if (itemCurrentPage === queryLimit) {
         this.query.page = (parseInt(this.query.page) + 1).toString();
 
         await handler(this.query);
+        this.enablePaginationBtn(previousBtn);
+      }
 
-        itemPerPage = await this.getNextPageRowCount();
-        if (itemPerPage < parseInt(this.query.limit)) {
-          nextBtn.style.filter = COLOR_NEXT_PAGE;
-        }
-
-        previousBtn.style.filter = COLOR_PREVIOUS_PAGE;
-      } else {
+      const itemLastPage = this.users.length;
+      if (itemLastPage < queryLimit) {
+        this.disablePaginationBtn(nextBtn);
         e.preventDefault();
       }
     });
@@ -172,19 +162,33 @@ export class UserView {
     const previousBtn = this.mainElement.querySelector('.btn-previous');
     const nextBtn = this.mainElement.querySelector('.btn-next');
 
+    if (parseInt(this.query.page) === 1) {
+      this.disablePaginationBtn(previousBtn);
+    }
+
     previousBtn.addEventListener('click', async (e) => {
       if (parseInt(this.query.page) > 1) {
-        nextBtn.style.filter = '';
+        this.enablePaginationBtn(nextBtn);
+
         this.query.page = (parseInt(this.query.page) - 1).toString();
         await handler(this.query);
+      }
 
-        if (parseInt(this.query.page) === 1) {
-          previousBtn.style.filter = '';
-        }
-      } else {
+      if (parseInt(this.query.page) === 1) {
+        this.disablePaginationBtn(previousBtn);
         e.preventDefault();
       }
     });
+  }
+
+  disablePaginationBtn(button) {
+    button.classList.add('btn-disable');
+    button.classList.remove('btn-enable');
+  }
+
+  enablePaginationBtn(button) {
+    button.classList.remove('btn-disable');
+    button.classList.add('btn-enable');
   }
 
   bindUserListChange(handler) {

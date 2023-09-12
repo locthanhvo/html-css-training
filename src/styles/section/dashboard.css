@@ -130,16 +130,29 @@
   padding: 20px 58px;
 }
 
-.btn-next,
-.btn-previous,
 .number-record,
 .btn-delete,
-.btn-edit {
+.btn-edit,
+.btn-next,
+.btn-previous {
   cursor: pointer;
 }
 
 .btn-delete,
-.btn-edit {
+.btn-edit,
+.btn-next,
+.btn-previous {
   background-color: transparent;
   padding: 10px;
+}
+
+.btn-enable {
+  filter: invert(49%) sepia(0%) saturate(0%) hue-rotate(154deg) brightness(89%)
+    contrast(93%);
+}
+
+.btn-disable {
+  filter: invert(88%) sepia(0%) saturate(285%) hue-rotate(54deg)
+    brightness(136%) contrast(102%);
+  cursor: default;
 }

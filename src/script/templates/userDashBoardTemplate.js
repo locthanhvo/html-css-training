@@ -67,8 +67,12 @@ export const getUserDashBoardTemplate = () => {
         ${optionRecords}
         </select>
         <div class="btn-pagination">
-          <img class="btn-previous" src="/svgs/previous-icon.svg" alt="previous icon" />
-          <img class="btn-next" src="/svgs/next-icon.svg" alt="next icon" />
+          <button class="btn-previous">
+            <img src="/svgs/previous-icon.svg" alt="previous icon" />
+          </button>
+          <button class="btn-next">
+            <img src="/svgs/next-icon.svg" alt="next icon" />
+          </button>
         </div>
       </div>
     </div>`;
