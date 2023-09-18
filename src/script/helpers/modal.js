@@ -1,12 +1,18 @@
+import { createElement, querySelector } from './doms';
+
 export const displayModal = ({ template, handler }) => {
-  const modalElement = document.createElement('div');
-  const mainElement = document.querySelector('.main-content');
+  const modalElement = createElement('div');
+  const mainElement = querySelector('.main-content');
 
   modalElement.classList.add('modal', 'flex-center', 'open');
   modalElement.innerHTML = template;
   mainElement.appendChild(modalElement);
 
-  modalElement.onclick = (e) => {
+  const modalContent = modalElement.querySelector(
+    '.form-modal, .confirm-modal'
+  );
+
+  modalContent.addEventListener('click', (e) => {
     const target = e.target;
     const btnClose = target.closest('.btn-close');
     const iconClose = target.closest('.icon-close');
@@ -21,5 +27,9 @@ export const displayModal = ({ template, handler }) => {
       handler();
       modalElement.remove();
     }
-  };
+  });
+
+  modalElement.addEventListener('click', function (event) {
+    event.target === modalElement && modalElement.remove();
+  });
 };

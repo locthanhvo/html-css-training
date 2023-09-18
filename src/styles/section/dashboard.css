@@ -1,5 +1,7 @@
 .dashboard {
   display: flex;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .nav-drawer {
@@ -27,6 +29,11 @@
   width: 100%;
   padding: 40px 20px;
   background-color: var(--color-white-smoke);
+  overflow: auto;
+}
+
+.dashboard-content::-webkit-scrollbar {
+  width: 12px;
 }
 
 .user-help {

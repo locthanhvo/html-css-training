@@ -1,3 +1,5 @@
+import { getElementById, querySelector, querySelectorAll } from '../helpers';
+
 export const showErrorMessage = (error, formValues) => {
   changeErrorMessage();
   Object.entries(error).forEach(([key, value]) => {
@@ -10,18 +12,18 @@ export const showErrorMessage = (error, formValues) => {
 };
 
 export const changeErrorMessage = () => {
-  const errorFields = document.querySelectorAll('.error-message');
+  const errorFields = querySelectorAll('.error-message');
   errorFields.forEach((field) => {
     field.innerText = '';
   });
 };
 
 export const removeErrorMessage = () => {
-  const formItems = document.querySelectorAll('.item-validate');
+  const formItems = querySelectorAll('.item-validate');
 
   formItems.forEach((item) => {
-    document.getElementById(item.name).addEventListener('focus', () => {
-      document.querySelector(`.${item.name}-error`).textContent = '';
+    getElementById(item.name).addEventListener('focus', () => {
+      querySelector(`.${item.name}-error`).textContent = '';
     });
   });
 };

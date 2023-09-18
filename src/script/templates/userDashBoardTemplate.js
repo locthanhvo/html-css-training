@@ -6,23 +6,8 @@ export const getUserDashBoardTemplate = () => {
   );
 
   return `
-    <div class="nav-drawer">
-      <h1 class="text-logo">YOURLOGO</h1>
-
-      <div class="nav-item">
-        <div>
-          <img
-            src="/svgs/dashboard-icon.svg"
-            alt="dashboard icon"
-          />
-        </div>
-        <h2 class="text-nav">Dashboard</h2>
-        <div class="line-nav-drawer"></div>
-      </div>
-    </div>
-
     <div class="dashboard-content">
-      <h2 class="title-list">Users Dashboard</h2>
+      <h1 class="title-list">Users Dashboard</h1>
 
       <div class="user-help flex-between">
         <div class="user-search">

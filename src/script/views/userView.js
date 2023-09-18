@@ -6,7 +6,7 @@ import {
   PAGE_DEFAULT,
   SORT_DEFAULT,
 } from '../constants';
-import { displayModal } from '../helpers';
+import { createElement, displayModal, querySelector } from '../helpers';
 import {
   getConfirmModalTemplate,
   getUserDashBoardTemplate,
@@ -24,8 +24,7 @@ import { validateForm } from '../validators/validate-form';
  */
 export class UserView {
   constructor() {
-    this.mainElement = document.querySelector('.main-content');
-    this.sectionElement = null;
+    this.mainElement = querySelector('.main-content');
     this.users = null;
     this.query = {
       page: PAGE_DEFAULT,
@@ -41,34 +40,41 @@ export class UserView {
   };
 
   bindDashboardInit() {
-    this.sectionElement = document.createElement('section');
-    this.sectionElement.classList.add('dashboard');
+    const sectionElement = createElement('section');
+    sectionElement.classList.add('dashboard');
 
-    this.sectionElement.innerHTML = getUserDashBoardTemplate();
+    sectionElement.innerHTML = getUserDashBoardTemplate();
 
-    this.mainElement.appendChild(this.sectionElement);
+    this.mainElement.appendChild(sectionElement);
   }
 
   bindFormAddUser(handler) {
-    const btnElement = this.mainElement.querySelector('.btn-add');
+    const btnElement = querySelector('.btn-add', this.mainElement);
 
     btnElement.onclick = () => {
       displayModal({ template: getUserFormTemplate() });
-
       this.handlerFormAddUser(handler);
     };
   }
 
   handlerFormAddUser(handler) {
-    document.querySelector('.btn-add-user').addEventListener('click', () => {
-      this.addUser = handler;
-      removeErrorMessage();
-      this.handlerSubmitUser();
-    });
+    querySelector('.btn-add-user', this.mainElement).addEventListener(
+      'click',
+      () => {
+        this.addUser = handler;
+        removeErrorMessage();
+      }
+    );
+
+    // Event submit form add user
+    querySelector('.form-content').addEventListener(
+      'submit',
+      this.handlerAddUser
+    );
   }
 
   handlerAddUser = async () => {
-    const formElement = document.querySelector('.form-content');
+    const formElement = querySelector('.form-content');
     const formValues = getFormValues(formElement);
 
     permissionFields(formValues);
@@ -78,23 +84,21 @@ export class UserView {
     if (Object.keys(errorMessage).length !== 0) {
       showErrorMessage(errorMessage, formElement);
     } else {
-      const modalElement = this.mainElement.querySelector('.modal');
+      const modalElement = querySelector('.modal', this.mainElement);
+      const btnSubmit = querySelector('.btn-add-user', formElement);
 
+      // Set atribute disabled for add button add
+      btnSubmit.setAttribute('disabled', '');
       await this.addUser(formValues);
       formElement.reset();
       modalElement.remove();
     }
   };
 
-  handlerSubmitUser() {
-    document
-      .querySelector('.form-content')
-      .addEventListener('submit', this.handlerAddUser);
-  }
-
   renderUserList(data) {
-    const tableElement = document.querySelector('.table-user');
-    const nextBtn = this.mainElement.querySelector('.btn-next');
+    const tableElement = querySelector('.table-user');
+    const nextBtn = querySelector('.btn-next', this.mainElement);
+    const previousBtn = querySelector('.btn-previous', this.mainElement);
     const userListTemplate = getUserListTemplate(data);
     const queryLimit = this.query.limit;
 
@@ -104,8 +108,8 @@ export class UserView {
       this.enablePaginationBtn(nextBtn);
     }
 
-    if (data.length < queryLimit) {
-      this.disablePaginationBtn(nextBtn);
+    if (this.query.page === 1) {
+      this.disablePaginationBtn(previousBtn);
     }
 
     tableElement.innerHTML = userListTemplate;
@@ -113,7 +117,7 @@ export class UserView {
   }
 
   async bindSearchInput(handler) {
-    const searchInput = this.mainElement.querySelector('.input-search');
+    const searchInput = querySelector('.input-search', this.mainElement);
 
     const debounceSearch = debounce(async (e) => {
       this.query.firstName = e.target.value;
@@ -124,7 +128,7 @@ export class UserView {
   }
 
   async bindSortSelect(handler) {
-    const sortSelect = this.mainElement.querySelector('.sort-option');
+    const sortSelect = querySelector('.sort-option', this.mainElement);
 
     sortSelect.addEventListener('change', async (e) => {
       this.query.sortBy = e.target.value;
@@ -134,7 +138,7 @@ export class UserView {
   }
 
   async bindLimitSelect(handler) {
-    const limitSelect = this.mainElement.querySelector('.number-record');
+    const limitSelect = querySelector('.number-record', this.mainElement);
 
     limitSelect.addEventListener('change', async (e) => {
       this.query.limit = parseInt(e.target.value);
@@ -143,26 +147,21 @@ export class UserView {
   }
 
   async bindNextButton(handler) {
-    const nextBtn = this.mainElement.querySelector('.btn-next');
-    const previousBtn = this.mainElement.querySelector('.btn-previous');
-    const itemFisrtPage = this.users.length;
+    const nextBtn = querySelector('.btn-next', this.mainElement);
+    const previousBtn = querySelector('.btn-previous', this.mainElement);
     const queryLimit = this.query.limit;
-
-    if (itemFisrtPage < queryLimit) {
-      this.disablePaginationBtn(nextBtn);
-    }
 
     nextBtn.addEventListener('click', async (e) => {
       const itemCurrentPage = this.users.length;
 
       if (itemCurrentPage === queryLimit) {
         this.query.page = this.query.page + 1;
-
         await handler(this.query);
         this.enablePaginationBtn(previousBtn);
       }
 
       const itemLastPage = this.users.length;
+
       if (itemLastPage < queryLimit) {
         this.disablePaginationBtn(nextBtn);
         e.preventDefault();
@@ -171,12 +170,8 @@ export class UserView {
   }
 
   async bindPreviousButton(handler) {
-    const previousBtn = this.mainElement.querySelector('.btn-previous');
-    const nextBtn = this.mainElement.querySelector('.btn-next');
-
-    if (this.query.page === 1) {
-      this.disablePaginationBtn(previousBtn);
-    }
+    const previousBtn = querySelector('.btn-previous', this.mainElement);
+    const nextBtn = querySelector('.btn-next', this.mainElement);
 
     previousBtn.addEventListener('click', async (e) => {
       if (this.query.page > 1) {
@@ -212,7 +207,7 @@ export class UserView {
   }
 
   handlerDeleteUser(handler) {
-    const tableElement = document.querySelector('.table-user');
+    const tableElement = querySelector('.table-user');
 
     tableElement.addEventListener('click', async (e) => {
       const target = e.target;
@@ -234,7 +229,7 @@ export class UserView {
   }
 
   handlerUserDetail(handler) {
-    const tableElement = document.querySelector('.table-user');
+    const tableElement = querySelector('.table-user');
 
     tableElement.addEventListener('click', async (e) => {
       const target = e.target;
@@ -255,17 +250,14 @@ export class UserView {
   renderUserDetail(data) {
     displayModal({ template: getUserFormTemplate(data) });
 
-    document.querySelector('.btn-update-user').addEventListener('click', () => {
+    querySelector('.btn-update-user').addEventListener('click', () => {
       removeErrorMessage();
-      displayModal({
-        template: getConfirmModalTemplate(CONFIRM_MESSAGE.confirmUpdate),
-        handler: () => this.handlerSubmitUpdateUser(data.id),
-      });
+      this.handlerSubmitUpdateUser(data.id);
     });
   }
 
   async handlerUpdateUser(id) {
-    const formElement = document.querySelector('.form-content');
+    const formElement = querySelector('.form-content');
     const formValues = getFormValues(formElement);
 
     permissionFields(formValues);
@@ -275,16 +267,20 @@ export class UserView {
     if (Object.keys(errorMessage).length !== 0) {
       showErrorMessage(errorMessage, formElement);
     } else {
-      const modalElement = this.mainElement.querySelector('.modal');
+      const modalElement = querySelector('.modal', this.mainElement);
+      const btnSubmit = querySelector('.btn-update-user', formElement);
 
+      // Set atribute disabled for add button add
+      btnSubmit.setAttribute('disabled', '');
       await this.updateUserHandler({ ...formValues, id });
       modalElement.remove();
     }
   }
 
   handlerSubmitUpdateUser(id) {
-    document
-      .querySelector('.form-content')
-      .addEventListener('submit', this.handlerUpdateUser(id));
+    querySelector('.form-content').addEventListener(
+      'submit',
+      this.handlerUpdateUser(id)
+    );
   }
 }
