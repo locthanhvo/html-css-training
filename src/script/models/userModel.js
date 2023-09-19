@@ -10,7 +10,11 @@ export class UserModel {
   }
 
   addUser(data) {
-    const user = { ...data, createdAt: new Date() };
+    const user = {
+      ...data,
+      createdAt: new Date(),
+      email: data.email.toLowerCase(),
+    };
 
     return this.httpsService.post(user);
   }
