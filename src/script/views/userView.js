@@ -14,8 +14,11 @@ import {
 } from '../templates';
 import { getUserListTemplate } from '../templates/userListTemplate';
 import { debounce, getFormValues, permissionFields } from '../utils';
-import { removeErrorMessage, showErrorMessage } from '../validators/form-error';
-import { validateForm } from '../validators/validate-form';
+import {
+  removeErrorMessage,
+  showErrorMessage,
+  validateForm,
+} from '../validators';
 
 /**
  * @class UserView
@@ -149,10 +152,10 @@ export class UserView {
   async bindNextButton(handler) {
     const nextBtn = querySelector('.btn-next', this.mainElement);
     const previousBtn = querySelector('.btn-previous', this.mainElement);
-    const queryLimit = this.query.limit;
 
     nextBtn.addEventListener('click', async (e) => {
       const itemCurrentPage = this.users.length;
+      const queryLimit = this.query.limit;
 
       if (itemCurrentPage === queryLimit) {
         this.query.page = this.query.page + 1;

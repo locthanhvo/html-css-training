@@ -1,9 +1,9 @@
 import { getElementById, querySelector, querySelectorAll } from '../helpers';
 
-export const showErrorMessage = (error, formValues) => {
+export const showErrorMessage = (error, form) => {
   changeErrorMessage();
   Object.entries(error).forEach(([key, value]) => {
-    const target = formValues.elements[key].nextElementSibling;
+    const target = form.elements[key].nextElementSibling;
 
     if (target) {
       target.innerText = value;

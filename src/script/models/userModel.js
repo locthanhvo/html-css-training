@@ -9,25 +9,25 @@ export class UserModel {
     this.httpsService = new HttpsService('users');
   }
 
-  addUser(data) {
+  async addUser(data) {
     const user = {
       ...data,
       createdAt: new Date(),
       email: data.email.toLowerCase(),
     };
 
-    return this.httpsService.post(user);
+    return await this.httpsService.post(user);
   }
 
-  get(id, query) {
-    return this.httpsService.get(id, query);
+  async get(id, query) {
+    return await this.httpsService.get(id, query);
   }
 
-  deleteUser(id) {
-    return this.httpsService.delete(id);
+  async deleteUser(id) {
+    return await this.httpsService.delete(id);
   }
 
-  updateUser(id, data) {
-    return this.httpsService.put(id, data);
+  async updateUser(id, data) {
+    return await this.httpsService.put(id, data);
   }
 }
