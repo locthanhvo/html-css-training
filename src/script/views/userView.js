@@ -84,7 +84,7 @@ export class UserView {
 
     const errorMessage = validateForm(formValues);
 
-    if (Object.keys(errorMessage).length !== 0) {
+    if (Object.keys(errorMessage).length) {
       showErrorMessage(errorMessage, formElement);
     } else {
       const modalElement = querySelector('.modal', this.mainElement);
@@ -105,6 +105,9 @@ export class UserView {
     const userListTemplate = getUserListTemplate(data);
     const queryLimit = this.query.limit;
 
+    this.displayEmptyData(data);
+    this.disablePagination(data);
+
     if (data.length < queryLimit) {
       this.disablePaginationBtn(nextBtn);
     } else {
@@ -117,6 +120,22 @@ export class UserView {
 
     tableElement.innerHTML = userListTemplate;
     this.users = data;
+  }
+
+  disablePagination(data) {
+    const pagination = querySelector('.pagination', this.mainElement);
+
+    data.length
+      ? pagination.classList.add('open-pagination')
+      : pagination.classList.remove('open-pagination');
+  }
+
+  displayEmptyData(data) {
+    const emptyTable = querySelector('.table-empty', this.mainElement);
+
+    !data.length
+      ? emptyTable.classList.add('open-empty')
+      : emptyTable.classList.remove('open-empty');
   }
 
   async bindSearchInput(handler) {
@@ -167,6 +186,7 @@ export class UserView {
 
       if (itemLastPage < queryLimit) {
         this.disablePaginationBtn(nextBtn);
+
         e.preventDefault();
       }
     });
@@ -220,7 +240,7 @@ export class UserView {
         const userId = btnDelete.dataset.id;
 
         displayModal({
-          template: getConfirmModalTemplate(CONFIRM_MESSAGE.confirmRemove),
+          template: getConfirmModalTemplate(CONFIRM_MESSAGE.CONFIRM_REMOVE),
           handler: () => handler(userId),
         });
       }

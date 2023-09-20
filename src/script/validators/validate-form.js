@@ -13,68 +13,69 @@ import {
 const validateFirstName = (firstName = '') => {
   return firstName
     ? undefined
-    : VALIDATE_MESSAGE.requiredError.replace('{field}', 'First Name');
+    : VALIDATE_MESSAGE.REQUIRED_ERROR.replace('{field}', 'First Name');
 };
 
 const validateLastName = (lastName = '') => {
   return lastName
     ? undefined
-    : VALIDATE_MESSAGE.requiredError.replace('{field}', 'Last Name');
+    : VALIDATE_MESSAGE.REQUIRED_ERROR.replace('{field}', 'Last Name');
 };
 
 const validateGender = (gender = '') => {
   return gender
     ? undefined
-    : VALIDATE_MESSAGE.requiredError.replace('{field}', 'Gender');
+    : VALIDATE_MESSAGE.REQUIRED_ERROR.replace('{field}', 'Gender');
 };
 
 const validateEmail = (email = '') => {
-  if (!email) return VALIDATE_MESSAGE.requiredError.replace('{field}', 'Email');
+  if (!email)
+    return VALIDATE_MESSAGE.REQUIRED_ERROR.replace('{field}', 'Email');
 
   if (!email.match(EMAIL_REGEX)) {
-    return VALIDATE_MESSAGE.inValidEmail;
+    return VALIDATE_MESSAGE.INVALID_EMAIL;
   }
 };
 
 const validateUsername = (username = '') => {
   if (!username)
-    return VALIDATE_MESSAGE.requiredError.replace('{field}', 'Username');
+    return VALIDATE_MESSAGE.REQUIRED_ERROR.replace('{field}', 'Username');
 
   if (!username.match(USERNAME_CHARACTERS_REGEX)) {
-    return VALIDATE_MESSAGE.inValidUsername;
+    return VALIDATE_MESSAGE.INVALID_USERNAME;
   }
   return;
 };
 
 const validatePassword = (password = '') => {
   if (!password)
-    return VALIDATE_MESSAGE.requiredError.replace('{field}', 'Password');
+    return VALIDATE_MESSAGE.REQUIRED_ERROR.replace('{field}', 'Password');
 
   if (!password.match(PASSWORD_CHARACTERS_REGEX)) {
-    return VALIDATE_MESSAGE.inValidPassword;
+    return VALIDATE_MESSAGE.INVALID_PASSWORD;
   }
 
   if (!password.match(UPPERCASE_CHARACTERS_REGEX)) {
-    return VALIDATE_MESSAGE.requireUpperCase;
+    return VALIDATE_MESSAGE.REQUIRE_UPPER_CASE;
   }
 
   if (!password.match(LOWERCASE_CHARACTERS_REGEX)) {
-    return VALIDATE_MESSAGE.requireLowerCase;
+    return VALIDATE_MESSAGE.REQUIRE_LOWER_CASE;
   }
 
   if (!password.match(NUMBER_CHARACTERS_REGEX)) {
-    return VALIDATE_MESSAGE.requireNumber;
+    return VALIDATE_MESSAGE.REQUIRE_NUMBER;
   }
 
   if (!password.match(SPECIAL_CHARACTERS_REGEX)) {
-    return VALIDATE_MESSAGE.requireSpecialCharacter;
+    return VALIDATE_MESSAGE.REQUIRE_SPECIAL_CHARACTER;
   }
   return;
 };
 
 const validateConfirmPassword = (confirmPassword = '', password = '') => {
   if (!confirmPassword)
-    return VALIDATE_MESSAGE.requiredError.replace(
+    return VALIDATE_MESSAGE.REQUIRED_ERROR.replace(
       '{field}',
       'Confirm Password'
     );
@@ -86,10 +87,11 @@ const validateConfirmPassword = (confirmPassword = '', password = '') => {
 };
 
 const validatePhone = (phone = '') => {
-  if (!phone) return VALIDATE_MESSAGE.requiredError.replace('{field}', 'Phone');
+  if (!phone)
+    return VALIDATE_MESSAGE.REQUIRED_ERROR.replace('{field}', 'Phone');
 
   if (!phone.match(PHONE_CHARACTERS_REGEX)) {
-    return VALIDATE_MESSAGE.invalidPhone;
+    return VALIDATE_MESSAGE.INVALID_PHONE;
   }
   return;
 };

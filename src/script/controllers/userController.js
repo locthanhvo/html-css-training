@@ -31,10 +31,10 @@ export class UserController {
   addUser = async (data) => {
     try {
       await this.userModel.addUser(data);
-      this.snackBar.handleSnackBarSuccess(SNACKBAR_MESSAGE.addSuccess);
+      this.snackBar.handleSnackBarSuccess(SNACKBAR_MESSAGE.ADD_SUCCESS);
       await this.showUserList(this.userView.query);
     } catch (error) {
-      this.snackBar.handleSnackBarError(SNACKBAR_MESSAGE.addFailed);
+      this.snackBar.handleSnackBarError(SNACKBAR_MESSAGE.ADD_FAILED);
     }
   };
 
@@ -42,9 +42,9 @@ export class UserController {
     try {
       await this.userModel.deleteUser(id);
       await this.showUserList(this.userView.query);
-      this.snackBar.handleSnackBarSuccess(SNACKBAR_MESSAGE.removeSuccess);
+      this.snackBar.handleSnackBarSuccess(SNACKBAR_MESSAGE.REMOVE_SUCCESS);
     } catch (error) {
-      this.snackBar.handleSnackBarError(SNACKBAR_MESSAGE.removeFailed);
+      this.snackBar.handleSnackBarError(SNACKBAR_MESSAGE.REMOVE_FAILED);
     }
   };
 
@@ -55,7 +55,7 @@ export class UserController {
 
       this.userView.renderUserList(data);
     } catch (error) {
-      this.snackBar.handleSnackBarError(SNACKBAR_MESSAGE.getFailed);
+      this.snackBar.handleSnackBarError(SNACKBAR_MESSAGE.GET_FAILED);
     }
   };
 
@@ -64,7 +64,7 @@ export class UserController {
       const data = await this.userModel.get(id);
       await this.userView.renderUserDetail(data);
     } catch (error) {
-      this.snackBar.handleSnackBarError(SNACKBAR_MESSAGE.getFailed);
+      this.snackBar.handleSnackBarError(SNACKBAR_MESSAGE.GET_FAILED);
     }
   };
 
@@ -72,9 +72,9 @@ export class UserController {
     try {
       await this.userModel.updateUser(data.id, data);
       await this.showUserList(this.userView.query);
-      this.snackBar.handleSnackBarSuccess(SNACKBAR_MESSAGE.updateSuccess);
+      this.snackBar.handleSnackBarSuccess(SNACKBAR_MESSAGE.UPDATE_SUCCESS);
     } catch (error) {
-      this.snackBar.handleSnackBarError(SNACKBAR_MESSAGE.updateFailed);
+      this.snackBar.handleSnackBarError(SNACKBAR_MESSAGE.UPDATE_FAILED);
     }
   };
 }

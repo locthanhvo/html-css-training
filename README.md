@@ -23,8 +23,8 @@
 
 - HTML5/CSS3
 - JavaScript
-- MockAPI
-- Parcel
+- MockAPI v2.0.1
+- Parcel v2.9.3
 
 ### Requirements
 
@@ -59,12 +59,12 @@
   - HTTPS:
     - `$ git clone https://gitlab.asoft-python.com/loc.vo/javascript-training.git`.
 - Step 2:
-  - Install the packages `npm i` or `yarn`.
+  - Install the packages `npm i` or `pnpm install`.
 - Step 3:
   - Create a .env file at your root folder, add a env var API_ENDPOINT by MockAPI
     - API_ENDPOINT = `https://64e2c689bac46e480e77bdab.mockapi.io`
 - Step 4:
-  - Case 1: Run the practice `npm start` or `yarn start`.
+  - Case 1: Run the practice `npm start` or `pnpm start`.
   - Case 2: Ctrl + click `http://localhost:1234`
 
 ## Author

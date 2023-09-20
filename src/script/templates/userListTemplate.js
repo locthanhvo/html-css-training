@@ -10,11 +10,9 @@ export const getUserListTemplate = (users) => {
         <tr class="table-row" id="header-row">
             ${headerLabels}
         </tr>
-        ${
-          users.length !== 0
-            ? users
-                .map(
-                  (data) => `            
+        ${users
+          .map(
+            (data) => `            
             <tr class="table-row ">
                   <td class="table-cell-username">
                     <h3 class="text-xs">${
@@ -41,11 +39,6 @@ export const getUserListTemplate = (users) => {
                     </button>
                   </td>
             </tr>`
-                )
-                .join('')
-            : `            
-            <tr class="table-row ">
-                <td class="table-cell text-cell">Data empty</td>
-            </tr>`
-        }`;
+          )
+          .join('')}`;
 };

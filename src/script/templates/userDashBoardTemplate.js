@@ -41,9 +41,15 @@ export const getUserDashBoardTemplate = () => {
 
       <div class="list-content">
         <h2 class="text-title text-title-list">List Users</h2>
-        <table class="table-user">
-            
-        </table>
+        <table class="table-user"></table>
+        <div class="table-empty flex-center">
+          <img
+          class="empty-icon"
+          src="/svgs/empty-icon.svg"
+          alt="search icon"
+          />
+          <div class="description-empty text-field">No Data</div>
+        </div>
       </div>
 
       <div class="pagination">

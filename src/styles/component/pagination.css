@@ -1,4 +1,8 @@
 .pagination {
+  display: none;
+}
+
+.open-pagination {
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1,28 +1,28 @@
 export const VALIDATE_MESSAGE = {
-  inValidEmail: 'Invalid email',
-  requiredError: '{field} is required',
-  inValidUsername:
+  INVALID_EMAIL: 'Invalid email',
+  REQUIRED_ERROR: '{field} is required',
+  INVALID_USERNAME:
     'Please enter a minimum of 6 and a maximum of 30 characters for the username',
-  invalidConfirmPassword: 'Password confirmation do not match password',
-  invalidPhone: 'Invalid phone. Example: +1-202-555-0192',
-  inValidPassword: 'Please enter at least 8 characters for password',
-  requireUpperCase: 'Upper case is required',
-  requireLowerCase: 'Lower case is required',
-  requireNumber: 'Number is required',
-  requireSpecialCharacter: 'Special character is required',
+  INVALID_CONFIRM_PASSWORD: 'Password confirmation do not match password',
+  INVALID_PHONE: 'Invalid phone. Example: +1-202-555-0192',
+  INVALID_PASSWORD: 'Please enter at least 8 characters for password',
+  REQUIRE_UPPER_CASE: 'Upper case is required',
+  REQUIRE_LOWER_CASE: 'Lower case is required',
+  REQUIRE_NUMBER: 'Number is required',
+  REQUIRE_SPECIAL_CHARACTER: 'Special character is required',
 };
 
 export const SNACKBAR_MESSAGE = {
-  addSuccess: 'Added user successfully',
-  addFailed: 'Added user failed',
-  removeSuccess: 'Deleted user successfully',
-  removeFailed: 'Deleted user failed',
-  updateSuccess: 'Updated user successfully',
-  updateFailed: 'Updated user failed',
-  getFailed: 'Get user failed',
+  ADD_SUCCESS: 'Added user successfully',
+  ADD_FAILED: 'Added user failed',
+  REMOVE_SUCCESS: 'Deleted user successfully',
+  REMOVE_FAILED: 'Deleted user failed',
+  UPDATE_SUCCESS: 'Updated user successfully',
+  UPDATE_FAILED: 'Updated user failed',
+  GET_FAILED: 'Get user failed',
 };
 
 export const CONFIRM_MESSAGE = {
-  confirmRemove: 'Are you sure you want to delete this user?',
-  confirmUpdate: 'Are you sure you want to update this user?',
+  CONFIRM_REMOVE: 'Are you sure you want to delete this user?',
+  CONFIRM_UPDATE: 'Are you sure you want to update this user?',
 };
