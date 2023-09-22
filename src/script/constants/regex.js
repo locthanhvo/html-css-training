@@ -4,8 +4,8 @@ export const EMAIL_REGEX = /^[\w-\\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 // check characters with strings or numbers between 6 and 30 characters in length
 export const USERNAME_CHARACTERS_REGEX = /[0-9a-zA-Z]{6,30}/;
 
-// check the character must match the phone number format. Example: +1-202-555-0192
-export const PHONE_CHARACTERS_REGEX = /^\+\d{1,}-\d{3}-\d{3}-\d{4}$/;
+// check the character must match the phone number format.
+export const PHONE_CHARACTERS_REGEX = /^(?:\+84|0)[1-9]\d{8,9}$/;
 
 // check characters least 8 characters minimum
 export const PASSWORD_CHARACTERS_REGEX = /^.{8,}$/;

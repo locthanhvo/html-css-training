@@ -1,8 +1,8 @@
-.pagination {
-  display: none;
+.close-pagination {
+  display: none !important;
 }
 
-.open-pagination {
+.pagination {
   display: flex;
   align-items: center;
   justify-content: center;

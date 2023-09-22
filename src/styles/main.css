@@ -18,6 +18,7 @@
 @import url('../styles/component/snack-bar.css');
 @import url('../styles/component/pagination.css');
 @import url('../styles/component/confirm.css');
+@import url('../styles/component/toggle.css');
 
 /* sections */
 @import url('../styles/section/dashboard.css');

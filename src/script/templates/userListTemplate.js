@@ -1,5 +1,5 @@
 import { HEADER_TABLE_LIST } from '../constants';
-import { formatDate } from '../utils';
+import { formatDate, formatPhoneNumber } from '../utils';
 
 export const getUserListTemplate = (users) => {
   const headerLabels = HEADER_TABLE_LIST.map(
@@ -20,7 +20,9 @@ export const getUserListTemplate = (users) => {
                     }</h3>
                     <p class="text-2xs">${data.email}</p>
                   </td>
-                  <td class="table-cell text-cell">${data.phone}</td>
+                  <td class="table-cell text-cell">${formatPhoneNumber(
+                    data.phone
+                  )}</td>
                   <td class="table-cell text-cell">${formatDate(
                     data.createdAt
                   )}</td>

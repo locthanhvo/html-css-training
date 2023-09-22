@@ -4,7 +4,7 @@ export const VALIDATE_MESSAGE = {
   INVALID_USERNAME:
     'Please enter a minimum of 6 and a maximum of 30 characters for the username',
   INVALID_CONFIRM_PASSWORD: 'Password confirmation do not match password',
-  INVALID_PHONE: 'Invalid phone. Example: +1-202-555-0192',
+  INVALID_PHONE: 'Invalid phone',
   INVALID_PASSWORD: 'Please enter at least 8 characters for password',
   REQUIRE_UPPER_CASE: 'Upper case is required',
   REQUIRE_LOWER_CASE: 'Lower case is required',
@@ -20,6 +20,7 @@ export const SNACKBAR_MESSAGE = {
   UPDATE_SUCCESS: 'Updated user successfully',
   UPDATE_FAILED: 'Updated user failed',
   GET_FAILED: 'Get user failed',
+  EMAIL_FAILED: 'Your email already in use, please try again',
 };
 
 export const CONFIRM_MESSAGE = {

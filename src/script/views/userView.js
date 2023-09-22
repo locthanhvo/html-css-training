@@ -17,6 +17,7 @@ import { debounce, getFormValues, permissionFields } from '../utils';
 import {
   removeErrorMessage,
   showErrorMessage,
+  userFormValidator,
   validateForm,
 } from '../validators';
 
@@ -82,11 +83,13 @@ export class UserView {
 
     permissionFields(formValues);
 
-    const errorMessage = validateForm(formValues);
+    const isInvalidForm = validateForm(
+      formValues,
+      userFormValidator(formValues),
+      formElement
+    );
 
-    if (Object.keys(errorMessage).length) {
-      showErrorMessage(errorMessage, formElement);
-    } else {
+    if (isInvalidForm) {
       const modalElement = querySelector('.modal', this.mainElement);
       const btnSubmit = querySelector('.btn-add-user', formElement);
 
@@ -104,33 +107,34 @@ export class UserView {
     const previousBtn = querySelector('.btn-previous', this.mainElement);
     const userListTemplate = getUserListTemplate(data);
     const queryLimit = this.query.limit;
+    const queryPage = this.query.page;
 
-    this.displayEmptyData(data);
-    this.disablePagination(data);
-
-    if (data.length < queryLimit) {
-      this.disablePaginationBtn(nextBtn);
-    } else {
-      this.enablePaginationBtn(nextBtn);
-    }
-
-    if (this.query.page === 1) {
-      this.disablePaginationBtn(previousBtn);
-    }
+    this.handleEmptyDataDisplay(data);
+    data.length < queryLimit
+      ? this.disablePaginationBtn(nextBtn)
+      : this.enablePaginationBtn(nextBtn);
+    queryPage === 1 && this.disablePaginationBtn(previousBtn);
+    !data.length && queryPage === 1
+      ? this.disablePagination()
+      : this.enablePagination();
 
     tableElement.innerHTML = userListTemplate;
     this.users = data;
   }
 
-  disablePagination(data) {
+  disablePagination() {
     const pagination = querySelector('.pagination', this.mainElement);
 
-    data.length
-      ? pagination.classList.add('open-pagination')
-      : pagination.classList.remove('open-pagination');
+    pagination.classList.add('close-pagination');
   }
 
-  displayEmptyData(data) {
+  enablePagination() {
+    const pagination = querySelector('.pagination', this.mainElement);
+
+    pagination.classList.remove('close-pagination');
+  }
+
+  handleEmptyDataDisplay(data) {
     const emptyTable = querySelector('.table-empty', this.mainElement);
 
     !data.length
@@ -186,7 +190,7 @@ export class UserView {
 
       if (itemLastPage < queryLimit) {
         this.disablePaginationBtn(nextBtn);
-
+        this.enablePagination();
         e.preventDefault();
       }
     });

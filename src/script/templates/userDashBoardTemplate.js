@@ -46,10 +46,18 @@ export const getUserDashBoardTemplate = () => {
           <img
           class="empty-icon"
           src="/svgs/empty-icon.svg"
-          alt="search icon"
+          alt="empty icon"
           />
           <div class="description-empty text-field">No Data</div>
         </div>
+      </div>
+
+      <div class="toggle flex-center">
+        <img
+        class="toggle-icon"
+        src="/svgs/toggle-icon.svg"
+        alt="toggle icon"
+        />
       </div>
 
       <div class="pagination">

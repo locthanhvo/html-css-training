@@ -119,7 +119,7 @@
 .btn-disable {
   filter: invert(88%) sepia(0%) saturate(285%) hue-rotate(54deg)
     brightness(136%) contrast(102%);
-  cursor: default;
+  cursor: default !important;
 }
 
 .table-empty {

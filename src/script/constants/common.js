@@ -22,3 +22,13 @@ export const HTTP_METHOD = {
   PUT: 'PUT',
   DELETE: 'DELETE',
 };
+
+export const TOGGLE_STATUS = {
+  OPEN: true,
+  CLOSE: false,
+};
+
+export const TOGGLE_STYLE = {
+  FLEX: 'flex',
+  NONE: 'none',
+};

@@ -5,8 +5,8 @@
  * @param userView
  */
 
-import { SNACKBAR_MESSAGE } from '../constants';
-import { SnackBar } from '../helpers';
+import { SNACKBAR_MESSAGE, TOGGLE_STATUS } from '../constants';
+import { SnackBar, handleToggleLoading } from '../helpers';
 import { buildQueryString } from '../utils';
 
 export class UserController {
@@ -29,16 +29,26 @@ export class UserController {
   };
 
   addUser = async (data) => {
+    handleToggleLoading(TOGGLE_STATUS.OPEN);
     try {
-      await this.userModel.addUser(data);
-      this.snackBar.handleSnackBarSuccess(SNACKBAR_MESSAGE.ADD_SUCCESS);
-      await this.showUserList(this.userView.query);
+      const queryString = buildQueryString({ email: data.email });
+      const [email] = await this.userModel.get('', queryString);
+
+      if (email) {
+        this.snackBar.handleSnackBarError(SNACKBAR_MESSAGE.EMAIL_FAILED);
+      } else {
+        await this.userModel.addUser(data);
+        this.snackBar.handleSnackBarSuccess(SNACKBAR_MESSAGE.ADD_SUCCESS);
+        await this.showUserList(this.userView.query);
+      }
     } catch (error) {
       this.snackBar.handleSnackBarError(SNACKBAR_MESSAGE.ADD_FAILED);
     }
+    handleToggleLoading(TOGGLE_STATUS.CLOSE);
   };
 
   deleteUser = async (id) => {
+    handleToggleLoading(TOGGLE_STATUS.OPEN);
     try {
       await this.userModel.deleteUser(id);
       await this.showUserList(this.userView.query);
@@ -46,6 +56,7 @@ export class UserController {
     } catch (error) {
       this.snackBar.handleSnackBarError(SNACKBAR_MESSAGE.REMOVE_FAILED);
     }
+    handleToggleLoading(TOGGLE_STATUS.CLOSE);
   };
 
   showUserList = async (query) => {
@@ -55,6 +66,7 @@ export class UserController {
 
       this.userView.renderUserList(data);
     } catch (error) {
+      console.log(error);
       this.snackBar.handleSnackBarError(SNACKBAR_MESSAGE.GET_FAILED);
     }
   };
@@ -69,6 +81,7 @@ export class UserController {
   };
 
   updateUser = async (data) => {
+    handleToggleLoading(TOGGLE_STATUS.OPEN);
     try {
       await this.userModel.updateUser(data.id, data);
       await this.showUserList(this.userView.query);
@@ -76,5 +89,6 @@ export class UserController {
     } catch (error) {
       this.snackBar.handleSnackBarError(SNACKBAR_MESSAGE.UPDATE_FAILED);
     }
+    handleToggleLoading(TOGGLE_STATUS.CLOSE);
   };
 }
