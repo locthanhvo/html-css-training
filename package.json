@@ -1,0 +1,32 @@
+{
+  "name": "typescript-training",
+  "version": "1.0.0",
+  "description": "- This document provides requirements and estimation for TypeScript practice.\r - Design: [Figma](<https://www.figma.com/file/hArsyvx1eOGsDcQyfbO1Xq/User-Management-CMS-(Community)?node-id=212%3A698&mode=dev>)\r - Plan: [Plan Practice](https://docs.google.com/document/d/125RwSFYXPu-rD-5SZ6dFYec1BFHzRe7fMlRPVa2s7T8/edit)",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "cd .. && husky install practice/.husky"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "eslint": "^8.47.0",
+    "husky": "^8.0.3",
+    "parcel": "^2.9.3",
+    "parcel-reporter-static-files-copy": "^1.5.0",
+    "path-browserify": "^1.0.1"
+  },
+  "dependencies": {
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "dotenv": "^16.3.1",
+    "events": "^3.3.0",
+    "lodash": "^4.17.21",
+    "os-browserify": "^0.3.0",
+    "process": "^0.11.10",
+    "stream-browserify": "^3.0.0"
+  }
+}
