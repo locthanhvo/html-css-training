@@ -9,7 +9,7 @@
   border-radius: var(--border-radius-xs);
   width: 100%;
   color: var(--color-gray-dark);
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-3sm);
   font-weight: var(--font-weight-semi-bold);
   line-height: var(--line-height-sm);
   background-color: var(--color-white-smoke);

@@ -1,14 +1,17 @@
 {
-  "name": "typescript-training",
+  "name": "javascript-training",
   "version": "1.0.0",
-  "description": "- This document provides requirements and estimation for TypeScript practice.\r - Design: [Figma](<https://www.figma.com/file/hArsyvx1eOGsDcQyfbO1Xq/User-Management-CMS-(Community)?node-id=212%3A698&mode=dev>)\r - Plan: [Plan Practice](https://docs.google.com/document/d/125RwSFYXPu-rD-5SZ6dFYec1BFHzRe7fMlRPVa2s7T8/edit)",
+  "description": "- This document provides requirements and estimation for JavaScript, TypeScript practice.\r - Design: [Figma](<https://www.figma.com/file/hArsyvx1eOGsDcQyfbO1Xq/User-Management-CMS-(Community)?node-id=212%3A698&mode=dev>)\r - Plan: [Plan Practice](https://docs.google.com/document/d/14kzcSwZdbs5HEXRxqZLw0jmi6H5iVzFuMuBvbPLSBCU/edit)",
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "cd .. && husky install practice/.husky"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.asoft-python.com/loc.vo/javascript-training"
+  },
+  "author": "Loc Vo",
   "license": "ISC",
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
