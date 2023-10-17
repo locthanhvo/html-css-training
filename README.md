@@ -1,28 +1,23 @@
-## Javascript training
+## Typescript training
 
 ### Overview
 
-- This document provides requirements and estimation for JavaScript, TypeScript practice.
+- This document provides requirements and estimation for TypeScript practice.
 - Design: [Figma](<https://www.figma.com/file/hArsyvx1eOGsDcQyfbO1Xq/User-Management-CMS-(Community)?node-id=212%3A698&mode=dev>)
-- Plan: [Plan Practice](https://docs.google.com/document/d/14kzcSwZdbs5HEXRxqZLw0jmi6H5iVzFuMuBvbPLSBCU/edit)
+- Plan: [Plan Practice](https://docs.google.com/document/d/125RwSFYXPu-rD-5SZ6dFYec1BFHzRe7fMlRPVa2s7T8/edit)
 
 ### Target
 
-- Understand & apply knowledge HTML/CSS/JavaScript (with ES6 syntax).
-- Understanding & apply MVC (or any MV model or module concept) (optional)
-- DOM manipulation, form validation.
-- Understand how asynchronous code works & apply in practice (API call or any place we can mock API in code).
-- Get familiar with DevTools (e.g Google Chrome DevTools) for debugging issues (breakpoint, log, etc..).
-- Deploy to the hosting (with help from supporter) (optional)
+- Get familiar and understand power of TypeScript language in specific and typed language in general
 
 ### Timeline
 
-- Estimate: 10 days (from Aug 24th, 2023 to Sep 8th, 2023).
+- Estimate: 08 days (from Oct 05th, 2023 to Oct 16th, 2023).
 
 ### Technical
 
 - HTML5/CSS3
-- JavaScript
+- Typescript
 - MockAPI v2.0.1
 - Parcel v2.9.3
 
@@ -55,9 +50,9 @@
 
 - Step 1: Clone repository.
   - SSH:
-    - `$ git clone git@gitlab.asoft-python.com:loc.vo/javascript-training.git`.
+    - `$ git clone git@gitlab.asoft-python.com:loc.vo/typescript-training.git`.
   - HTTPS:
-    - `$ git clone https://gitlab.asoft-python.com/loc.vo/javascript-training.git`.
+    - `$ git clone https://gitlab.asoft-python.com/loc.vo/typescript-training.git`.
 - Step 2:
   - Install the packages `npm i` or `pnpm install`.
 - Step 3:

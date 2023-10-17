@@ -1,6 +1,6 @@
 .text-title {
   font-weight: var(--font-weight-semi-bold);
-  font-size: var(--font-size-3sm);
+  font-size: var(--font-size-lg);
   line-height: var(--line-height-sm);
   color: var(--color-primary);
 }

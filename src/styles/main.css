@@ -1,10 +1,8 @@
 /* base */
 @import url('../styles/base/reset.css');
 @import url('../styles/base/typography.css');
-@import url('../styles/base/global.css');
-
-/* abstracts */
 @import url('../styles/abstracts/variables.css');
+@import url('../styles/base/global.css');
 
 /* components */
 @import url('../styles/component/button.css');
