@@ -1,0 +1,6 @@
+.error-message {
+  margin-top: 5px;
+  color: var(--color-red-light);
+  font-size: var(--font-size-3xs);
+  text-transform: capitalize;
+}
