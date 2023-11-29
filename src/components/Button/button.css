@@ -47,10 +47,12 @@
 
 @media (min-width: 768px) {
   .btn-primary {
+    width: 142px;
     padding: 16px 13px;
   }
 
   .btn-secondary {
+    width: 107px;
     padding: 16px 18px;
   }
 }

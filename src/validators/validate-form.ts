@@ -10,19 +10,18 @@ import {
   USERNAME_CHARACTERS_REGEX,
   VALIDATE_MESSAGE,
 } from '@constants'
-// import { showErrorMessage } from './form-error'
 import { FormValidators } from '@types'
 
 const validateFieldRequired = (field: string, value: string): string | null =>
   !value ? VALIDATE_MESSAGE.REQUIRED_ERROR.replace('{field}', field) : null
 
-const validateEmail = (field: string, value: string): string | null =>
+const validateEmail = (_field: string, value: string): string | null =>
   !value.match(EMAIL_REGEX) ? VALIDATE_MESSAGE.INVALID_EMAIL : null
 
-const validateUsername = (field: string, value: string): string | null =>
+const validateUsername = (_field: string, value: string): string | null =>
   !value.match(USERNAME_CHARACTERS_REGEX) ? VALIDATE_MESSAGE.INVALID_USERNAME : null
 
-const validatePassword = (field: string, value: string): string | null => {
+const validatePassword = (_field: string, value: string): string | null => {
   if (!value.match(PASSWORD_CHARACTERS_REGEX)) {
     return VALIDATE_MESSAGE.INVALID_PASSWORD
   }
@@ -45,11 +44,11 @@ const validatePassword = (field: string, value: string): string | null => {
   return null
 }
 
-const validatePhone = (field: string, value: string): string | null =>
+const validatePhone = (_field: string, value: string): string | null =>
   !value.match(PHONE_CHARACTERS_REGEX) ? VALIDATE_MESSAGE.INVALID_PHONE : null
 
 const validateConfirmPassword = <T>(password: keyof T) => {
-  return (field: string, value: string, form?: T) => {
+  return (_field: string, value: string, form?: T) => {
     if (value !== form?.[password]) {
       return VALIDATE_MESSAGE.INVALID_CONFIRM_PASSWORD
     }
@@ -57,7 +56,7 @@ const validateConfirmPassword = <T>(password: keyof T) => {
   }
 }
 
-const validateImageUrl = (field: string, value: string): string | null =>
+const validateImageUrl = (_field: string, value: string): string | null =>
   value !== '' && !IMAGE_URL_REGEX.test(value) ? VALIDATE_MESSAGE.INVALID_AVATAR : null
 
 export const getFormErrors = <T>(form: T, validators: FormValidators<T>): T => {
