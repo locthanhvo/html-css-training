@@ -1,0 +1,54 @@
+.filter-desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .filter-desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+
+  .option-filter {
+    width: 254px;
+    margin-top: 5px;
+    border: 1px solid var(--color-grey-light);
+    border-radius: 13px;
+    position: absolute;
+    top: 157px;
+    background-color: var(--color-white);
+  }
+
+  .option-item {
+    padding: 12px 20px;
+    color: var(--color-grey-dark);
+    border-bottom: 1px solid var(--color-grey-light);
+    cursor: pointer;
+    justify-content: space-between;
+    text-transform: capitalize;
+  }
+
+  .option-item:first-child {
+    border-top-right-radius: 13px;
+    border-top-left-radius: 13px;
+  }
+
+  .option-item:last-child {
+    border-bottom-right-radius: 13px;
+    border-bottom-left-radius: 13px;
+  }
+
+  .option-frame {
+    gap: 12px;
+  }
+
+  .selected {
+    background-color: var(--color-white-seashell);
+    color: var(--color-purple);
+  }
+
+  .icon-selected {
+    filter: brightness(0) saturate(100%) invert(27%) sepia(70%) saturate(6653%) hue-rotate(260deg)
+      brightness(87%) contrast(83%);
+  }
+}

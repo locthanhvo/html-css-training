@@ -1,0 +1,29 @@
+@media (min-width: 768px) {
+  .row-record {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 12px;
+    border-bottom: 1px solid var(--color-grey-light);
+  }
+
+  .selected-row {
+    background-color: var(--color-grey-blue);
+  }
+
+  .td-sm {
+    width: 10%;
+  }
+
+  .td-md {
+    width: 15%;
+  }
+
+  .td-xl {
+    width: 20%;
+  }
+
+  .td-lg {
+    width: 40%;
+  }
+}
