@@ -1,0 +1,11 @@
+.tag-h1 {
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-xl);
+  color: var(--color-black);
+}
+
+.tag-h2 {
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-2sm);
+  color: var(--color-black);
+}
