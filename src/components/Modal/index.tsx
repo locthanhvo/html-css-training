@@ -1,8 +1,8 @@
 import { ReactNode } from 'react'
 import './modal.css'
-import Heading from '@components/Heading'
-import Button from '@components/Button'
-import Text from '@components/Text'
+import Heading from '@components/common/Heading'
+import Button from '@components/common/Button'
+import Text from '@components/common/Text'
 import SpinnerIcon from '@components/Icons/SpinnerIcon'
 import CloseIcon from '@components/Icons/CloseIcon'
 import { Colors, FontWeight } from 'themes'
@@ -26,7 +26,6 @@ const Modal = ({
   onCloseModal,
   onSubmitModal,
 }: ModalProps) => {
-
   return (
     <div className='modal d-flex flex-center open'>
       <div className='modal-content'>
@@ -54,7 +53,7 @@ const Modal = ({
           </Button>
         </div>
       </div>
-    </div >
+    </div>
   )
 }
 

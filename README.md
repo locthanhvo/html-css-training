@@ -13,7 +13,7 @@
 
 ### Timeline
 
-- Estimate: 12 days (from Nov 8th, 2023 to Nov 23th, 2023).
+- Estimate: 12 days (from Nov 8th, 2023 to Nov 24th, 2023).
 
 ### Technical
 
@@ -22,7 +22,6 @@
 - MockAPI v2.0.1
 - Vite
 - Prettier
-- CSS module
 - React
 - Storybook
 
@@ -31,7 +30,7 @@
 - LIST USERS
   - Display list users
   - Previous/Next pagination
-  - Sort alphabetically by name, email, or date
+  - Filter by status
   - Search by name, or email
 - ADD/EDIT USERS
   - User form validations:

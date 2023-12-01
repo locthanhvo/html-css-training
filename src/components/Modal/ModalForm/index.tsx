@@ -4,7 +4,7 @@ import { ChangeEvent } from 'react'
 import { User, UserField } from '@types'
 import { STATUS_OPTIONS } from '@constants'
 import SelectBox from '@components/SelectBox'
-import InputGroup from '@components/InputGroup'
+import InputGroup from '@components/common/InputGroup'
 
 interface FormProps {
   onCloseForm: (e: React.FormEvent) => void

@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { COLUMNS } from '@constants'
-import Text from '@components/Text'
+import Text from '@components/common/Text'
 import SortIcon from '@components/Icons/SortIcon'
 import { Colors, FontWeight } from '@themes'
 import './tableHeader.css'

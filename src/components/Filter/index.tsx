@@ -1,5 +1,5 @@
 import { ChangeEvent, useState } from 'react'
-import Button from '@components/Button'
+import Button from '@components/common/Button'
 import FilterIcon from '@components/Icons/FilterIcon'
 import FilterMobile from '@components/Filter/FilterMobile'
 import { COLOR_ICON } from '@constants'

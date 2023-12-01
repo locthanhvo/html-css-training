@@ -134,10 +134,6 @@ input {
   outline: none;
 }
 
-button:disabled {
-  pointer-events: none;
-}
-
 a {
   text-decoration: none;
 }

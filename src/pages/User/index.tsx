@@ -1,18 +1,18 @@
 import Form from '@components/Modal/ModalForm'
 import useSnackBar from '@hooks/SnackBar'
-import SnackBar from '@components/SnackBar'
-import { ChangeEvent, useRef, useState } from 'react'
+import SnackBar from '@components/common/SnackBar'
+import { ChangeEvent, useEffect, useRef, useState } from 'react'
 import { CONFIRM_MESSAGE, DEBOUNCE_DURATION, SNACKBAR_MESSAGE, SNACKBAR_STATUS } from '@constants'
-import { validateForm, validateUserForm } from '@validators'
+import { validateForm, validateUserForm } from '@helpers'
 import { CheckBox, CustomError, UserField } from '@types'
 import { useUser } from '@contexts'
 import './userPage.css'
 import { debounce } from '@helpers'
 import Header from './Header'
-import LoadingIndicator from '@components/LoadingIndicator'
+import LoadingIndicator from '@components/common/LoadingIndicator'
 import Confirm from '@components/Modal/ModalConfirm'
 import usePagination from '@hooks/Pagination'
-import Pagination from '@components/Pagination'
+import Pagination from '@components/common/Pagination'
 import Table from '@components/Table'
 import UserCard from '@components/UserCard'
 
@@ -30,9 +30,11 @@ const UserPage = () => {
     handleEditUser,
     handleDeleteMultipleUser,
     setUserData,
+    getData,
     initialState,
     userData,
     users,
+    query,
   } = useUser()
   const { SnackBar: snackBarState, showSnackBar, clearSnackBar } = useSnackBar()
   const {
@@ -48,11 +50,16 @@ const UserPage = () => {
   const [errorMessage, setErrorMessage] = useState<UserField>(initialState)
   const [isOpenForm, setIsOpenForm] = useState(false)
   const [isOpenConfirmDelete, setIsOpenConfirmDelete] = useState(false)
+  const [isOpenConfirmMultipleDelete, setIsOpenConfirmMultipleDelete] = useState(false)
   const [isLoadingForm, setIsLoadingForm] = useState(false)
   const [selectedFilterOption, setSelectedFilterOption] = useState('')
   const [checked, setChecked] = useState<string[]>([])
   const [userId, setUserId] = useState('')
   const filterOptionRef = useRef('')
+
+  useEffect(() => {
+    getData(query)
+  }, [])
 
   const handleCloseForm = () => {
     setIsOpenForm((prevState) => !prevState)
@@ -63,6 +70,10 @@ const UserPage = () => {
 
   const toggleConfirmDelete = () => {
     setIsOpenConfirmDelete((prevState) => !prevState)
+  }
+
+  const toggleConfirmMultipleDelete = () => {
+    setIsOpenConfirmMultipleDelete((prevState) => !prevState)
   }
 
   const handleFieldChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -104,9 +115,12 @@ const UserPage = () => {
     if (selectedValue === filterOptionRef.current) {
       setSelectedFilterOption('')
       handleFilterStatus('')
+
+      filterOptionRef.current = ''
     } else {
       setSelectedFilterOption(selectedValue)
       handleFilterStatus(selectedValue)
+
       filterOptionRef.current = selectedValue
     }
   }
@@ -149,8 +163,6 @@ const UserPage = () => {
   }
 
   const handleCheckboxChange = ({ isChecked, checkboxId }: CheckBox) => {
-    // const { id, checked } = e.target
-
     setChecked((prevState) => {
       return isChecked
         ? Array.from(new Set([...prevState, checkboxId]))
@@ -162,12 +174,15 @@ const UserPage = () => {
     setIsLoadingIndicator((prev) => !prev)
     try {
       await handleDeleteMultipleUser(checked)
+
       showSnackBar(SNACKBAR_MESSAGE.REMOVE_SUCCESS, SNACKBAR_STATUS.SUCCESS)
     } catch (error) {
       showSnackBar(SNACKBAR_MESSAGE.REMOVE_FAILED, SNACKBAR_STATUS.ERROR)
     }
+
     setIsLoadingIndicator((prev) => !prev)
     setChecked([])
+    toggleConfirmMultipleDelete()
   }
 
   const handleConfirmDelete = async () => {
@@ -182,6 +197,10 @@ const UserPage = () => {
     toggleConfirmDelete()
   }
 
+  const handleOpenConfirmDeleteMutiple = () => {
+    toggleConfirmMultipleDelete()
+  }
+
   return (
     <main className='main-container'>
       <Header
@@ -190,7 +209,7 @@ const UserPage = () => {
         onChangeSearch={handleSearchList}
         onClickSelectOption={handleFilterList}
         onOpenForm={handleCloseForm}
-        onDeleteMutiple={handleDeleteMultiple}
+        onDeleteMutiple={handleOpenConfirmDeleteMutiple}
       />
 
       <div className='main-content'>
@@ -242,6 +261,16 @@ const UserPage = () => {
           onConfirm={handleConfirmDelete}
           onCloseConfirm={toggleConfirmDelete}
           title='Confirm Delete'
+          message={CONFIRM_MESSAGE.CONFIRM_REMOVE}
+        />
+      )}
+
+      {isOpenConfirmMultipleDelete && (
+        <Confirm
+          isLoading={isLoadingForm}
+          onConfirm={handleDeleteMultiple}
+          onCloseConfirm={toggleConfirmMultipleDelete}
+          title='Confirm Multiple Delete User'
           message={CONFIRM_MESSAGE.CONFIRM_REMOVE}
         />
       )}

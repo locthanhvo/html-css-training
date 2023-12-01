@@ -1,8 +1,8 @@
 import SelectBox from '@components/SelectBox'
 import './filterMobile.css'
 import { FILTER_MOBILE } from '@constants'
-import Button from '@components/Button'
-import Text from '@components/Text'
+import Button from '@components/common/Button'
+import Text from '@components/common/Text'
 import { Colors, FontSize, FontWeight } from '@themes'
 
 interface FilterMobileProps {

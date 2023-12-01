@@ -1,9 +1,9 @@
-import Button from '@components/Button'
+import Button from '@components/common/Button'
 import Filter from '@components/Filter'
-import Heading from '@components/Heading'
+import Heading from '@components/common/Heading'
 import AddIcon from '@components/Icons/AddIcon'
 import SearchInput from '@components/SearchInput'
-import Text from '@components/Text'
+import Text from '@components/common/Text'
 import { Colors, FontSize, FontWeight } from '@themes'
 
 interface HeaderProps {

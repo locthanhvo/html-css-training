@@ -1,0 +1,75 @@
+.font-size-sm {
+  font-size: var(--font-size-sm);
+}
+
+.font-size-2sm {
+  font-size: var(--font-size-2sm);
+}
+
+.font-size-md {
+  font-size: var(--font-size-md);
+}
+
+.font-size-xl {
+  font-size: var(--font-size-xl);
+}
+
+.font-weight-regular {
+  font-family: var(--font-family-primary);
+}
+
+.font-weight-bold {
+  font-family: var(--font-family-secondary);
+}
+
+.color-black {
+  color: var(--color-black);
+}
+
+.color-white {
+  color: var(--color-white);
+}
+
+.color-grey-liver {
+  color: var(--color-grey-liver);
+}
+
+.color-grey-dark {
+  color: var(--color-grey-dark);
+}
+
+.color-purple {
+  color: var(--color-purple);
+}
+
+.color-green {
+  color: var(--color-green);
+}
+
+.color-green-light {
+  color: var(--color-green-light);
+}
+
+.color-orange {
+  color: var(--color-orange);
+}
+
+.color-orange-light {
+  color: var(--color-orange-light);
+}
+
+.color-grey {
+  color: var(--color-grey);
+}
+
+.color-grey-light {
+  color: var(--color-grey-light);
+}
+
+.color-grey-blue {
+  color: var(--color-grey-blue);
+}
+
+.color-grey-dim {
+  color: var(--color-grey-dim);
+}

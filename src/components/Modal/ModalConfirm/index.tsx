@@ -1,6 +1,6 @@
 import Modal from '@components/Modal'
 import './modalConfirm.css'
-import Text from '@components/Text'
+import Text from '@components/common/Text'
 import { Colors, FontSize, FontWeight } from 'themes'
 
 interface ConfirmProps {
@@ -12,7 +12,6 @@ interface ConfirmProps {
 }
 
 const Confirm = ({ title, message, isLoading, onConfirm, onCloseConfirm }: ConfirmProps) => {
-
   return (
     <Modal
       title={title}

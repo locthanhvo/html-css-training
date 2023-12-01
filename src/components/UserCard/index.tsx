@@ -1,8 +1,8 @@
-import Avatar from '@components/Avatar'
-import Checkbox from '@components/Chechkbox'
-import Heading from '@components/Heading'
+import Avatar from '@components/common/Avatar'
+import Checkbox from '@components/common/Checkbox'
+import Heading from '@components/common/Heading'
 import StatusUser from '@components/Status'
-import Text from '@components/Text'
+import Text from '@components/common/Text'
 import { formatDate } from '@helpers'
 import { CheckBox, User } from '@types'
 import './userCard.css'
@@ -11,7 +11,7 @@ import { Colors, FontSize } from '@themes'
 import EditIcon from '@components/Icons/EditIcon'
 import DeleteIcon from '@components/Icons/DeleteIcon'
 import EmptyIcon from '@components/Icons/EmptyIcon'
-import Button from '@components/Button'
+import Button from '@components/common/Button'
 
 interface UserCardProps {
   data: User[]

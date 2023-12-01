@@ -1,16 +1,16 @@
-import Checkbox from '@components/Chechkbox'
+import Checkbox from '@components/common/Checkbox'
 import StatusUser from '@components/Status'
 import { CheckBox, User } from '@types'
-import Heading from '@components/Heading'
-import Text from '@components/Text'
-import Avatar from '@components/Avatar'
+import Heading from '@components/common/Heading'
+import Text from '@components/common/Text'
+import Avatar from '@components/common/Avatar'
 import './tableRow.css'
 import { formatDate } from '@helpers'
 import { memo, useState } from 'react'
 import { Colors } from '@themes'
 import EditIcon from '@components/Icons/EditIcon'
 import DeleteIcon from '@components/Icons/DeleteIcon'
-import Button from '@components/Button'
+import Button from '@components/common/Button'
 
 interface Props {
   data: User

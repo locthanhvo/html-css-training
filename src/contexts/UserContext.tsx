@@ -16,7 +16,6 @@ import {
   createContext,
   useCallback,
   useContext,
-  useEffect,
   useMemo,
   useState,
 } from 'react'
@@ -36,11 +35,13 @@ interface UsersContextData {
   handleDetailUser: (id: string) => Promise<User>
   handleEditUser: (id: string, data: UserRequest) => Promise<void>
   handleDeleteMultipleUser: (ids: string[]) => Promise<void>
+  getData: (queryParams: UserQueryParamsType) => Promise<void>
+  setUserData: Dispatch<SetStateAction<User>>
+  setUsers: Dispatch<SetStateAction<User[]>>
+  users: User[]
   initialState: User
   userData: User
-  setUserData: Dispatch<SetStateAction<User>>
-  users: User[]
-  setUsers: Dispatch<SetStateAction<User[]>>
+  query: UserQueryParamsType
 }
 
 let query = {
@@ -87,10 +88,6 @@ export const UserProvider = ({ children }: ProviderProps) => {
     }
   }, [])
 
-  useEffect(() => {
-    getData(query)
-  }, [])
-
   const getUsersByEmail = async (query: UserQueryParamsType): Promise<User[]> => {
     return (await getUser('', query)) as User[]
   }
@@ -122,15 +119,17 @@ export const UserProvider = ({ children }: ProviderProps) => {
 
   const handleSearchUser = useCallback(
     (keyword: string): void => {
-      if (keyword.trim() === '') {
-        return setUsers(initUserList)
-      }
+      const lowerCaseKeyword = keyword.trim().toLowerCase()
 
-      const searchUser = initUserList.filter((data) => {
-        return data.firstName.includes(keyword)
-      })
-
-      setUsers(searchUser)
+      setUsers(
+        lowerCaseKeyword === ''
+          ? initUserList
+          : initUserList.filter(
+              (data) =>
+                data.firstName.toLowerCase().includes(lowerCaseKeyword) ||
+                data.email.toLowerCase().includes(lowerCaseKeyword),
+            ),
+      )
     },
     [initUserList, setUsers],
   )
@@ -275,10 +274,12 @@ export const UserProvider = ({ children }: ProviderProps) => {
       handleEditUser,
       handleDeleteMultipleUser,
       setUsers,
+      getData,
       setUserData,
       initialState: initUserState,
       userData,
       users,
+      query,
     }),
     [
       handleAddUser,
@@ -293,8 +294,10 @@ export const UserProvider = ({ children }: ProviderProps) => {
       handleEditUser,
       handleDeleteMultipleUser,
       setUserData,
+      getData,
       userData,
       users,
+      query,
     ],
   )
 
