@@ -45,6 +45,7 @@
   .main-tools {
     flex-direction: row;
     align-items: end;
+    gap: 0px;
   }
 
   .main-tool-group {

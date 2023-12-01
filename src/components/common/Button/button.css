@@ -29,6 +29,7 @@
 .btn-danger {
   background-color: var(--color-red);
   padding: 16px 18px;
+  width: 102px;
 }
 
 .btn-danger.btn-delete-desktop {
@@ -53,7 +54,7 @@
   }
 
   .btn-secondary {
-    width: 107px;
+    width: 127px;
     padding: 16px 18px;
   }
 }

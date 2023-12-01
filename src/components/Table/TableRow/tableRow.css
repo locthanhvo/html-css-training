@@ -5,6 +5,9 @@
     padding: 15px;
     gap: 12px;
     border-bottom: 1px solid var(--color-grey-light);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .row-record:last-child {
