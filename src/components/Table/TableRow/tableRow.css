@@ -7,6 +7,14 @@
     border-bottom: 1px solid var(--color-grey-light);
   }
 
+  .row-record:last-child {
+    border-bottom-right-radius: 10px;
+  }
+
+  .row-record:first-child {
+    border-bottom-left-radius: 10px;
+  }
+
   .selected-row {
     background-color: var(--color-grey-blue);
   }
