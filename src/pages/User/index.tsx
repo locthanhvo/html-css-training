@@ -44,7 +44,6 @@ const UserPage = () => {
     handleLimitList,
     handleNextPageList,
     handlePreviousPageList,
-    setIsLoadingIndicator,
     hasPagination,
   } = usePagination(handlePaginationPage, handleLimitUser, showSnackBar, users)
   const [errorMessage, setErrorMessage] = useState<UserField>(initialState)
@@ -171,7 +170,7 @@ const UserPage = () => {
   }
 
   const handleDeleteMultiple = async () => {
-    setIsLoadingIndicator((prev) => !prev)
+    setIsLoadingForm((prevState) => !prevState)
     try {
       await handleDeleteMultipleUser(checked)
 
@@ -180,12 +179,13 @@ const UserPage = () => {
       showSnackBar(SNACKBAR_MESSAGE.REMOVE_FAILED, SNACKBAR_STATUS.ERROR)
     }
 
-    setIsLoadingIndicator((prev) => !prev)
+    setIsLoadingForm((prevState) => !prevState)
     setChecked([])
     toggleConfirmMultipleDelete()
   }
 
   const handleConfirmDelete = async () => {
+    setIsLoadingForm((prevState) => !prevState)
     try {
       await handleDeleteUser(userId)
 
@@ -193,11 +193,11 @@ const UserPage = () => {
     } catch (error) {
       showSnackBar(SNACKBAR_MESSAGE.REMOVE_FAILED, SNACKBAR_STATUS.ERROR)
     }
-
+    setIsLoadingForm((prevState) => !prevState)
     toggleConfirmDelete()
   }
 
-  const handleOpenConfirmDeleteMutiple = () => {
+  const handleOpenConfirmDeleteMultiple = () => {
     toggleConfirmMultipleDelete()
   }
 
@@ -209,7 +209,7 @@ const UserPage = () => {
         onChangeSearch={handleSearchList}
         onClickSelectOption={handleFilterList}
         onOpenForm={handleCloseForm}
-        onDeleteMutiple={handleOpenConfirmDeleteMutiple}
+        onDeleteMultiple={handleOpenConfirmDeleteMultiple}
       />
 
       <div className='main-content'>

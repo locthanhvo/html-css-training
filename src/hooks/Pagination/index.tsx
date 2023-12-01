@@ -10,7 +10,6 @@ interface PaginationProps {
   handleLimitList: (e: ChangeEvent<HTMLSelectElement>) => Promise<void>
   handleNextPageList: (e: React.MouseEvent<SVGSVGElement>) => Promise<void>
   handlePreviousPageList: (e: React.MouseEvent<SVGSVGElement>) => Promise<void>
-  setIsLoadingIndicator: React.Dispatch<React.SetStateAction<boolean>>
   hasPagination: boolean
 }
 
@@ -105,7 +104,6 @@ const usePagination = (
     handleLimitList,
     handleNextPageList,
     handlePreviousPageList,
-    setIsLoadingIndicator,
     hasPagination:
       pageRef.current !== PAGE_DEFAULT || (pageRef.current === PAGE_DEFAULT && users.length > 0),
   }

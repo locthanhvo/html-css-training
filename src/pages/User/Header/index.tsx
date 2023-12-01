@@ -11,7 +11,7 @@ interface HeaderProps {
   onClickSelectOption: (option: string | React.ChangeEvent<HTMLSelectElement>) => void
   selected: string
   onOpenForm: (e: React.FormEvent<Element>) => void
-  onDeleteMutiple: () => void
+  onDeleteMultiple: () => void
   checked: number
 }
 
@@ -19,7 +19,7 @@ const Header = ({
   onChangeSearch,
   onClickSelectOption,
   onOpenForm,
-  onDeleteMutiple,
+  onDeleteMultiple: onDeleteMultiple,
   selected,
   checked,
 }: HeaderProps) => {
@@ -29,7 +29,7 @@ const Header = ({
       <div className='d-flex main-tools'>
         <div className='d-flex  main-tool-group'>
           <div className='display-button'>
-            <Button variants='danger' onClick={onDeleteMutiple} isDisabled={checked === 0}>
+            <Button variants='danger' onClick={onDeleteMultiple} isDisabled={checked === 0}>
               <Text
                 content='Delete All'
                 color={Colors.White}
@@ -45,7 +45,7 @@ const Header = ({
             onClickSelectOption={onClickSelectOption}
             selectedOption={selected}
             checked={checked}
-            onDeleteMutiple={onDeleteMutiple}
+            onDeleteMutiple={onDeleteMultiple}
           />
           <Button variants='primary' onClick={onOpenForm}>
             <Text
