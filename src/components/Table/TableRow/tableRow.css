@@ -8,14 +8,11 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    line-height: 2.5;
   }
 
-  .row-record:last-child {
-    border-bottom-right-radius: 10px;
-  }
-
-  .row-record:first-child {
-    border-bottom-left-radius: 10px;
+  .row-email {
+    display: inline-block;
   }
 
   .selected-row {
@@ -36,5 +33,13 @@
 
   .td-lg {
     width: 40%;
+  }
+
+  .table-row:last-of-type .td-sm {
+    border-bottom-left-radius: 10px;
+  }
+
+  .table-row:last-of-type .td-xl {
+    border-bottom-right-radius: 10px;
   }
 }

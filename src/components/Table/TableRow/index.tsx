@@ -50,7 +50,7 @@ const TableRow = ({ data, onClickDelete, onClickEdit, onChangeCheckbox }: Props)
       <td className='row-record td-md'>
         <StatusUser status={status} />
       </td>
-      <td className='row-record td-lg'>{email}</td>
+      <td className='row-record row-email td-lg'>{email}</td>
       <td className='row-record td-xl'>{formatDate(createdAt)}</td>
       <td className='row-record td-xl'>
         <Button variants='default' onClick={() => onClickEdit(id)}>
