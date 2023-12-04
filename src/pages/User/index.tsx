@@ -60,10 +60,16 @@ const UserPage = () => {
     getData(query)
   }, [])
 
-  const handleCloseForm = () => {
+  const toggleAddUserForm = () => {
     setIsOpenForm((prevState) => !prevState)
 
-    userData.id && resetUserData()
+    resetUserData()
+    setErrorMessage(initialState)
+  }
+
+  const toggleUpdateUserForm = () => {
+    setIsOpenForm((prevState) => !prevState)
+
     setErrorMessage(initialState)
   }
 
@@ -94,7 +100,7 @@ const UserPage = () => {
       resetUserData()
       showSnackBar(SNACKBAR_MESSAGE.ADD_SUCCESS, SNACKBAR_STATUS.SUCCESS)
 
-      handleCloseForm()
+      toggleAddUserForm()
     } catch (error) {
       const customError = error as CustomError
 
@@ -139,7 +145,7 @@ const UserPage = () => {
       resetUserData()
       showSnackBar(SNACKBAR_MESSAGE.UPDATE_SUCCESS, SNACKBAR_STATUS.SUCCESS)
 
-      handleCloseForm()
+      toggleUpdateUserForm()
     } catch (error) {
       const customError = error as CustomError
 
@@ -158,7 +164,7 @@ const UserPage = () => {
     const userDetail = await handleDetailUser(id)
 
     setUserData(userDetail)
-    handleCloseForm()
+    toggleUpdateUserForm()
   }
 
   const handleCheckboxChange = ({ isChecked, checkboxId }: CheckBox) => {
@@ -208,7 +214,7 @@ const UserPage = () => {
         selected={selectedFilterOption}
         onChangeSearch={handleSearchList}
         onClickSelectOption={handleFilterList}
-        onOpenForm={handleCloseForm}
+        onOpenForm={toggleAddUserForm}
         onDeleteMultiple={handleOpenConfirmDeleteMultiple}
       />
 
@@ -248,7 +254,7 @@ const UserPage = () => {
           primaryTitle={userData.id ? 'Update User' : 'Add User'}
           data={userData}
           isLoading={isLoadingForm}
-          onCloseForm={handleCloseForm}
+          onCloseForm={userData.id ? toggleUpdateUserForm : toggleAddUserForm}
           onSubmitForm={userData.id ? handleUpdateUser : handleCreateUser}
           onChangeField={handleFieldChange}
           errorMessage={errorMessage}

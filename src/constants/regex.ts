@@ -23,4 +23,4 @@ export const NUMBER_CHARACTERS_REGEX = /^(?=.*\d).*$/
 export const SPECIAL_CHARACTERS_REGEX = /^(?=.*[#$@!%&*?])/
 
 // check characters image url
-export const IMAGE_URL_REGEX = /^(?=.*[#@$!%&*?])(https?:\/\/.+?\.(png|jpe?g|gif|bmp|svg|jpg))/i
+export const IMAGE_URL_REGEX = /^(https?:\/\/.*?\.(png|jpe?g|gif|bmp|svg|jpg))/i

@@ -56,8 +56,11 @@ const validateConfirmPassword = <T>(password: keyof T) => {
   }
 }
 
-const validateImageUrl = (_field: string, value: string): string | null =>
-  value !== '' && !IMAGE_URL_REGEX.test(value) ? VALIDATE_MESSAGE.INVALID_AVATAR : null
+const validateImageUrl = (_field: string, value: string): string | null => {
+  console.log(IMAGE_URL_REGEX.test(value))
+
+  return value !== '' && !IMAGE_URL_REGEX.test(value) ? VALIDATE_MESSAGE.INVALID_AVATAR : null
+}
 
 export const getFormErrors = <T>(form: T, validators: FormValidators<T>): T => {
   const formErrors = {} as T

@@ -10,7 +10,7 @@ interface Props {
 
 const Avatar = ({ url, name, lastName, firstName }: Props) => {
   return (
-    <div className='avatar'>
+    <div className='avatar d-flex flex-center'>
       {url && IMAGE_URL_REGEX.test(url) ? (
         <img className='avatar-item' src={url} alt={name} />
       ) : (
