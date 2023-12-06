@@ -9,87 +9,91 @@ import {
   UPPERCASE_CHARACTERS_REGEX,
   USERNAME_CHARACTERS_REGEX,
   VALIDATE_MESSAGE,
-} from '@constants'
-import { FormValidators } from '@types'
+} from "@constants";
+import { FormValidators } from "@types";
 
 const validateFieldRequired = (field: string, value: string): string | null =>
-  !value ? VALIDATE_MESSAGE.REQUIRED_ERROR.replace('{field}', field) : null
+  !value ? VALIDATE_MESSAGE.REQUIRED_ERROR.replace("{field}", field) : null;
 
 const validateEmail = (_field: string, value: string): string | null =>
-  !value.match(EMAIL_REGEX) ? VALIDATE_MESSAGE.INVALID_EMAIL : null
+  !value.match(EMAIL_REGEX) ? VALIDATE_MESSAGE.INVALID_EMAIL : null;
 
 const validateUsername = (_field: string, value: string): string | null =>
-  !value.match(USERNAME_CHARACTERS_REGEX) ? VALIDATE_MESSAGE.INVALID_USERNAME : null
+  !value.match(USERNAME_CHARACTERS_REGEX)
+    ? VALIDATE_MESSAGE.INVALID_USERNAME
+    : null;
 
 const validatePassword = (_field: string, value: string): string | null => {
   if (!value.match(PASSWORD_CHARACTERS_REGEX)) {
-    return VALIDATE_MESSAGE.INVALID_PASSWORD
+    return VALIDATE_MESSAGE.INVALID_PASSWORD;
   }
 
   if (!value.match(UPPERCASE_CHARACTERS_REGEX)) {
-    return VALIDATE_MESSAGE.REQUIRE_UPPER_CASE
+    return VALIDATE_MESSAGE.REQUIRE_UPPER_CASE;
   }
 
   if (!value.match(LOWERCASE_CHARACTERS_REGEX)) {
-    return VALIDATE_MESSAGE.REQUIRE_LOWER_CASE
+    return VALIDATE_MESSAGE.REQUIRE_LOWER_CASE;
   }
 
   if (!value.match(NUMBER_CHARACTERS_REGEX)) {
-    return VALIDATE_MESSAGE.REQUIRE_NUMBER
+    return VALIDATE_MESSAGE.REQUIRE_NUMBER;
   }
 
   if (!value.match(SPECIAL_CHARACTERS_REGEX)) {
-    return VALIDATE_MESSAGE.REQUIRE_SPECIAL_CHARACTER
+    return VALIDATE_MESSAGE.REQUIRE_SPECIAL_CHARACTER;
   }
-  return null
-}
+  return null;
+};
 
 const validatePhone = (_field: string, value: string): string | null =>
-  !value.match(PHONE_CHARACTERS_REGEX) ? VALIDATE_MESSAGE.INVALID_PHONE : null
+  !value.match(PHONE_CHARACTERS_REGEX) ? VALIDATE_MESSAGE.INVALID_PHONE : null;
 
 const validateConfirmPassword = <T>(password: keyof T) => {
   return (_field: string, value: string, form?: T) => {
     if (value !== form?.[password]) {
-      return VALIDATE_MESSAGE.INVALID_CONFIRM_PASSWORD
+      return VALIDATE_MESSAGE.INVALID_CONFIRM_PASSWORD;
     }
-    return ''
-  }
-}
+    return "";
+  };
+};
 
 const validateImageUrl = (_field: string, value: string): string | null => {
-  console.log(IMAGE_URL_REGEX.test(value))
+  console.log(IMAGE_URL_REGEX.test(value));
 
-  return value !== '' && !IMAGE_URL_REGEX.test(value) ? VALIDATE_MESSAGE.INVALID_AVATAR : null
-}
+  return value !== "" && !IMAGE_URL_REGEX.test(value)
+    ? VALIDATE_MESSAGE.INVALID_AVATAR
+    : null;
+};
 
 export const getFormErrors = <T>(form: T, validators: FormValidators<T>): T => {
-  const formErrors = {} as T
+  const formErrors = {} as T;
 
   for (const field in validators) {
-    const fieldValidators = validators[field]
+    const fieldValidators = validators[field];
 
     for (const validator of fieldValidators) {
-      const error = validator(field, form[field as keyof T] as string, form)
+      const error = validator(field, form[field as keyof T] as string, form);
 
       if (error) {
-        ;(formErrors[field as keyof T] as string) = error
-        break
+        (formErrors[field as keyof T] as string) = error;
+        break;
       }
     }
   }
 
-  return formErrors
-}
+  return formErrors;
+};
 
 export const validateForm = <T>(
   form: T,
   validators: FormValidators<T>,
 ): Record<keyof T, string> | null => {
-  const formErrors = getFormErrors(form, validators) as Record<keyof T, string>
-  const invalidForm = Object.keys(formErrors).length
+  const formErrors = getFormErrors(form, validators) as Record<keyof T, string>;
+  const invalidForm = Object.keys(formErrors).length;
 
-  return invalidForm ? formErrors : null
-}
+  return invalidForm ? formErrors : null;
+};
 
 export const validateUserForm = {
   username: [validateFieldRequired, validateUsername],
@@ -99,5 +103,5 @@ export const validateUserForm = {
   phone: [validateFieldRequired, validatePhone],
   avatar: [validateImageUrl],
   password: [validateFieldRequired, validatePassword],
-  confirmPassword: [validateFieldRequired, validateConfirmPassword('password')],
-}
+  confirmPassword: [validateFieldRequired, validateConfirmPassword("password")],
+};

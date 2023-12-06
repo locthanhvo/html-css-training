@@ -1,19 +1,19 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { ReactComponent as AddIcon } from '@assets/icons/add-icon.svg'
-import Button from '.'
-import '../../index.css'
+import type { Meta, StoryObj } from "@storybook/react";
+import { ReactComponent as AddIcon } from "@assets/icons/add-icon.svg";
+import Button from ".";
+import "../../../index.css";
 
 const meta = {
-  title: 'Components/Button',
+  title: "Components/Button",
   component: Button,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
-  tags: ['autodocs'],
-} satisfies Meta<typeof Button>
+  tags: ["autodocs"],
+} satisfies Meta<typeof Button>;
 
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 export const ButtonPrimary: Story = {
   args: {
@@ -23,12 +23,12 @@ export const ButtonPrimary: Story = {
         <AddIcon />
       </>
     ),
-    variants: 'primary',
+    variants: "primary",
     onClick() {
-      console.log('Button Add User')
+      console.log("Button Add User");
     },
   },
-}
+};
 
 export const ButtonSecondary: Story = {
   args: {
@@ -38,9 +38,9 @@ export const ButtonSecondary: Story = {
         <h2>Edit User</h2>
       </>
     ),
-    variants: 'secondary',
+    variants: "secondary",
     onClick() {
-      console.log('Button Add User')
+      console.log("Button Add User");
     },
   },
-}
+};

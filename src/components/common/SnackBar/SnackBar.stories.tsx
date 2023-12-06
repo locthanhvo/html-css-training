@@ -1,29 +1,29 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import SnackBar from '.'
-import '../../index.css'
+import type { Meta, StoryObj } from "@storybook/react";
+import SnackBar from ".";
+import "../../../index.css";
 
 const meta = {
-  title: 'Components/SnackBar',
+  title: "Components/SnackBar",
   component: SnackBar,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
-  tags: ['autodocs'],
-} satisfies Meta<typeof SnackBar>
+  tags: ["autodocs"],
+} satisfies Meta<typeof SnackBar>;
 
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 export const SnackBarSuccess: Story = {
   args: {
-    status: 'success',
-    message: 'Add User Successfully !!!',
+    status: "success",
+    message: "Add User Successfully !!!",
   },
-}
+};
 
 export const SnackBarError: Story = {
   args: {
-    status: 'error',
-    message: 'Add User Failed !!!',
+    status: "error",
+    message: "Add User Failed !!!",
   },
-}
+};

@@ -7,12 +7,12 @@ import { Colors, FontSize, FontWeight } from '@themes'
 
 interface FilterMobileProps {
   onChangeSelect: (option: string | React.ChangeEvent<HTMLSelectElement>) => void
-  onDeleteMutiple: () => void
+  onDeleteMultiple: () => void
   value: string
   checked: number
 }
 
-const FilterMobile = ({ onChangeSelect, onDeleteMutiple, value, checked }: FilterMobileProps) => {
+const FilterMobile = ({ onChangeSelect, onDeleteMultiple, value, checked }: FilterMobileProps) => {
   return (
     <div className='filter-mobile'>
       <SelectBox
@@ -21,7 +21,7 @@ const FilterMobile = ({ onChangeSelect, onDeleteMutiple, value, checked }: Filte
         onChange={onChangeSelect}
         value={value}
       />
-      <Button variants='danger' onClick={onDeleteMutiple} isDisabled={checked === 0}>
+      <Button variants='danger' onClick={onDeleteMultiple} isDisabled={checked === 0}>
         <Text
           content='Delete All'
           color={Colors.White}

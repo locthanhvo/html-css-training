@@ -5,13 +5,13 @@
  */
 
 export const formatDate = (inputDate: string): string => {
-  const dateObject = new Date(inputDate)
+  const dateObject = new Date(inputDate);
 
-  const day = dateObject.getUTCDate()
-  const month = dateObject.getUTCMonth() + 1
-  const year = dateObject.getUTCFullYear()
+  const day = dateObject.getUTCDate();
+  const month = dateObject.getUTCMonth() + 1;
+  const year = dateObject.getUTCFullYear();
 
-  const formattedDate = `${day}/${month}/${year.toString().slice(-2)}`
+  const formattedDate = `${day}/${month}/${year.toString().slice(-2)}`;
 
-  return formattedDate
-}
+  return formattedDate;
+};

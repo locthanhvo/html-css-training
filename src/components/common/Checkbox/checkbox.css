@@ -25,7 +25,7 @@
 }
 
 .checkbox-item:checked::after {
-  content: '\2714';
+  content: "\2714";
   position: absolute;
   bottom: 0;
   right: 14%;

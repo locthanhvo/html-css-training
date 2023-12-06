@@ -1,11 +1,11 @@
-import { Colors, FontSize, FontWeight } from 'themes'
-import './text.css'
+import { Colors, FontSize, FontWeight } from "themes";
+import "./text.css";
 
 interface Props {
-  content: string
-  fontSize?: FontSize
-  fontWeight?: FontWeight
-  color?: Colors
+  content: string;
+  fontSize?: FontSize;
+  fontWeight?: FontWeight;
+  color?: Colors;
 }
 
 const Text = ({
@@ -15,8 +15,12 @@ const Text = ({
   color = Colors.Black,
 }: Props) => {
   return (
-    <p className={`font-size-${fontSize} font-weight-${fontWeight} color-${color}`}>{content}</p>
-  )
-}
+    <p
+      className={`font-size-${fontSize} font-weight-${fontWeight} color-${color}`}
+    >
+      {content}
+    </p>
+  );
+};
 
-export default Text
+export default Text;

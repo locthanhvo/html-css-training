@@ -1,5 +1,5 @@
-import { RequestOptions, httpsMethod } from '@types'
-import { HTTP_METHOD } from '@constants'
+import { RequestOptions, httpsMethod } from "@types";
+import { HTTP_METHOD } from "@constants";
 
 /**
  * @function commonHttpRequest
@@ -16,16 +16,16 @@ export const commonHttpRequest = async <T, U>(
 ): Promise<U> => {
   const requestOptions: RequestOptions = {
     method: method,
-  }
+  };
 
   if ((method === HTTP_METHOD.POST || method === HTTP_METHOD.PUT) && data) {
     requestOptions.headers = {
-      'Content-Type': 'application/json',
-    }
-    requestOptions.body = JSON.stringify(data)
+      "Content-Type": "application/json",
+    };
+    requestOptions.body = JSON.stringify(data);
   }
 
-  const response = await fetch(path, requestOptions)
+  const response = await fetch(path, requestOptions);
 
-  return (await response.json()) as U
-}
+  return (await response.json()) as U;
+};

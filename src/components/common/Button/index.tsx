@@ -1,18 +1,25 @@
-import { ReactNode } from 'react'
-import './button.css'
+import { ReactNode } from "react";
+import "./button.css";
 
 interface Props {
-  type?: 'button' | 'submit'
-  children: ReactNode
-  variants: 'primary' | 'secondary' | 'default' | 'danger'
-  onClick: (e: React.FormEvent) => void
-  isActive?: boolean
-  isDisabled?: boolean
+  type?: "button" | "submit";
+  children: ReactNode;
+  variants: "primary" | "secondary" | "default" | "danger";
+  onClick: (e: React.FormEvent) => void;
+  isActive?: boolean;
+  isDisabled?: boolean;
 }
 
-const Button = ({ children, type = 'button', variants, isActive, isDisabled, onClick }: Props) => {
-  const activeClass = isActive ? 'filter-active' : ''
-  const disabledClass = isDisabled ? 'btn-disabled' : ''
+const Button = ({
+  children,
+  type = "button",
+  variants,
+  isActive,
+  isDisabled,
+  onClick,
+}: Props) => {
+  const activeClass = isActive ? "filter-active" : "";
+  const disabledClass = isDisabled ? "btn-disabled" : "";
 
   return (
     <button
@@ -23,7 +30,7 @@ const Button = ({ children, type = 'button', variants, isActive, isDisabled, onC
     >
       {children}
     </button>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

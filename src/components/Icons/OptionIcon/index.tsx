@@ -1,19 +1,23 @@
 // OptionIcon.tsx
-import { ReactNode, MouseEvent } from 'react'
+import { ReactNode, MouseEvent } from "react";
 
 interface OptionIconProps {
-  isSelected: boolean
-  onClickOption: (event: MouseEvent) => void
-  iconComponent: ReactNode
+  isSelected: boolean;
+  onClickOption: (event: MouseEvent) => void;
+  iconComponent: ReactNode;
 }
 
-const OptionIcon = ({ isSelected, onClickOption, iconComponent }: OptionIconProps) => (
+const OptionIcon = ({
+  isSelected,
+  onClickOption,
+  iconComponent,
+}: OptionIconProps) => (
   <div
-    className={`option-icon-container ${isSelected ? 'icon-selected' : ''}`}
+    className={`option-icon-container ${isSelected ? "icon-selected" : ""}`}
     onClick={onClickOption}
   >
     {iconComponent}
   </div>
-)
+);
 
-export default OptionIcon
+export default OptionIcon;

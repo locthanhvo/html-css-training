@@ -1,7 +1,7 @@
-import { StatusType } from '@types'
-import './status.css'
+import { StatusType } from "@types";
+import "./status.css";
 interface Props {
-  status: StatusType
+  status: StatusType;
 }
 
 const StatusUser = ({ status }: Props) => {
@@ -10,7 +10,7 @@ const StatusUser = ({ status }: Props) => {
       <span className={`dot-icon dot-icon-${status.toLocaleLowerCase()}`} />
       <p>{status}</p>
     </div>
-  )
-}
+  );
+};
 
-export default StatusUser
+export default StatusUser;

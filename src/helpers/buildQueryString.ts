@@ -1,20 +1,24 @@
-import { AllowedQueryKeys, QueryParamsType } from '@types'
+import { AllowedQueryKeys, QueryParamsType } from "@types";
 
 /**
  *
  * @param params params query string
  * @returns {string}
  */
-export const queryParams = <T extends Record<string, string | number | boolean>>(
+export const queryParams = <
+  T extends Record<string, string | number | boolean>,
+>(
   params: QueryParamsType<T>,
 ): string => {
   const queryString = Object.keys(params)
     .filter((key) => !!params[key as AllowedQueryKeys<T>])
     .map(
       (key) =>
-        `${encodeURIComponent(key)}=${encodeURIComponent(params[key as AllowedQueryKeys<T>])}`,
+        `${encodeURIComponent(key)}=${encodeURIComponent(
+          params[key as AllowedQueryKeys<T>],
+        )}`,
     )
-    .join('&')
+    .join("&");
 
-  return queryString
-}
+  return queryString;
+};

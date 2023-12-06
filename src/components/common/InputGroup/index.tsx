@@ -1,14 +1,14 @@
-import { ChangeEvent } from 'react'
-import './inputGroup.css'
-import Input from '@components/common/Input'
+import { ChangeEvent } from "react";
+import "./inputGroup.css";
+import Input from "@components/common/Input";
 
 interface InputGroupProps {
-  name: string
-  type: string
-  value: string
-  placeholder: string
-  onChangeInput: (e: ChangeEvent<HTMLInputElement>) => void
-  errorMessageField: string
+  name: string;
+  type: string;
+  value: string;
+  placeholder: string;
+  onChangeInput: (e: ChangeEvent<HTMLInputElement>) => void;
+  errorMessageField: string;
 }
 
 const InputGroup = ({
@@ -20,7 +20,7 @@ const InputGroup = ({
   errorMessageField,
 }: InputGroupProps) => {
   return (
-    <div className='input-group'>
+    <div className="input-group">
       <Input
         type={type}
         name={name}
@@ -29,10 +29,12 @@ const InputGroup = ({
         onChangeInput={onChangeInput}
       />
       {errorMessageField && (
-        <span className={`${name}-error error-message`}>{errorMessageField}</span>
+        <span className={`${name}-error error-message`}>
+          {errorMessageField}
+        </span>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default InputGroup
+export default InputGroup;
