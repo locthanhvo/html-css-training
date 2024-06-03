@@ -1,34 +1,37 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import StatusUser from ".";
-import "../../index.css";
-import { STATUS } from "@constants";
+import { Meta, StoryObj } from '@storybook/react';
+import { BrowserRouter } from 'react-router-dom';
 
-const meta = {
-  title: "Components/Status",
-  component: StatusUser,
+// Components
+import Status from '.';
+
+// Constants
+import { STATUS } from '@/constants';
+
+export default {
+  title: 'Components/Status',
+  component: Status,
+  decorators: [
+    (Story) => (
+      <BrowserRouter>
+        <Story />
+      </BrowserRouter>
+    ),
+  ],
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
-  tags: ["autodocs"],
-} satisfies Meta<typeof StatusUser>;
+} as Meta;
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Status>;
 
-export const StatusActive: Story = {
-  args: {
-    status: STATUS.ACTIVE,
-  },
+export const ValidStatus: Story = {
+  args: { variant: STATUS.VALID },
 };
 
-export const StatusOffline: Story = {
-  args: {
-    status: STATUS.OFFLINE,
-  },
+export const ActiveStatus: Story = {
+  args: { variant: STATUS.ACTIVE },
 };
 
-export const StatusWait: Story = {
-  args: {
-    status: STATUS.WAIT,
-  },
+export const InActiveStatus: Story = {
+  args: { variant: STATUS.INACTIVE },
 };

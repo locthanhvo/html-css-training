@@ -1,75 +1,73 @@
-import Checkbox from "@components/common/Checkbox";
-import StatusUser from "@components/Status";
-import { CheckBox, User } from "@types";
-import Heading from "@components/common/Heading";
-import Text from "@components/common/Text";
-import Avatar from "@components/common/Avatar";
-import "./tableRow.css";
-import { formatDate } from "@helpers";
-import { useState } from "react";
-import { Colors } from "@themes";
-import EditIcon from "@components/Icons/EditIcon";
-import DeleteIcon from "@components/Icons/DeleteIcon";
-import Button from "@components/common/Button";
+import { memo } from 'react';
+import { Td, Text, Tooltip, Tr } from '@chakra-ui/react';
 
-interface Props {
-  data: User;
-  onClickDelete: (id: string) => void;
-  onClickEdit: (id: string) => void;
-  onChangeCheckbox: ({ isChecked, checkboxId }: CheckBox) => void;
+// Constants
+import { ERROR_MESSAGES } from '@/constants';
+
+// Types
+import { TDataSource, THeaderTable } from '@/types';
+
+interface TableRowProps {
+  columns?: THeaderTable[];
+  dataSource?: TDataSource[];
+  onClickTableRow?: (id: string) => void;
 }
 
-const TableRow = ({
-  data,
-  onClickDelete,
-  onClickEdit,
-  onChangeCheckbox,
-}: Props) => {
-  const { id, firstName, lastName, email, status, createdAt, avatar } = data;
-  const [isChecked, setIsChecked] = useState(false);
+const TableRow = ({ columns, dataSource, onClickTableRow }: TableRowProps) => {
+  return !dataSource?.length ? (
+    <Tr data-testid="table-row">
+      <Td
+        colSpan={columns?.length}
+        color="text.primary"
+        fontSize="lg"
+        fontWeight="regular"
+        textAlign="center"
+        border="none"
+      >
+        {ERROR_MESSAGES.EMPTY_DATA}
+      </Td>
+    </Tr>
+  ) : (
+    dataSource.map((data) => {
+      const handleClick = () => onClickTableRow?.(`${data.id}`);
 
-  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { checked, id } = e.target;
-
-    setIsChecked(checked);
-    onChangeCheckbox({ isChecked: checked, checkboxId: id });
-  };
-
-  return (
-    <tr
-      key={id}
-      className={`table-row  d-flex ${isChecked ? "selected-row" : ""}`}
-    >
-      <td className="row-record td-sm">
-        <Checkbox checkboxId={id} onCheckboxChange={handleCheckboxChange} />
-      </td>
-      <td className="row-record td-lg">
-        <Avatar
-          url={avatar}
-          firstName={firstName}
-          lastName={lastName}
-          name={`${firstName} ${lastName}`}
-        />
-        <div>
-          <Heading tag="h2" content={`${firstName} ${lastName}`} />
-          <Text content={`@${firstName}`} color={Colors.GreyDark} />
-        </div>
-      </td>
-      <td className="row-record td-md">
-        <StatusUser status={status} />
-      </td>
-      <td className="row-record row-email td-lg">{email}</td>
-      <td className="row-record td-xl">{formatDate(createdAt)}</td>
-      <td className="row-record td-xl">
-        <Button variants="default" onClick={() => onClickEdit(id)}>
-          <EditIcon />
-        </Button>
-        <Button variants="default" onClick={() => onClickDelete(id)}>
-          <DeleteIcon />
-        </Button>
-      </td>
-    </tr>
+      return (
+        <Tr
+          key={data.id}
+          {...(onClickTableRow && {
+            cursor: 'pointer',
+          })}
+          onClick={handleClick}
+        >
+          {!!columns?.length &&
+            columns?.map((column, index) =>
+              column?.renderBody ? (
+                column?.renderBody(data, index)
+              ) : (
+                <Td key={column?.key} px={0} borderColor="gray.150">
+                  <Tooltip
+                    minW="max-content"
+                    placement="bottom-start"
+                    label={data[column?.key as keyof typeof data] as string}
+                  >
+                    <Text
+                      fontSize="xs"
+                      color="gray.800"
+                      fontWeight="regular"
+                      textAlign="left"
+                      whiteSpace="break-spaces"
+                      noOfLines={1}
+                    >
+                      {data[column?.key as keyof typeof data] as string}
+                    </Text>
+                  </Tooltip>
+                </Td>
+              ),
+            )}
+        </Tr>
+      );
+    })
   );
 };
 
-export default TableRow;
+export default memo(TableRow);

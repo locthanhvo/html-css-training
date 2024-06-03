@@ -1,25 +1,32 @@
-import { IMAGE_URL_REGEX } from '@constants'
-import './avatar.css'
-import { getFirstLetterFullName } from '@helpers'
-interface Props {
-  url?: string
-  name?: string
-  firstName: string
-  lastName: string
+import { Center, Flex, Image, Text } from '@chakra-ui/react';
+
+import AvatarDefault from '../../assets/images/avatar.png';
+import { memo } from 'react';
+
+interface AvatarProps {
+  url?: string;
+  firstName: string;
+  lastName: string;
+  email: string;
 }
 
-const Avatar = ({ url, name, lastName, firstName }: Props) => {
+const Avatar = ({ url, firstName, lastName, email }: AvatarProps) => {
   return (
-    <div className='avatar'>
-      {url && IMAGE_URL_REGEX.test(url) ? (
-        <img className='avatar-item' src={url} alt={name} />
-      ) : (
-        <p className='d-flex flex-center avatar-item avatar-name'>
-          {getFirstLetterFullName(firstName, lastName)}
-        </p>
-      )}
-    </div>
-  )
-}
+    <Flex gap={2} alignItems="center">
+      <Center w={10} h={10} borderRadius="50%">
+        <Image src={url || AvatarDefault} />
+      </Center>
 
-export default Avatar
+      <Flex direction="column">
+        <Text color="primary" fontWeight="medium" fontSize="base">
+          {firstName} {lastName}
+        </Text>
+        <Text color="primary" fontWeight="regular" fontSize="xs">
+          {email}
+        </Text>
+      </Flex>
+    </Flex>
+  );
+};
+
+export default memo(Avatar);

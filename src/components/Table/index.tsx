@@ -1,60 +1,46 @@
-import TableHeader from "@components/Table/TableHeader";
-import TableRow from "@components/Table/TableRow";
-import { CheckBox, User } from "@types";
-import Text from "@components/common/Text";
-import EmptyIcon from "@components/Icons/EmptyIcon";
-import { Colors, FontSize } from "@themes";
-import "./table.css";
+import { memo } from 'react';
+import {
+  TableContainer,
+  Table as TableChakra,
+  Thead,
+  Tbody,
+  TableProps,
+} from '@chakra-ui/react';
 
-interface Props {
-  data: User[];
-  onClickDelete: (id: string) => void;
-  onClickEdit: (id: string) => void;
-  onChangeCheckbox: ({ isChecked, checkboxId }: CheckBox) => void;
-}
+// Types
+import { TDataSource, THeaderTable } from '@/types';
 
-const Table = ({
-  data,
-  onClickDelete,
-  onClickEdit,
-  onChangeCheckbox,
-}: Props) => {
-  const renderTableContent = () =>
-    data.map((value) => (
-      <TableRow
-        data={value}
-        key={value.id}
-        onClickDelete={onClickDelete}
-        onClickEdit={onClickEdit}
-        onChangeCheckbox={onChangeCheckbox}
-      />
-    ));
+// Components
+import TableRow from '@/components/Table/TableRow';
+import TableHead from '@/components/Table/TableHead';
 
-  return (
-    <div className="table-content">
-      <table className="table-user">
-        <TableHeader />
-        {data.length ? (
-          <tbody>{renderTableContent()}</tbody>
-        ) : (
-          <tfoot>
-            <tr>
-              <td>
-                <div className="table-empty d-flex flex-center">
-                  <EmptyIcon />
-                  <Text
-                    content="No Data"
-                    color={Colors.Black}
-                    fontSize={FontSize.Medium}
-                  />
-                </div>
-              </td>
-            </tr>
-          </tfoot>
-        )}
-      </table>
-    </div>
-  );
+type TTableProps = TableProps & {
+  columns?: THeaderTable[];
+  dataSource?: TDataSource[];
+  onClickTableRow?: (id: string) => void;
 };
 
-export default Table;
+const Table = ({
+  columns = [],
+  dataSource = [],
+  onClickTableRow,
+  ...props
+}: TTableProps): JSX.Element => (
+  <TableContainer>
+    <TableChakra {...props}>
+      <Thead>
+        <TableHead columns={columns} />
+      </Thead>
+
+      <Tbody>
+        <TableRow
+          columns={columns}
+          dataSource={dataSource}
+          onClickTableRow={onClickTableRow}
+        />
+      </Tbody>
+    </TableChakra>
+  </TableContainer>
+);
+
+export default memo(Table);

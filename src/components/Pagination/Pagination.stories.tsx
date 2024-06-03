@@ -1,22 +1,22 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import Pagination from '.'
-import '../../index.css'
+import type { Meta, StoryObj } from '@storybook/react';
 
-const meta = {
+// Components
+import Pagination from '.';
+
+const meta: Meta<typeof Pagination> = {
   title: 'Components/Pagination',
-  component: Pagination,
-  parameters: {
-    layout: 'centered',
-  },
   tags: ['autodocs'],
-} satisfies Meta<typeof Pagination>
+  component: Pagination,
+};
 
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof Pagination>;
 
-export const PaginationList: Story = {
+export const Default: Story = {
   args: {
-    isActiveNextIcon: true,
-    isActivePreviousIcon: false,
+    totalRecords: '100 items',
+    pageSize: 10,
+    arrOfCurrButtons: [1, 2, 3, '...', 7],
+    currentPage: 2,
   },
-}
+};

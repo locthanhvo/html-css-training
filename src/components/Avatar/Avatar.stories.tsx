@@ -1,31 +1,30 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import Avatar from '.'
-import '../../index.css'
+import { Meta, StoryObj } from '@storybook/react';
+import { BrowserRouter } from 'react-router-dom';
 
-const meta = {
+// Components
+import Avatar from '.';
+
+export default {
   title: 'Components/Avatar',
   component: Avatar,
+  decorators: [
+    (Story) => (
+      <BrowserRouter>
+        <Story />
+      </BrowserRouter>
+    ),
+  ],
   parameters: {
     layout: 'centered',
   },
-  tags: ['autodocs'],
-} satisfies Meta<typeof Avatar>
+} as Meta;
 
-export default meta
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<typeof Avatar>;
 
-export const AvatarNameUser: Story = {
+export const AvatarDefault: Story = {
   args: {
-    firstName: 'Loc',
-    lastName: 'Vo',
+    firstName: 'John',
+    lastName: 'Doe',
+    email: 'HbJjv@example.com',
   },
-}
-
-export const AvatarImageUser: Story = {
-  args: {
-    url: 'https://png.pngtree.com/png-vector/20220709/ourmid/pngtree-businessman-user-avatar-wearing-suit-with-red-tie-png-image_5809521.png',
-    name: 'Loc Vo',
-    firstName: 'Loc',
-    lastName: 'Vo',
-  },
-}
+};

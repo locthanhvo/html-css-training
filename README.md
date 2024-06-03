@@ -1,51 +1,73 @@
-## React training
+## React Revise
 
 ### Overview
 
-- This document provides requirements and estimation for React practice.
-- Design: [Figma](https://www.figma.com/file/vHINjTKxE7gKfsgtIHTLG4/Untitled?type=design&node-id=0-1&mode=design&t=S6zU9LLNkSMKupzL-0)
-- Plan: [Plan Practice](https://docs.google.com/document/d/12MGTzXSbJILSK5YlrUp60VpkN1B0SlR-/edit)
+- This document provides requirements and estimation for React Revise Practice.
+- Design: [Figma](https://www.figma.com/design/nbNc3nrYJ06gIXH1smzXG1/Untitled?node-id=0-1&t=MjqBUYK81g7OwsoQ-0)
+- Plan: [Plan Practice](https://docs.google.com/document/d/1Lwd1bu-RdQHlxvNAQaHW4xohsSOMYv7E3P-KzESE7wU/edit)
 
 ### Target
 
-- Understand the lifecycle of react component.
-- Basic hooks in react
+- React-Advance: reinforce the knowledge and understanding of how the useMemo and useCallback operate.
+- Unit testing: understand how to test for all the parts (snapshot, React component, React hooks, asynchronous operations… ) needed in a basic web application.
+- React-Query: apply best practices for this section based on the basic existing knowledge as well as experience in using React-Query.
+- Learning new tech stacks such as Zustand for managing local state and applying the Chakra UI library in the practice.
 
 ### Timeline
 
-- Estimate: 12 days (from Nov 8th, 2023 to Nov 24th, 2023).
+- Estimate: 12 days (from May 24th, 2024 to June 12th, 2024).
 
 ### Technical
 
-- HTML5/CSS3
-- TypeScript
-- MockAPI v2.0.1
 - Vite
 - Prettier
+- ESLint
 - React
+- TypeScript
 - Storybook
+- Jest
+- React Query
+- Zustand
+- React-Testing-Library
+- React Router v6
 
 ### Requirements
 
-- LIST USERS
-  - Display list users
-  - Previous/Next pagination
-  - Filter by status
-  - Search by name, or email
-- ADD/EDIT USERS
-  - User form validations:
-  - First/Last name: Required
-  - Phone: Required, valid phone number format
-  - Email: Required, valid email address format
-  - User name: Required, 6 characters minimum
-  - Password: Required, 8 characters minimum and at least 1 number, 1 special letter and 1 uppercase letter
-  - Confirm password: Must match password value
-  - Show error messages when the form is invalid and has submitted
-  - Show snackbar when user submits form successfully/failed
-- REMOVE USERS
-  - Show modal to confirm before removing
-  - Show snackbar when removing successfully/failed
+- SIGN IN/ SIGN UP PAGE
+
+  - Users can sign up for a new account (not duplicate to the existing account).
+  - Users can sign in to the site with an existing account.
+  - Validation rules:
+    - The email is required.
+    - The password is required.
+    - The valid email format complies with the standard email.
+    - The valid password format has at least 8 characters including at least one special letter, one uppercase letter.
+
+- DASHBOARD PAGE
+
+  - Users must sign in by the registered account to be able to access the dashboard page.
+  - User navigation
+
+    - Display list of users in table form including pagination.
+    - The user can search the displayed users by name, email, phone number, and status.
+    - The user can add/edit the display user through the user form.
+
+  - Control navigation
+
+    - The user can switch between the list of companies and the list of nations through nav-tab.
+    - Company tab:
+      - Display a list of companies in table form including pagination.
+      - The user can search the displayed companies by name, email, phone number, and status.
+      - The user can add/edit the display company through the company form.
+      - The user can remove the display company by icon on the table.
+    - Control Settings tab:
+      - Display a list of brigades, a list of control teams, a List of stagecoaches, and members of the CRCA as a list form.
+      - The user can search the displayed item by name.
+      - The user can add/edit the item through the item form.
+      - The user can remove the item by the button on the list.
+
 - DEPLOY WITH VERCEL
+
   - Reference link: https://vercel.com/
 
 ### Getting Started
@@ -56,13 +78,15 @@
   - HTTPS:
     - `$ git clone https://gitlab.asoft-python.com/loc.vo/react-training.git`.
 - Step 2:
+  - Open terminal: `cd .\workflow-practice\`
   - Install the packages `pnpm install`.
 - Step 3:
-  - Create a .env file at your root folder, add a env var API_ENDPOINT by MockAPI
-    - API_ENDPOINT = `https://64e2c689bac46e480e77bdab.mockapi.io`
+  - Run app:
+    - Run web local: `pnpm dev`
+    - Run json server: `pnpm start`
 - Step 4:
-  - Case 1: Run the practice `pnpm dev`.
-  - Case 2: Ctrl + click `http://localhost:5173/`
+  - Run Storybook: `pnpm storybook`.
+  - Run Test: `pnpm test`
 
 ## Author
 
