@@ -6,7 +6,7 @@ interface ActionButtonProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   isLoading?: boolean;
   isDisabled?: boolean;
-  title: string;
+  title?: string;
   bgColor?: string;
   color?: string;
   borderColor?: string;

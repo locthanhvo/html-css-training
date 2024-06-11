@@ -5,9 +5,9 @@ import { memo } from 'react';
 
 interface AvatarProps {
   url?: string;
-  firstName: string;
-  lastName: string;
-  email: string;
+  firstName?: string;
+  lastName?: string;
+  email?: string;
 }
 
 const Avatar = ({ url, firstName, lastName, email }: AvatarProps) => {

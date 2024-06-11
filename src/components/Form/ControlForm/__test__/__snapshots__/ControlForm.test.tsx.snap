@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ControlForm components match snapshot with add form 1`] = `
+<div>
+  <form
+    class="css-1urdh7u"
+  >
+    <p
+      class="chakra-text css-5fbnf6"
+    >
+      Add Control Teams
+    </p>
+    <div
+      class="css-1pyx7hi"
+    >
+      <div
+        aria-label="name"
+        class="chakra-form-control css-0"
+        name="name"
+        placeholder="Please enter name"
+        role="group"
+        value=""
+      >
+        <label
+          class="chakra-form__label css-zecyy3"
+          for="field-:r0:"
+          id="field-:r0:-label"
+        >
+          Name
+        </label>
+        <div
+          class="chakra-input__group css-bx0blc"
+          data-group="true"
+        >
+          <input
+            aria-label="name"
+            class="chakra-input css-adz8kx"
+            id="field-:r0:"
+            name="name"
+            placeholder="Please enter name"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        class="chakra-form-control css-0"
+        role="group"
+      >
+        <label
+          class="chakra-form__label css-zecyy3"
+          for="field-:r1:"
+          id="field-:r1:-label"
+        >
+          Description
+        </label>
+        <textarea
+          aria-label="name"
+          class="chakra-textarea css-mie5s1"
+          id="field-:r1:"
+          name="description"
+          placeholder="Please enter description..."
+        />
+      </div>
+    </div>
+    <div
+      class="css-bbgbcw"
+    >
+      <button
+        class="chakra-button css-ey593w"
+        disabled=""
+        name="Create"
+        type="submit"
+      >
+        Create
+      </button>
+      <button
+        class="chakra-button css-15qijou"
+        name="Cancel"
+        type="button"
+      >
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`ControlForm components match snapshot with edit form 1`] = `
+<div>
+  <form
+    class="css-1urdh7u"
+  >
+    <p
+      class="chakra-text css-5fbnf6"
+    >
+      Edit Control
+    </p>
+    <div
+      class="css-1pyx7hi"
+    >
+      <div
+        aria-label="name"
+        class="chakra-form-control css-0"
+        name="name"
+        placeholder="Please enter name"
+        role="group"
+        value=""
+      >
+        <label
+          class="chakra-form__label css-zecyy3"
+          for="field-:r2:"
+          id="field-:r2:-label"
+        >
+          Name
+        </label>
+        <div
+          class="chakra-input__group css-bx0blc"
+          data-group="true"
+        >
+          <input
+            aria-label="name"
+            class="chakra-input css-adz8kx"
+            id="field-:r2:"
+            name="name"
+            placeholder="Please enter name"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        class="chakra-form-control css-0"
+        role="group"
+      >
+        <label
+          class="chakra-form__label css-zecyy3"
+          for="field-:r3:"
+          id="field-:r3:-label"
+        >
+          Description
+        </label>
+        <textarea
+          aria-label="name"
+          class="chakra-textarea css-mie5s1"
+          id="field-:r3:"
+          name="description"
+          placeholder="Please enter description..."
+        />
+      </div>
+    </div>
+    <div
+      class="css-bbgbcw"
+    >
+      <button
+        class="chakra-button css-ey593w"
+        disabled=""
+        name="Update"
+        type="submit"
+      >
+        Update
+      </button>
+      <button
+        class="chakra-button css-15qijou"
+        name="Cancel"
+        type="button"
+      >
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>
+`;

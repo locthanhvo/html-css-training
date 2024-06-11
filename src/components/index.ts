@@ -11,4 +11,6 @@ export { default as ErrorBoundary } from './ErrorBoundary';
 export { default as Fallback } from './Fallback';
 export { default as Dropdown } from './Dropdown';
 export { default as Pagination } from './Pagination';
+export { default as ConfirmModal } from './ConfirmModal';
+export { default as TextareaField } from './TextareaField';
 export * from './Form';

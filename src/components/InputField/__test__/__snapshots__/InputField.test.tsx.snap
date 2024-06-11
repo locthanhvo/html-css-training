@@ -4,6 +4,8 @@ exports[`InputField component Render correctly with default props 1`] = `
 <div>
   <div
     class="chakra-form-control css-0"
+    name="email"
+    placeholder="Email"
     role="group"
   >
     <div
@@ -27,6 +29,8 @@ exports[`InputField component Render correctly with error message 1`] = `
   <div
     class="chakra-form-control css-0"
     data-invalid=""
+    name="email"
+    placeholder="Email"
     role="group"
   >
     <div
@@ -58,6 +62,8 @@ exports[`InputField component Render correctly with right icon 1`] = `
 <div>
   <div
     class="chakra-form-control css-0"
+    name="email"
+    placeholder="Email"
     role="group"
   >
     <div

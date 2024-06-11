@@ -21,4 +21,13 @@ export default {
 
 type Story = StoryObj<typeof ExpandSidebar>;
 
-export const SignInButton: Story = {};
+export const SignInButton: Story = {
+  args: {
+    user: {
+      firstName: 'John',
+      lastName: 'Doe',
+      email: 'WqCk0@example.com',
+      password: '123456',
+    },
+  },
+};

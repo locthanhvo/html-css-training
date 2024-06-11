@@ -1,4 +1,4 @@
-import { memo, useCallback, useEffect } from 'react';
+import { memo, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useToast } from '@chakra-ui/react';
 
@@ -28,34 +28,41 @@ import {
 const SignInPage = () => {
   const toast = useToast();
   const navigate = useNavigate();
-  const { errorMessage, handleSignIn } = useAuth();
+  const { users, isLoading } = useAuth();
   const setUser = authStore((state) => state.setUser);
 
-  const handleUserSignIn = useCallback(async (data: TAuthForm) => {
-    const response = await handleSignIn(data.email, data.password);
+  const handleUserSignIn = useCallback(
+    async (data: TAuthForm) => {
+      try {
+        const response = users?.find(
+          (user) =>
+            user.email === data.email && user.password === data.password,
+        );
 
-    if (response) {
-      setUser({ user: response });
+        if (response) {
+          setUser({ user: response });
+          toast(
+            customToast({
+              title: SUCCESS_MESSAGES.SIGN_IN_SUCCESS,
+              status: TOAST_STATUS.SUCCESS,
+            }),
+          );
 
-      toast(
-        customToast(SUCCESS_MESSAGES.SIGN_IN_SUCCESS, '', TOAST_STATUS.SUCCESS),
-      );
+          navigate(PRIVATE_ROUTERS.ROOT);
+        }
+      } catch (error) {
+        toast(
+          customToast({
+            title: ERROR_MESSAGES.SIGN_IN_FAILED,
+            status: TOAST_STATUS.ERROR,
+          }),
+        );
+      }
+    },
+    [users, setUser, toast, navigate],
+  );
 
-      navigate(PRIVATE_ROUTERS.ROOT);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (errorMessage) {
-      toast({
-        title: ERROR_MESSAGES.SIGN_IN_FAILED,
-        description: errorMessage,
-        status: 'error',
-      });
-    }
-  }, [errorMessage, toast]);
-
-  return <AuthForm onSubmit={handleUserSignIn} />;
+  return <AuthForm isLoading={isLoading} onSubmit={handleUserSignIn} />;
 };
 
 export default memo(SignInPage);

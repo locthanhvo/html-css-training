@@ -31,7 +31,14 @@ export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
       <Route element={<RouteProtected />}>
-        <Route path={PRIVATE_ROUTERS.ROOT} element={<MainLayout />}>
+        <Route
+          path={PRIVATE_ROUTERS.ROOT}
+          element={
+            <Suspense fallback={<Fallback />}>
+              <MainLayout />
+            </Suspense>
+          }
+        >
           <Route
             index
             element={<Navigate to={PRIVATE_ROUTERS.USERS} replace />}

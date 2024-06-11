@@ -6,11 +6,19 @@ import { DropdownIcon } from '@/components/Icons';
 
 interface DropdownProps {
   defaultValue?: string;
+  width?: string;
+  bgColor?: string;
   options: { name: string; value: string }[];
   onSelect?: (option: string) => void;
 }
 
-const Dropdown = ({ defaultValue, options, onSelect }: DropdownProps) => {
+const Dropdown = ({
+  defaultValue,
+  width = '520px',
+  bgColor = 'primary',
+  options,
+  onSelect,
+}: DropdownProps) => {
   const [selectedOption, setSelectedOption] = useState(
     defaultValue || options[0].value,
   );
@@ -27,8 +35,8 @@ const Dropdown = ({ defaultValue, options, onSelect }: DropdownProps) => {
   return (
     <Menu>
       <MenuButton
-        w="516px"
-        h="40px"
+        w={width}
+        h="42px"
         textAlign="left"
         fontSize="xs"
         border="1px solid"
@@ -36,6 +44,7 @@ const Dropdown = ({ defaultValue, options, onSelect }: DropdownProps) => {
         as={Button}
         color="gray.400"
         rightIcon={<DropdownIcon />}
+        bgColor={bgColor}
       >
         {optionName}
       </MenuButton>

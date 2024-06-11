@@ -17,7 +17,7 @@ export const Button = defineStyleConfig({
     md: {
       px: 4,
       py: 3,
-      fontSize: 'sm',
+      fontSize: 'xs',
     },
     lg: {
       w: '15rem',

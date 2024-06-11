@@ -16,10 +16,15 @@ import { displayFieldAuthForm } from '@/utils';
 
 interface AuthFormProps {
   isRegister?: boolean;
+  isLoading?: boolean;
   onSubmit: (data: TAuthForm) => void;
 }
 
-const AuthForm = ({ isRegister = false, onSubmit }: AuthFormProps) => {
+const AuthForm = ({
+  isLoading = false,
+  isRegister = false,
+  onSubmit,
+}: AuthFormProps) => {
   const {
     control,
     formState: { isSubmitting, isValid },
@@ -39,21 +44,21 @@ const AuthForm = ({ isRegister = false, onSubmit }: AuthFormProps) => {
     },
   });
 
-  const handleClearErrorMessage = useCallback(
+  const handleInputChange = useCallback(
     ({
       field,
+      data,
       isError,
       onChange,
     }: {
       field: keyof TAuthForm;
+      data: string;
       isError: boolean;
       onChange: (value: string) => void;
-    }) =>
-      (data: string) => {
-        isError && clearErrors(field);
-
-        onChange(data);
-      },
+    }) => {
+      isError && clearErrors(field);
+      onChange(data);
+    },
     [clearErrors],
   );
 
@@ -65,31 +70,36 @@ const AuthForm = ({ isRegister = false, onSubmit }: AuthFormProps) => {
       gap={4}
       onSubmit={handleSubmit(onSubmit)}
     >
-      {displayFieldAuthForm(isRegister).map((fieldConfig: any) => (
-        <Controller
-          key={fieldConfig.name}
-          control={control}
-          rules={fieldConfig.rules}
-          name={fieldConfig.name}
-          render={({ field, fieldState: { error } }) => (
-            <InputField
-              type={fieldConfig.type}
-              label={fieldConfig.label}
-              placeholder={fieldConfig.placeholder}
-              {...field}
-              isError={!!error}
-              errorMessages={error?.message}
-              isDisabled={isSubmitting}
-              onChange={handleClearErrorMessage({
-                field: fieldConfig.name,
-                isError: !!error,
-                onChange: field.onChange,
-              })}
-              aria-label={fieldConfig.ariaLabel}
-            />
-          )}
-        />
-      ))}
+      {displayFieldAuthForm(isRegister).map(
+        ({ name, rules, type, label, placeholder, ariaLabel }) => (
+          <Controller
+            key={name}
+            control={control}
+            rules={rules}
+            name={name}
+            render={({ field, fieldState: { error } }) => (
+              <InputField
+                type={type}
+                label={label}
+                placeholder={placeholder}
+                {...field}
+                isError={!!error}
+                errorMessages={error?.message}
+                isDisabled={isSubmitting}
+                onChange={(data) =>
+                  handleInputChange({
+                    field: name,
+                    data,
+                    isError: !!error,
+                    onChange: field.onChange,
+                  })
+                }
+                aria-label={ariaLabel}
+              />
+            )}
+          />
+        ),
+      )}
 
       {isRegister ? (
         <Controller
@@ -125,7 +135,7 @@ const AuthForm = ({ isRegister = false, onSubmit }: AuthFormProps) => {
         bgColor="blue.200"
         rightIcon={!isRegister ? <ForwardIcon /> : undefined}
         isDisabled={!isValid && !isSubmitting}
-        isLoading={isSubmitting}
+        isLoading={isLoading || isSubmitting}
       />
 
       <Text textAlign="center" fontSize="base" fontWeight="regular">

@@ -4,8 +4,11 @@ import { Outlet } from 'react-router-dom';
 
 // Components
 import { ExpandSidebar, Header } from '@/components';
+import { authStore } from '@/stores';
 
 const MainLayout = () => {
+  const user = authStore((state) => state.user);
+
   return (
     <Flex
       position="absolute"
@@ -14,7 +17,7 @@ const MainLayout = () => {
       bgColor="gray.50"
       alignItems="stretch"
     >
-      <ExpandSidebar />
+      <ExpandSidebar user={user} />
 
       <VStack flex={1} alignItems="stretch" overflow="hidden">
         <Header />

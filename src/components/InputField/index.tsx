@@ -44,7 +44,7 @@ const InputField = (
   );
 
   return (
-    <FormControl isInvalid={isError}>
+    <FormControl isInvalid={isError} {...rest}>
       {label && (
         <FormLabel
           fontSize="base"

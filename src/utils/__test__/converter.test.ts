@@ -73,7 +73,7 @@ describe('displayFieldAuthForm', () => {
         name: 'phone',
         label: 'Phone',
         placeholder: 'Phone',
-        type: 'text',
+        type: 'number',
         rules: AUTH_SCHEMA.PHONE,
         ariaLabel: 'phone',
       },

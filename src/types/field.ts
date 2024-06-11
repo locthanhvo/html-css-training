@@ -1,8 +1,9 @@
-export type TField = {
-  name: string;
+export type TField<T> = {
+  name: keyof T;
   label: string;
   placeholder: string;
-  type: string;
+  type: 'text' | 'email' | 'password' | 'datetime-local';
+  elementType?: 'dropdown' | 'input';
   rules: {
     required: string;
     pattern: {

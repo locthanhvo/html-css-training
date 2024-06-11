@@ -14,8 +14,14 @@ import { BrandIcon } from '@/components/Icons';
 // Images
 import sidebarImage from '@/assets/images/sidebar-image.png';
 import Avatar from '../Avatar';
+import { TUser } from '@/types';
 
-const ExpandSidebar = () => {
+interface ExpandSidebarProps {
+  user: TUser;
+}
+
+const ExpandSidebar = ({ user }: ExpandSidebarProps) => {
+  const { firstName, lastName, email } = user;
   return (
     <>
       <VStack w="265px" h="100vh" gap={0} bgColor="blue.500">
@@ -45,7 +51,7 @@ const ExpandSidebar = () => {
               ))}
             </Flex>
 
-            <Avatar firstName="John" lastName="Doe" email="HbJjv@example.com" />
+            <Avatar firstName={firstName} lastName={lastName} email={email} />
           </Flex>
         </VStack>
       </VStack>

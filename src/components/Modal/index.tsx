@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react';
 
 interface TModalProps {
+  maxW?: string;
   isOpen: boolean;
   onClose: () => void;
   title?: string;
@@ -17,6 +18,7 @@ interface TModalProps {
 }
 
 const CustomModal = ({
+  maxW = 'fit-content',
   isOpen,
   onClose,
   body,
@@ -25,7 +27,7 @@ const CustomModal = ({
 }: TModalProps) => (
   <Modal isCentered isOpen={isOpen} onClose={onClose}>
     <ModalOverlay />
-    <ModalContent minW={320} maxW="fit-content">
+    <ModalContent minW={320} maxW={maxW}>
       <ModalHeader
         display="flex"
         justifyContent={hasCloseButton ? 'space-between' : 'center'}

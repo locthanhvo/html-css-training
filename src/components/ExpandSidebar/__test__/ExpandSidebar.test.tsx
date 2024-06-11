@@ -8,7 +8,14 @@ describe('ExpandSidebar Component', () => {
   it('Match ExpandSidebar component', () => {
     const element = render(
       <BrowserRouter>
-        <ExpandSidebar />
+        <ExpandSidebar
+          user={{
+            firstName: 'John',
+            lastName: 'Doe',
+            email: 'WqCk0@example.com',
+            password: '123456',
+          }}
+        />
       </BrowserRouter>,
     );
 

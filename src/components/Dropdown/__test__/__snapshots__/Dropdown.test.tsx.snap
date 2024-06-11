@@ -9,7 +9,7 @@ exports[`Dropdown Component Should match snapshot 1`] = `
         aria-controls="menu-list-:r1:"
         aria-expanded="false"
         aria-haspopup="menu"
-        class="chakra-button chakra-menu__menu-button css-b0lbf4"
+        class="chakra-button chakra-menu__menu-button css-g3hnlp"
         id="menu-button-:r1:"
         type="button"
       >
@@ -78,7 +78,7 @@ exports[`Dropdown Component Should match snapshot 1`] = `
       aria-controls="menu-list-:r1:"
       aria-expanded="false"
       aria-haspopup="menu"
-      class="chakra-button chakra-menu__menu-button css-b0lbf4"
+      class="chakra-button chakra-menu__menu-button css-g3hnlp"
       id="menu-button-:r1:"
       type="button"
     >

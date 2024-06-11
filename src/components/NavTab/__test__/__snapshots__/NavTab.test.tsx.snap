@@ -10,14 +10,14 @@ exports[`NavTab Component Should match snapshot 1`] = `
       >
         <div
           aria-orientation="horizontal"
-          class="chakra-tabs__tablist css-vtch3d"
+          class="chakra-tabs__tablist css-gjkjxc"
           role="tablist"
         >
           <button
             aria-controls="tabs-:r0:--tabpanel-0"
             aria-disabled="false"
             aria-selected="true"
-            class="chakra-tabs__tab css-1vj60e7"
+            class="chakra-tabs__tab css-z1kpsc"
             data-index="0"
             id="tabs-:r0:--tab-0"
             role="tab"
@@ -30,7 +30,7 @@ exports[`NavTab Component Should match snapshot 1`] = `
             aria-controls="tabs-:r0:--tabpanel-1"
             aria-disabled="false"
             aria-selected="false"
-            class="chakra-tabs__tab css-kzjl1i"
+            class="chakra-tabs__tab css-1d3zngc"
             data-index="1"
             id="tabs-:r0:--tab-1"
             role="tab"
@@ -41,7 +41,7 @@ exports[`NavTab Component Should match snapshot 1`] = `
           </button>
         </div>
         <div
-          class="chakra-tabs__tab-panels css-18mcdo6"
+          class="chakra-tabs__tab-panels css-w464rq"
         >
           <div
             aria-labelledby="tabs-:r0:--tab-0"
@@ -74,14 +74,14 @@ exports[`NavTab Component Should match snapshot 1`] = `
     >
       <div
         aria-orientation="horizontal"
-        class="chakra-tabs__tablist css-vtch3d"
+        class="chakra-tabs__tablist css-gjkjxc"
         role="tablist"
       >
         <button
           aria-controls="tabs-:r0:--tabpanel-0"
           aria-disabled="false"
           aria-selected="true"
-          class="chakra-tabs__tab css-1vj60e7"
+          class="chakra-tabs__tab css-z1kpsc"
           data-index="0"
           id="tabs-:r0:--tab-0"
           role="tab"
@@ -94,7 +94,7 @@ exports[`NavTab Component Should match snapshot 1`] = `
           aria-controls="tabs-:r0:--tabpanel-1"
           aria-disabled="false"
           aria-selected="false"
-          class="chakra-tabs__tab css-kzjl1i"
+          class="chakra-tabs__tab css-1d3zngc"
           data-index="1"
           id="tabs-:r0:--tab-1"
           role="tab"
@@ -105,7 +105,7 @@ exports[`NavTab Component Should match snapshot 1`] = `
         </button>
       </div>
       <div
-        class="chakra-tabs__tab-panels css-18mcdo6"
+        class="chakra-tabs__tab-panels css-w464rq"
       >
         <div
           aria-labelledby="tabs-:r0:--tab-0"

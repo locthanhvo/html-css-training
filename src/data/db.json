@@ -1,3 +1,213 @@
 {
-  "users": [{ "id": "1", "email": "admin@gmail.com", "password": "1@Dzxcvb" }]
+  "users": [
+    {
+      "email": "admin@gmail.com",
+      "password": "1@Dzxcvb",
+      "phone": "0931961406",
+      "firstName": "admin",
+      "lastName": "ng",
+      "status": "Active",
+      "createdAt": "2024-06-05 14:46:58",
+      "updatedAt": "2024-06-07T02:52:22.111Z",
+      "id": "39123a24-dab7-4836-93e4-35aa7de21714"
+    },
+    {
+      "email": "vothanhloc406@gmail.com",
+      "phone": "0912312312",
+      "password": "1@Dzxcvb",
+      "firstName": "loc",
+      "lastName": "thanh",
+      "status": "Active",
+      "createdAt": "2024-06-07 11:08:14",
+      "updatedAt": "2024-06-07T04:08:19.003Z",
+      "id": "80e41cdf-9d79-468d-bdda-3242b10da6bc"
+    }
+  ],
+  "companies": [
+    {
+      "id": "93d1f6a8-c312-436a-886f-a646bf424209",
+      "company": "Asnet",
+      "phone": "0938475890",
+      "branch": "NON VIE",
+      "city": "Ho Chi Minh",
+      "commissioner": "Loc Vo Thanh",
+      "website": "http://localhost:5173/controls",
+      "country": "Viet Nam",
+      "mainEmail": "admin@gmail.com",
+      "secondaryEmail": "admin@gmail.com",
+      "gpsLatitude": "latitude",
+      "gpsLongitude": "longitude",
+      "createdAt": "2024-06-10T07:10:28.710Z",
+      "updatedAt": "2024-06-10T07:10:28.710Z"
+    }
+  ],
+  "brigades": [
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440000",
+      "name": "Alpha Brigade",
+      "description": "A highly trained elite brigade specializing in tactical operations.",
+      "createdAt": "2023-01-15T08:00:00Z",
+      "updatedAt": "2024-06-10T12:00:00Z"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440001",
+      "name": "Bravo Brigade",
+      "description": "A brigade known for its expertise in reconnaissance and intelligence gathering.",
+      "createdAt": "2023-02-20T09:30:00Z",
+      "updatedAt": "2024-06-10T12:00:00Z"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440002",
+      "name": "Charlie Brigade",
+      "description": "A support brigade providing logistical and medical assistance to other units.",
+      "createdAt": "2023-03-25T10:00:00Z",
+      "updatedAt": "2024-06-10T12:00:00Z"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440003",
+      "name": "Delta Brigade",
+      "description": "A brigade specializing in cyber warfare and electronic defense.",
+      "createdAt": "2023-04-30T11:15:00Z",
+      "updatedAt": "2024-06-10T12:00:00Z"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440004",
+      "name": "Echo Brigade",
+      "description": "An engineering brigade focused on construction and demolition operations.",
+      "createdAt": "2023-05-15T12:30:00Z",
+      "updatedAt": "2024-06-10T12:00:00Z"
+    }
+  ],
+  "controls": [
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440000",
+      "name": "Alpha Brigade",
+      "description": "A highly trained elite brigade specializing in tactical operations.",
+      "createdAt": "2023-01-15T08:00:00Z",
+      "updatedAt": "2024-06-10T12:00:00Z"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440001",
+      "name": "Bravo Brigade",
+      "description": "A brigade known for its expertise in reconnaissance and intelligence gathering.",
+      "createdAt": "2023-02-20T09:30:00Z",
+      "updatedAt": "2024-06-10T12:00:00Z"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440002",
+      "name": "Charlie Brigade",
+      "description": "A support brigade providing logistical and medical assistance to other units.",
+      "createdAt": "2023-03-25T10:00:00Z",
+      "updatedAt": "2024-06-10T12:00:00Z"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440003",
+      "name": "Delta Brigade",
+      "description": "A brigade specializing in cyber warfare and electronic defense.",
+      "createdAt": "2023-04-30T11:15:00Z",
+      "updatedAt": "2024-06-10T12:00:00Z"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440004",
+      "name": "Echo Brigades",
+      "description": "An engineering brigade focused on construction and demolition operations.",
+      "createdAt": "2024-06-11T07:57:08.670Z",
+      "updatedAt": "2024-06-11T07:57:08.670Z"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440777",
+      "name": "Echo Brigade",
+      "description": "An engineering brigade focused on construction and demolition operations.",
+      "createdAt": "2023-05-15T12:30:00Z",
+      "updatedAt": "2024-06-10T12:00:00Z"
+    }
+  ],
+  "stagecoaches": [
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440000",
+      "name": "Alpha Brigade",
+      "description": "A highly trained elite brigade specializing in tactical operations.",
+      "createdAt": "2023-01-15T08:00:00Z",
+      "updatedAt": "2024-06-10T12:00:00Z"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440001",
+      "name": "Bravo Brigade",
+      "description": "A brigade known for its expertise in reconnaissance and intelligence gathering.",
+      "createdAt": "2023-02-20T09:30:00Z",
+      "updatedAt": "2024-06-10T12:00:00Z"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440002",
+      "name": "Charlie Brigade",
+      "description": "A support brigade providing logistical and medical assistance to other units.",
+      "createdAt": "2023-03-25T10:00:00Z",
+      "updatedAt": "2024-06-10T12:00:00Z"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440003",
+      "name": "Delta Brigade",
+      "description": "A brigade specializing in cyber warfare and electronic defense.",
+      "createdAt": "2023-04-30T11:15:00Z",
+      "updatedAt": "2024-06-10T12:00:00Z"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440004",
+      "name": "Echo Brigade",
+      "description": "An engineering brigade.",
+      "createdAt": "2024-06-11T08:02:55.034Z",
+      "updatedAt": "2024-06-11T08:02:55.034Z"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440777",
+      "name": "Echo Brigade",
+      "description": "An engineering brigade focused on construction and demolition operations.",
+      "createdAt": "2023-05-15T12:30:00Z",
+      "updatedAt": "2024-06-10T12:00:00Z"
+    }
+  ],
+  "crca": [
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440000",
+      "name": "Alpha Brigade",
+      "description": "A highly trained elite brigade specializing in tactical operations.",
+      "createdAt": "2023-01-15T08:00:00Z",
+      "updatedAt": "2024-06-10T12:00:00Z"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440001",
+      "name": "Bravo Brigade",
+      "description": "A brigade known for its expertise in reconnaissance and intelligence gathering.",
+      "createdAt": "2023-02-20T09:30:00Z",
+      "updatedAt": "2024-06-10T12:00:00Z"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440002",
+      "name": "Charlie Brigade",
+      "description": "A support brigade providing logistical and medical assistance to other units.",
+      "createdAt": "2023-03-25T10:00:00Z",
+      "updatedAt": "2024-06-10T12:00:00Z"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440003",
+      "name": "Delta Brigade",
+      "description": "A brigade specializing in cyber warfare and electronic defense.",
+      "createdAt": "2023-04-30T11:15:00Z",
+      "updatedAt": "2024-06-10T12:00:00Z"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440004",
+      "name": "Echo Brigade",
+      "description": "An engineering brigade focused on construction and demolition operations.",
+      "createdAt": "2023-05-15T12:30:00Z",
+      "updatedAt": "2024-06-10T12:00:00Z"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440777",
+      "name": "Echo Brigade",
+      "description": "An engineering brigade focused on construction and demolition operations.",
+      "createdAt": "2023-05-15T12:30:00Z",
+      "updatedAt": "2024-06-10T12:00:00Z"
+    }
+  ]
 }

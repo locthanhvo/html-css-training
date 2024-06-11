@@ -14,7 +14,7 @@ const ErrorBoundary = lazy(() => import('@/components/ErrorBoundary'));
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      staleTime: 5000,
+      staleTime: 3000,
       refetchOnWindowFocus: false,
     },
   },

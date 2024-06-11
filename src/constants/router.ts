@@ -1,13 +1,15 @@
 export const PRIVATE_ROUTERS = {
   ROOT: '/',
   USERS: '/users',
-  BASES: './bases',
-  CONTROLS: './controls',
-  WORKFLOWS: './workflows',
-  ALERTS: './alerts',
-  ROLES: './roles',
-  PREFERENCES: './preferences',
-  CALENDAR: './calendar',
+  USER_ADD: '/users/user-add',
+  USER_EDIT: '/users/user-edit/:id',
+  BASES: '/bases',
+  CONTROLS: '/controls',
+  WORKFLOWS: '/workflows',
+  ALERTS: '/alerts',
+  ROLES: '/roles',
+  PREFERENCES: '/preferences',
+  CALENDAR: '/calendar',
 };
 
 export const PUBLIC_ROUTERS = {

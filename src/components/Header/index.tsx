@@ -1,5 +1,11 @@
 import { memo, useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import {
+  Link,
+  useLocation,
+  useMatches,
+  useParams,
+  useRouteLoaderData,
+} from 'react-router-dom';
 
 import {
   Box,
@@ -17,12 +23,20 @@ import { formatBreadcrumb } from '@/utils';
 import { BreadcrumbIcon, NotifyIcon } from '@/components/Icons';
 
 const Header = ({ ...props }) => {
-  // TODO: Fake data breadcrumb
-  const pathname = '/users/create';
-  const param = '/users/create';
+  const { pathname } = useLocation();
+  const matches = useMatches();
+  const param = useParams();
+
+  const { title } =
+    (useRouteLoaderData(matches.at(-1)?.id ?? pathname) as {
+      title?: string;
+    }) || {};
 
   const renderBreadcrumb = useMemo(() => {
-    const basePath = '/users/create';
+    const basePath = Object.values(param).reduce<string>(
+      (path, param) => path.replace('/' + param, ''),
+      pathname,
+    );
     const paths = formatBreadcrumb(basePath);
 
     return paths.map(({ pathName, breadcrumbName }) => {
@@ -61,7 +75,7 @@ const Header = ({ ...props }) => {
       </Flex>
 
       <Heading py={5} px={10} as="h1" fontSize="lg" fontWeight="semibold">
-        Users
+        {title}
       </Heading>
     </>
   );

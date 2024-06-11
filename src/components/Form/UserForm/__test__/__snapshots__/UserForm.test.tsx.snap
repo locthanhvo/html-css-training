@@ -1,0 +1,364 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserForm components match snapshot with add form 1`] = `
+<div>
+  <form
+    class="css-jbe4xg"
+  >
+    <div
+      class="css-blvggq"
+    >
+      <div
+        aria-label="email"
+        class="chakra-form-control css-0"
+        name="email"
+        placeholder="Email"
+        role="group"
+        value=""
+      >
+        <label
+          class="chakra-form__label css-zecyy3"
+          for="field-:r0:"
+          id="field-:r0:-label"
+        >
+          Email
+        </label>
+        <div
+          class="chakra-input__group css-bx0blc"
+          data-group="true"
+        >
+          <input
+            aria-label="email"
+            class="chakra-input css-adz8kx"
+            id="field-:r0:"
+            name="email"
+            placeholder="Email"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        aria-label="phone"
+        class="chakra-form-control css-0"
+        name="phone"
+        placeholder="Phone"
+        role="group"
+        value=""
+      >
+        <label
+          class="chakra-form__label css-zecyy3"
+          for="field-:r1:"
+          id="field-:r1:-label"
+        >
+          Phone
+        </label>
+        <div
+          class="chakra-input__group css-bx0blc"
+          data-group="true"
+        >
+          <input
+            aria-label="phone"
+            class="chakra-input css-adz8kx"
+            id="field-:r1:"
+            name="phone"
+            placeholder="Phone"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-blvggq"
+    >
+      <div
+        aria-label="firstName"
+        class="chakra-form-control css-0"
+        name="firstName"
+        placeholder="First Name"
+        role="group"
+        value=""
+      >
+        <label
+          class="chakra-form__label css-zecyy3"
+          for="field-:r2:"
+          id="field-:r2:-label"
+        >
+          First Name
+        </label>
+        <div
+          class="chakra-input__group css-bx0blc"
+          data-group="true"
+        >
+          <input
+            aria-label="firstName"
+            class="chakra-input css-adz8kx"
+            id="field-:r2:"
+            name="firstName"
+            placeholder="First Name"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        aria-label="lastName"
+        class="chakra-form-control css-0"
+        name="lastName"
+        placeholder="Last Name"
+        role="group"
+        value=""
+      >
+        <label
+          class="chakra-form__label css-zecyy3"
+          for="field-:r3:"
+          id="field-:r3:-label"
+        >
+          Last Name
+        </label>
+        <div
+          class="chakra-input__group css-bx0blc"
+          data-group="true"
+        >
+          <input
+            aria-label="lastName"
+            class="chakra-input css-adz8kx"
+            id="field-:r3:"
+            name="lastName"
+            placeholder="Last Name"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-blvggq"
+    />
+    <button
+      class="chakra-button css-ey593w"
+      disabled=""
+      name="Create"
+      type="submit"
+    >
+      Create
+    </button>
+  </form>
+</div>
+`;
+
+exports[`UserForm components match snapshot with edit form 1`] = `
+<div>
+  <form
+    class="css-jbe4xg"
+  >
+    <div
+      class="css-blvggq"
+    >
+      <div
+        aria-label="email"
+        class="chakra-form-control css-0"
+        name="email"
+        placeholder="Email"
+        role="group"
+        value="devon@mail.com"
+      >
+        <label
+          class="chakra-form__label css-zecyy3"
+          for="field-:r4:"
+          id="field-:r4:-label"
+        >
+          Email
+        </label>
+        <div
+          class="chakra-input__group css-bx0blc"
+          data-group="true"
+        >
+          <input
+            aria-label="email"
+            class="chakra-input css-adz8kx"
+            id="field-:r4:"
+            name="email"
+            placeholder="Email"
+            type="text"
+            value="devon@mail.com"
+          />
+        </div>
+      </div>
+      <div
+        aria-label="phone"
+        class="chakra-form-control css-0"
+        name="phone"
+        placeholder="Phone"
+        role="group"
+        value="+237 6 99 88 77 66"
+      >
+        <label
+          class="chakra-form__label css-zecyy3"
+          for="field-:r5:"
+          id="field-:r5:-label"
+        >
+          Phone
+        </label>
+        <div
+          class="chakra-input__group css-bx0blc"
+          data-group="true"
+        >
+          <input
+            aria-label="phone"
+            class="chakra-input css-adz8kx"
+            id="field-:r5:"
+            name="phone"
+            placeholder="Phone"
+            type="text"
+            value="+237 6 99 88 77 66"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-blvggq"
+    >
+      <div
+        aria-label="firstName"
+        class="chakra-form-control css-0"
+        name="firstName"
+        placeholder="First Name"
+        role="group"
+        value="Devon"
+      >
+        <label
+          class="chakra-form__label css-zecyy3"
+          for="field-:r6:"
+          id="field-:r6:-label"
+        >
+          First Name
+        </label>
+        <div
+          class="chakra-input__group css-bx0blc"
+          data-group="true"
+        >
+          <input
+            aria-label="firstName"
+            class="chakra-input css-adz8kx"
+            id="field-:r6:"
+            name="firstName"
+            placeholder="First Name"
+            type="text"
+            value="Devon"
+          />
+        </div>
+      </div>
+      <div
+        aria-label="lastName"
+        class="chakra-form-control css-0"
+        name="lastName"
+        placeholder="Last Name"
+        role="group"
+        value="Lane"
+      >
+        <label
+          class="chakra-form__label css-zecyy3"
+          for="field-:r7:"
+          id="field-:r7:-label"
+        >
+          Last Name
+        </label>
+        <div
+          class="chakra-input__group css-bx0blc"
+          data-group="true"
+        >
+          <input
+            aria-label="lastName"
+            class="chakra-input css-adz8kx"
+            id="field-:r7:"
+            name="lastName"
+            placeholder="Last Name"
+            type="text"
+            value="Lane"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-blvggq"
+    >
+      <div
+        aria-label="createdAt"
+        class="chakra-form-control css-0"
+        data-disabled=""
+        name="createdAt"
+        placeholder="Created At"
+        role="group"
+        value="2024-06-05 14:46:58"
+      >
+        <label
+          class="chakra-form__label css-zecyy3"
+          data-disabled=""
+          for="field-:r8:"
+          id="field-:r8:-label"
+        >
+          Created At
+        </label>
+        <div
+          class="chakra-input__group css-bx0blc"
+          data-group="true"
+        >
+          <input
+            aria-label="createdAt"
+            class="chakra-input css-adz8kx"
+            disabled=""
+            id="field-:r8:"
+            name="createdAt"
+            placeholder="Created At"
+            type="datetime-local"
+            value="2024-06-05 14:46:58"
+          />
+        </div>
+      </div>
+      <div
+        aria-label="updatedAt"
+        class="chakra-form-control css-0"
+        data-disabled=""
+        name="updatedAt"
+        placeholder="Updated At"
+        role="group"
+        value="2024-06-05 14:46:58"
+      >
+        <label
+          class="chakra-form__label css-zecyy3"
+          data-disabled=""
+          for="field-:r9:"
+          id="field-:r9:-label"
+        >
+          Updated At
+        </label>
+        <div
+          class="chakra-input__group css-bx0blc"
+          data-group="true"
+        >
+          <input
+            aria-label="updatedAt"
+            class="chakra-input css-adz8kx"
+            disabled=""
+            id="field-:r9:"
+            name="updatedAt"
+            placeholder="Updated At"
+            type="datetime-local"
+            value="2024-06-05 14:46:58"
+          />
+        </div>
+      </div>
+    </div>
+    <button
+      class="chakra-button css-ey593w"
+      disabled=""
+      name="Update"
+      type="submit"
+    >
+      Update
+    </button>
+  </form>
+</div>
+`;

@@ -8,7 +8,7 @@ interface TabProps {
   }[];
 }
 
-const TabLayout = ({ tabList }: TabProps) => {
+const NavTab = ({ tabList, ...rest }: TabProps) => {
   const [tabIndex, setTabIndex] = useState(0);
 
   const handleTabChange = (index: number) => {
@@ -17,29 +17,28 @@ const TabLayout = ({ tabList }: TabProps) => {
 
   return (
     <Tabs>
-      <TabList maxW="578px">
+      <TabList maxW="fit-content">
         {tabList.map((tab, index) => (
           <Tab
-            px={4}
-            py={3}
-            bgColor={tabIndex === index ? 'white' : ''}
             color={tabIndex === index ? 'blue.200' : 'gray.500'}
             fontSize="base"
             fontWeight="regular"
-            key={index}
+            key={tab.label}
             onClick={() => handleTabChange(index)}
           >
             {tab.label}
           </Tab>
         ))}
       </TabList>
-      <TabPanels bgColor="white" borderColor="gray.200">
+      <TabPanels mt={4} {...rest}>
         {tabList.map((tab, index) => (
-          <TabPanel key={index}>{tabIndex === index && tab.component}</TabPanel>
+          <TabPanel key={tab.label}>
+            {tabIndex === index && tab.component}
+          </TabPanel>
         ))}
       </TabPanels>
     </Tabs>
   );
 };
 
-export default memo(TabLayout);
+export default memo(NavTab);

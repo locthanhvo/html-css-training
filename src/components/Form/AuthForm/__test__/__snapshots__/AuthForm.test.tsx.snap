@@ -6,8 +6,12 @@ exports[`AuthForm components match snapshot with login form 1`] = `
     class="css-jbe4xg"
   >
     <div
+      aria-label="email"
       class="chakra-form-control css-0"
+      name="email"
+      placeholder="Email"
       role="group"
+      value=""
     >
       <label
         class="chakra-form__label css-zecyy3"
@@ -32,8 +36,12 @@ exports[`AuthForm components match snapshot with login form 1`] = `
       </div>
     </div>
     <div
+      aria-label="password"
       class="chakra-form-control css-0"
+      name="password"
+      placeholder="Password"
       role="group"
+      value=""
     >
       <label
         class="chakra-form__label css-zecyy3"
@@ -110,8 +118,12 @@ exports[`AuthForm components match snapshot with register form 1`] = `
     class="css-jbe4xg"
   >
     <div
+      aria-label="email"
       class="chakra-form-control css-0"
+      name="email"
+      placeholder="Email"
       role="group"
+      value=""
     >
       <label
         class="chakra-form__label css-zecyy3"
@@ -136,8 +148,12 @@ exports[`AuthForm components match snapshot with register form 1`] = `
       </div>
     </div>
     <div
+      aria-label="phone"
       class="chakra-form-control css-0"
+      name="phone"
+      placeholder="Phone"
       role="group"
+      value=""
     >
       <label
         class="chakra-form__label css-zecyy3"
@@ -156,14 +172,18 @@ exports[`AuthForm components match snapshot with register form 1`] = `
           id="field-:r3:"
           name="phone"
           placeholder="Phone"
-          type="text"
+          type="number"
           value=""
         />
       </div>
     </div>
     <div
+      aria-label="password"
       class="chakra-form-control css-0"
+      name="password"
+      placeholder="Password"
       role="group"
+      value=""
     >
       <label
         class="chakra-form__label css-zecyy3"
@@ -188,8 +208,12 @@ exports[`AuthForm components match snapshot with register form 1`] = `
       </div>
     </div>
     <div
+      aria-label="confirmPassword"
       class="chakra-form-control css-0"
+      name="confirmPassword"
+      placeholder="Confirm password"
       role="group"
+      value=""
     >
       <label
         class="chakra-form__label css-zecyy3"

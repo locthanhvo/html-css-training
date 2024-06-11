@@ -1,72 +1,50 @@
 import { memo } from 'react';
 import { Td, Text, Tooltip, Tr } from '@chakra-ui/react';
-
-// Constants
-import { ERROR_MESSAGES } from '@/constants';
-
-// Types
-import { TDataSource, THeaderTable } from '@/types';
+import { TCellTable } from '@/types';
 
 interface TableRowProps {
-  columns?: THeaderTable[];
-  dataSource?: TDataSource[];
-  onClickTableRow?: (id: string) => void;
+  cells: TCellTable[];
+  onClick?: () => void;
 }
 
-const TableRow = ({ columns, dataSource, onClickTableRow }: TableRowProps) => {
-  return !dataSource?.length ? (
-    <Tr data-testid="table-row">
-      <Td
-        colSpan={columns?.length}
-        color="text.primary"
-        fontSize="lg"
-        fontWeight="regular"
-        textAlign="center"
-        border="none"
-      >
-        {ERROR_MESSAGES.EMPTY_DATA}
-      </Td>
-    </Tr>
-  ) : (
-    dataSource.map((data) => {
-      const handleClick = () => onClickTableRow?.(`${data.id}`);
-
-      return (
-        <Tr
-          key={data.id}
-          {...(onClickTableRow && {
-            cursor: 'pointer',
-          })}
-          onClick={handleClick}
+const TableRow = ({ cells, onClick }: TableRowProps) => {
+  return (
+    <Tr
+      {...(onClick && {
+        cursor: 'pointer',
+      })}
+      onClick={onClick}
+    >
+      {cells.map((cell) => (
+        <Td
+          key={cell.key}
+          p={0}
+          py={5}
+          px={2}
+          maxW="50px"
+          textAlign="left"
+          borderColor="gray.150"
         >
-          {!!columns?.length &&
-            columns?.map((column, index) =>
-              column?.renderBody ? (
-                column?.renderBody(data, index)
-              ) : (
-                <Td key={column?.key} px={0} borderColor="gray.150">
-                  <Tooltip
-                    minW="max-content"
-                    placement="bottom-start"
-                    label={data[column?.key as keyof typeof data] as string}
-                  >
-                    <Text
-                      fontSize="xs"
-                      color="gray.800"
-                      fontWeight="regular"
-                      textAlign="left"
-                      whiteSpace="break-spaces"
-                      noOfLines={1}
-                    >
-                      {data[column?.key as keyof typeof data] as string}
-                    </Text>
-                  </Tooltip>
-                </Td>
-              ),
-            )}
-        </Tr>
-      );
-    })
+          <Tooltip
+            minW="max-content"
+            placement="bottom-start"
+            label={cell.tooltipLabel}
+          >
+            <Text
+              as="span"
+              fontSize="xs"
+              color="gray.800"
+              fontWeight="regular"
+              textAlign="left"
+              whiteSpace="break-spaces"
+              noOfLines={1}
+            >
+              {cell.content}
+            </Text>
+          </Tooltip>
+        </Td>
+      ))}
+    </Tr>
   );
 };
 
