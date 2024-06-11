@@ -30,7 +30,7 @@ import {
 } from '@/hooks';
 
 // Types
-import { TDataSource, TError, TCompany, TControl } from '@/types';
+import { TDataSource, TError, TControl } from '@/types';
 
 // Utils
 import { customToast } from '@/utils';
