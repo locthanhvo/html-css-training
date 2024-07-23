@@ -139,6 +139,8 @@ const EditTaskForm = ({
               fontSize="lg"
               color="primary"
               {...field}
+              isError={!!error}
+              errorMessages={error?.message}
               onChange={(data) =>
                 handleInputChange({
                   field: 'title',

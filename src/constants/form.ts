@@ -2,7 +2,7 @@ import { ERROR_MESSAGES } from './message';
 
 export const TASK_SCHEMA = {
   TITLE: {
-    required: ERROR_MESSAGES.FIELD_REQUIRED('Email'),
+    required: ERROR_MESSAGES.FIELD_REQUIRED('Title'),
   },
 };
 

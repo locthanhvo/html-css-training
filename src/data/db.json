@@ -23,14 +23,17 @@
   ],
   "tasks": [
     {
+      "id": 1,
       "title": "asdsada",
+      "description": "",
       "startDate": "",
       "endDate": "",
+      "label": [],
+      "boardId": "93d1f6a8-c312-436a-886f-a646bf424209",
+      "members": [],
       "images": [
         "https://i.ibb.co/yfScpc7/Screenshot-2024-05-08-092811.png"
-      ],
-      "boardId": "93d1f6a8-c312-436a-886f-a646bf424209",
-      "id": 1
+      ]
     }
   ]
 }
