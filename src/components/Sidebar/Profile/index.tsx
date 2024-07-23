@@ -32,7 +32,7 @@ const Profile = ({
         zIndex={1}
         borderRadius="50%"
         w={110}
-        h={110}
+        h={111}
       />
 
       <Flex
