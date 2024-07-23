@@ -60,8 +60,8 @@ const HeaderList = ({ onClick, title, color, total }: HeaderListProps) => {
         </Flex>
       </Flex>
 
-      <Flex gap={2}>
-        <ActionButton title="" rightIcon={<MeatballsMenuIcon />} />
+      <Flex gap={4}>
+        <ActionButton title="Option" rightIcon={<MeatballsMenuIcon />} />
         <ActionButton title="Add" leftIcon={<PlusIcon />} onClick={onClick} />
       </Flex>
     </VStack>
