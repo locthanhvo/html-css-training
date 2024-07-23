@@ -24,6 +24,7 @@ import { calculateDaysLeft } from '@/utils';
 interface EditTaskFormProps {
   task?: ITask;
   isLoading?: boolean;
+  isDeleteLoading?: boolean;
   onSubmit: (data: TEditTaskForm, imageFiles?: File[]) => void;
   onCancel?: () => void;
   onRemove?: () => void;
@@ -32,6 +33,7 @@ interface EditTaskFormProps {
 const EditTaskForm = ({
   task,
   isLoading,
+  isDeleteLoading,
   onSubmit,
   onCancel,
   onRemove,
@@ -134,7 +136,7 @@ const EditTaskForm = ({
           control={control}
           render={({ field, fieldState: { error } }) => (
             <InputField
-              p={0}
+              p={1}
               w="full"
               fontSize="lg"
               color="primary"
@@ -297,7 +299,7 @@ const EditTaskForm = ({
             size="md"
             title="Remove Card"
             color="lightRed"
-            isLoading={isLoading}
+            isLoading={isDeleteLoading}
             onClick={onRemove}
           />
         </Flex>

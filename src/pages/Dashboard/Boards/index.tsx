@@ -158,9 +158,8 @@ const Boards = () => {
             ) : (
               <EditTaskForm
                 task={editedTask || taskDetail}
-                isLoading={
-                  isEditLoading || isLoadingUploadImages || isDeleteLoading
-                }
+                isDeleteLoading={isDeleteLoading}
+                isLoading={isEditLoading || isLoadingUploadImages}
                 onSubmit={handleUpdateTask}
                 onCancel={handleToggleModal}
                 onRemove={handleDelete}

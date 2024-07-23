@@ -103,7 +103,7 @@ const CardItem = ({
       draggable
       onClick={handleClickTask}
       _hover={{
-        border: '2px solid',
+        border: '1px solid',
         borderColor: 'lightRed',
       }}
       onDragStart={handleDragStart}
@@ -128,7 +128,7 @@ const CardItem = ({
 
             <Flex>{memberElements}</Flex>
           </Flex>
-          <Text size="sm" color="primary">
+          <Text size="base" color="primary">
             {title}
           </Text>
 

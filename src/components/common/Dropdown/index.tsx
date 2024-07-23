@@ -70,7 +70,7 @@ const Dropdown = ({
         border="2px solid"
         borderColor="lightGray"
         color="primary"
-        fontSize="base"
+        fontSize="md"
       >
         {name}
       </MenuButton>

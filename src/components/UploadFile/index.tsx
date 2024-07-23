@@ -41,7 +41,7 @@ const UploadFile = ({
         )}
       </Flex>
       {variant === 'button' && (
-        <Text fontSize="sm" color="primary" textAlign="center">
+        <Text fontSize="base" color="primary" textAlign="center">
           Attachment
         </Text>
       )}

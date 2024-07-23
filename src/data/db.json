@@ -24,11 +24,16 @@
   "tasks": [
     {
       "id": 1,
-      "title": "asdsada",
+      "title": "New task",
       "description": "",
       "startDate": "",
       "endDate": "",
-      "label": [],
+      "label": [
+        {
+          "name": "Space Tasks 1",
+          "value": "space-tasks-1"
+        }
+      ],
       "boardId": "93d1f6a8-c312-436a-886f-a646bf424209",
       "members": [],
       "images": [
