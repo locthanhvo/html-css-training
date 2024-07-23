@@ -61,16 +61,16 @@ const Boards = () => {
   );
 
   useEffect(() => {
-    if (boards?.length && tasks?.length) {
-      const taskList: IListTask[] = boards.map((board) => ({
+    if (boards?.length) {
+      const taskList = boards?.map((board) => ({
         id: board.id,
         title: board.title,
         color: board.color,
-        total: tasks.filter((task: ITask) => task.boardId === board.id).length,
-        tasks: tasks.filter((task: ITask) => task.boardId === board.id),
+        total: tasks?.filter((task: ITask) => task.boardId === board.id).length,
+        tasks: tasks?.filter((task: ITask) => task.boardId === board.id),
       }));
 
-      setTaskList(taskList);
+      setTaskList(taskList as IListTask[]);
     }
   }, [boards, tasks, setTaskList]);
 
