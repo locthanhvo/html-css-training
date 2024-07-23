@@ -1,0 +1,103 @@
+{
+  "boards": [
+    {
+      "id": "93d1f6a8-c312-436a-886f-a646bf424209",
+      "title": "Todo",
+      "color": "electricPurple"
+    },
+    {
+      "id": "93d1f6a8-c312-436a-886f-a646bf424208",
+      "title": "In Work",
+      "color": "skyBlue"
+    },
+    {
+      "id": "93d1f6a8-c312-436a-886f-a646bf424207",
+      "title": "Review",
+      "color": "yellow"
+    },
+    {
+      "id": "9b1a1aa0-afc0-4bdb-90f7-7d8330ec254b",
+      "title": "Done",
+      "color": "green"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440003",
+      "title": "Development Apps",
+      "description": "",
+      "startDate": "",
+      "endDate": "",
+      "label": [
+        {
+          "name": "Space Tasks 2",
+          "value": "space-tasks-2"
+        }
+      ],
+      "boardId": "93d1f6a8-c312-436a-886f-a646bf424207",
+      "members": [],
+      "images": []
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440006",
+      "label": [
+        {
+          "name": "Space Tasks 2",
+          "value": "space-tasks-2"
+        }
+      ],
+      "title": "Astronomy Or Astrology",
+      "description": "Task 3 description",
+      "boardId": "9b1a1aa0-afc0-4bdb-90f7-7d8330ec254b"
+    },
+    {
+      "id": "g4EWWAu",
+      "title": "Make Money Online Through",
+      "description": "<p>hello</p><p>hi</p>",
+      "startDate": "",
+      "endDate": "",
+      "label": [],
+      "boardId": "93d1f6a8-c312-436a-886f-a646bf424209",
+      "members": [],
+      "images": [
+        "https://i.ibb.co/3R97MPw/Screenshot-2024-05-08-092811.png"
+      ]
+    },
+    {
+      "id": "WqsKcTy",
+      "title": "Copper Canyon",
+      "description": "<p>hello</p><p>hi</p>",
+      "startDate": "2024-07-19",
+      "endDate": "2024-07-30",
+      "label": [
+        {
+          "name": "Space Tasks 1",
+          "value": "space-tasks-1"
+        },
+        {
+          "name": "Space Tasks 2",
+          "value": "space-tasks-2"
+        }
+      ],
+      "boardId": "93d1f6a8-c312-436a-886f-a646bf424208",
+      "members": [
+        {
+          "name": "Mary Alex",
+          "image": "/src/assets/images/avatar-small-2.png",
+          "value": "mary-alex"
+        },
+        {
+          "name": "Jack Rice",
+          "image": "/src/assets/images/avatar-small-3.png",
+          "value": "jack-rice"
+        },
+        {
+          "name": "Antony Jones",
+          "image": "/src/assets/images/avatar-small-4.png",
+          "value": "antony-jones"
+        }
+      ],
+      "images": []
+    }
+  ]
+}
