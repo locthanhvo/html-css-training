@@ -26,7 +26,14 @@ const Profile = ({
       borderColor="lightGray"
       position="relative"
     >
-      <Image src={AvatarUrl} alt="avatar" zIndex={1} borderRadius="50%" />
+      <Image
+        src={AvatarUrl}
+        alt="avatar"
+        zIndex={1}
+        borderRadius="50%"
+        w={110}
+        h={110}
+      />
 
       <Flex
         position="absolute"
