@@ -7,10 +7,10 @@ import {
   StatisticsIcon,
 } from '@/components/common/Icons';
 
-import AvatarUserOne from '@/assets/images/avatar-medium-1.png';
-import AvatarUserTwo from '@/assets/images/avatar-medium-2.png';
-import AvatarUserThree from '@/assets/images/avatar-medium-3.png';
-import AvatarUserFour from '@/assets/images/avatar-medium-4.png';
+import AvatarUserOne from '@/assets/images/avatar-medium-1.webp';
+import AvatarUserTwo from '@/assets/images/avatar-medium-2.webp';
+import AvatarUserThree from '@/assets/images/avatar-medium-3.webp';
+import AvatarUserFour from '@/assets/images/avatar-medium-4.webp';
 
 export const SIDEBAR_MENU = [
   {

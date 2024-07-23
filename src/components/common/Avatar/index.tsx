@@ -10,7 +10,7 @@ interface AvatarProps {
 const Avatar = ({ url, w = 20, h = 20 }: AvatarProps) => {
   return (
     <Center w={w} h={h} borderRadius="50%">
-      <Image borderRadius="50%" src={url} />
+      <Image borderRadius="50%" src={url} w={w} h={h} />
     </Center>
   );
 };

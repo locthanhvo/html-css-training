@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { Box, Flex, Image, Text } from '@chakra-ui/react';
 
-import AvatarUrl from '@/assets/images/avatar-large.png';
+import AvatarUrl from '@/assets/images/avatar-large.webp';
 
 interface ProfileProps {
   name?: string;
