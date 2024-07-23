@@ -1,82 +1,29 @@
 import {
   createBrowserRouter,
   createRoutesFromElements,
-  Navigate,
-  redirect,
   Route,
 } from 'react-router-dom';
-import { lazy, Suspense } from 'react';
-
-// Wrappers
-import RouteProtected from './RouteProtected';
+import { Suspense } from 'react';
 
 // routes
 import { PUBLIC_ROUTES } from './public-routes';
-import { PRIVATE_ROUTES } from './private-routes';
-
-// Stores
-import { authStore } from '@/stores';
-
-// Constants
-import { PRIVATE_ROUTERS } from '@/constants';
-
-// Components
-const Fallback = lazy(() => import('@/components/Fallback'));
-
-// Layouts
-const MainLayout = lazy(() => import('@/layouts/MainLayout'));
-const SecondaryLayout = lazy(() => import('@/layouts/SecondaryLayout'));
+import { Box } from '@chakra-ui/react';
+import MainLayout from '@/layouts/MainLayout';
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route>
-      <Route element={<RouteProtected />}>
+    <Route element={<MainLayout />}>
+      {PUBLIC_ROUTES.map(({ path, Component }) => (
         <Route
-          path={PRIVATE_ROUTERS.ROOT}
+          key={path}
+          path={path}
           element={
-            <Suspense fallback={<Fallback />}>
-              <MainLayout />
+            <Suspense fallback={<Box>Loading...</Box>}>
+              <Component />
             </Suspense>
           }
-        >
-          <Route
-            index
-            element={<Navigate to={PRIVATE_ROUTERS.USERS} replace />}
-          />
-
-          {PRIVATE_ROUTES.map(({ path, Component, title }) => (
-            <Route
-              key={path}
-              path={path}
-              id={path}
-              element={
-                <Suspense fallback={<Fallback />}>
-                  <Component />
-                </Suspense>
-              }
-              loader={() => ({ title })}
-            />
-          ))}
-        </Route>
-      </Route>
-      <Route element={<SecondaryLayout />}>
-        {PUBLIC_ROUTES.map(({ path, Component }) => (
-          <Route
-            key={path}
-            path={path}
-            element={
-              <Suspense fallback={<Fallback />}>
-                <Component />
-              </Suspense>
-            }
-            loader={() => {
-              const user = authStore.getState().user.email;
-
-              return user ? redirect(PRIVATE_ROUTERS.ROOT) : null;
-            }}
-          />
-        ))}
-      </Route>
+        />
+      ))}
     </Route>,
   ),
 );

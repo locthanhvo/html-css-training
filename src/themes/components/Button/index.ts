@@ -4,30 +4,21 @@ import { defineStyleConfig } from '@chakra-ui/react';
 export const Button = defineStyleConfig({
   baseStyle: {
     fontFamily: fonts.body,
-    fontWeight: 'regular',
+    fontWeight: 'normal',
     borderRadius: 'lg',
   },
   sizes: {
     sm: {
-      w: '5.125rem',
+      w: '2.6875rem',
       px: 2,
       py: 2,
-      fontSize: '2xs',
+      fontSize: 'sm',
     },
     md: {
+      w: '3.5rem',
       px: 4,
-      py: 3,
-      fontSize: 'xs',
-    },
-    lg: {
-      w: '15rem',
-      py: 3,
-      fontSize: 'sm',
-    },
-    xl: {
-      w: '32.5rem',
-      py: 3,
-      fontSize: 'sm',
+      py: 4,
+      fontSize: 'base',
     },
   },
   defaultProps: {

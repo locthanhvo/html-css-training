@@ -1,15 +1,7 @@
-import { Navigate, Outlet } from 'react-router-dom';
-
-// Constants
-import { PUBLIC_ROUTERS } from '@/constants';
-
-// Stores
-import { authStore } from '@/stores';
+import { Outlet } from 'react-router-dom';
 
 const RouteProtected = () => {
-  const user = authStore((state) => state.user);
-
-  return user.email ? <Outlet /> : <Navigate to={PUBLIC_ROUTERS.SIGN_IN} />;
+  return <Outlet />;
 };
 
 export default RouteProtected;

@@ -1,8 +1,10 @@
-const BASE_URL = process.env.VITE_API_ENDPOINT || '';
-
+// Types
 import { RequestOptions, httpsMethod } from '@/types';
 
+// Constants
 import { HTTP_METHOD } from '@/constants';
+
+const BASE_URL = process.env.VITE_API_ENDPOINT ?? '';
 
 export const apiRequest = async <T>(
   method: httpsMethod,

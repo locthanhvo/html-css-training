@@ -1,84 +1,100 @@
-import { memo, useMemo } from 'react';
+import { Flex, Text, VStack } from '@chakra-ui/react';
+import Navbar from './Navbar';
+import InputField from '../common/InputField';
 import {
-  Link,
-  useLocation,
-  useMatches,
-  useParams,
-  useRouteLoaderData,
-} from 'react-router-dom';
+  UserProfileIcon,
+  ForwardArrowIcon,
+  FavoriteIcon,
+  MenuIcon,
+  NotifyIcon,
+  SearchIcon,
+} from '../common/Icons';
+import { memo } from 'react';
 
-import {
-  Box,
-  Breadcrumb,
-  BreadcrumbItem,
-  Flex,
-  Heading,
-  Text,
-} from '@chakra-ui/react';
+interface HeaderProps {
+  w?: number | string;
+}
 
-// Utils
-import { formatBreadcrumb } from '@/utils';
-
-// Icons
-import { BreadcrumbIcon, NotifyIcon } from '@/components/Icons';
-
-const Header = ({ ...props }) => {
-  const { pathname } = useLocation();
-  const matches = useMatches();
-  const param = useParams();
-
-  const { title } =
-    (useRouteLoaderData(matches.at(-1)?.id ?? pathname) as {
-      title?: string;
-    }) || {};
-
-  const renderBreadcrumb = useMemo(() => {
-    const basePath = Object.values(param).reduce<string>(
-      (path, param) => path.replace('/' + param, ''),
-      pathname,
-    );
-    const paths = formatBreadcrumb(basePath);
-
-    return paths.map(({ pathName, breadcrumbName }) => {
-      const colorText = `/${pathName}` === pathname ? 'blue.300' : 'gray.500';
-      return (
-        <BreadcrumbItem key={pathName}>
-          <Link to={pathName}>
-            <Text fontSize="xs" color={colorText}>
-              {breadcrumbName.replace(/\b\w/g, (l) => l.toUpperCase())}
-            </Text>
-          </Link>
-        </BreadcrumbItem>
-      );
-    });
-  }, [param, pathname]);
-
+const Header = ({ w = 1600 }: HeaderProps) => {
   return (
-    <>
+    <VStack
+      bgColor="ghostWhite"
+      w={w}
+      p={4}
+      flexDirection="row"
+      justifyContent="space-between"
+      borderBottom="2px solid"
+      borderColor="lightGray"
+    >
       <Flex
-        bgColor="primary"
-        maxW="full"
-        px={10}
-        py={7}
-        justifyContent="space-between"
-        {...props}
+        w={50}
+        h={50}
+        alignItems="center"
+        justifyContent="center"
+        borderRadius="50%"
+        boxShadow="md"
+        cursor="pointer"
+        bgColor="white"
       >
-        <Box>
-          <Breadcrumb spacing="8px" separator={<BreadcrumbIcon />}>
-            {renderBreadcrumb}
-          </Breadcrumb>
-        </Box>
-
-        <Flex gap={3} alignItems="center">
-          <NotifyIcon />
-        </Flex>
+        <MenuIcon />
       </Flex>
 
-      <Heading py={5} px={10} as="h1" fontSize="lg" fontWeight="semibold">
-        {title}
-      </Heading>
-    </>
+      <Text color="steelBlue" size="xl">
+        Constructor
+      </Text>
+
+      <Navbar />
+
+      <InputField
+        leftIcon={<SearchIcon />}
+        rightIcon={<ForwardArrowIcon />}
+        placeholder="Search Tasks"
+        borderRadius="2xl"
+        bgColor="white"
+        _focus={{
+          boxShadow: 'none',
+          border: '1px solid',
+          borderColor: 'gray.200',
+        }}
+        boxShadow="md"
+        size="lg"
+      />
+
+      <Flex gap={2} alignItems="center" justifyContent="center">
+        <UserProfileIcon />
+        <Text size="md" color="primary">
+          Clayton Santos
+        </Text>
+      </Flex>
+
+      <Flex gap={2.5}>
+        <Flex
+          w={50}
+          h={50}
+          alignItems="center"
+          justifyContent="center"
+          borderRadius="50%"
+          boxShadow="md"
+          cursor="pointer"
+          bgColor="white"
+        >
+          <NotifyIcon />
+        </Flex>
+
+        <Flex
+          w={50}
+          h={50}
+          alignItems="center"
+          justifyContent="center"
+          borderRadius="50%"
+          boxShadow="md"
+          cursor="pointer"
+          bgColor="white"
+        >
+          <FavoriteIcon />
+        </Flex>
+      </Flex>
+    </VStack>
   );
 };
-
 export default memo(Header);

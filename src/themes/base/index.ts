@@ -1,9 +1,8 @@
 import { colors } from './colors';
-import { fontSizes, fontWeights, fonts } from './typography';
+import { fontSizes, fonts } from './typography';
 
-export const foundations = {
+export const bases = {
   colors,
   fonts,
   fontSizes,
-  fontWeights,
 };

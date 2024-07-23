@@ -1,36 +1,29 @@
 import { memo } from 'react';
-import { Box, Flex, VStack } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import { Outlet } from 'react-router-dom';
 
 // Components
-import { ExpandSidebar, Header } from '@/components';
-import { authStore } from '@/stores';
+import { Header, Sidebar } from '@/components';
 
 const MainLayout = () => {
-  const user = authStore((state) => state.user);
-
   return (
-    <Flex
-      position="absolute"
-      w="100dvw"
-      h="100dvh"
-      bgColor="gray.50"
-      alignItems="stretch"
-    >
-      <ExpandSidebar user={user} />
+    <Flex w="100dvw" h="100dvh" bgColor="ghostWhite" direction="column">
+      <Header w="full" />
 
-      <VStack flex={1} alignItems="stretch" overflow="hidden">
-        <Header />
-        <Box
-          flex={1}
-          overflowY="auto"
-          px={30}
-          pb={30}
-          bgColor="background.table"
-        >
-          <Outlet />
+      <Flex flex={1} w="full" alignItems="stretch">
+        <Sidebar />
+
+        <Box flex={1} p={7} bgColor="ghostWhite">
+          <Box
+            h="full"
+            border="2px solid"
+            borderColor="lightGray"
+            borderRadius="2xl"
+          >
+            <Outlet />
+          </Box>
         </Box>
-      </VStack>
+      </Flex>
     </Flex>
   );
 };

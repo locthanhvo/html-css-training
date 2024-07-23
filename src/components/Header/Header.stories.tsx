@@ -21,6 +21,6 @@ export default {
 
 type Story = StoryObj<typeof Header>;
 
-export const HeaderComponent: Story = {
-  args: { width: '1140px' },
+export const Default: Story = {
+  args: {},
 };

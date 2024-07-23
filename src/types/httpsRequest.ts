@@ -4,8 +4,6 @@ export type httpsMethod = keyof typeof HTTP_METHOD;
 
 export interface RequestOptions {
   method: httpsMethod;
-  headers?: {
-    'Content-Type': string;
-  };
+  headers?: Record<string, string>;
   body?: string;
 }

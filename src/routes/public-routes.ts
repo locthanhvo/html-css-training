@@ -7,16 +7,11 @@ import { IRoute } from '@/types';
 import { PUBLIC_ROUTERS } from '@/constants';
 
 // Pages
-const SignInPage = lazy(() => import('@/pages/SignIn'));
-const SignUpPage = lazy(() => import('@/pages/SignUp'));
+const DashboardPage = lazy(() => import('@/pages/Dashboard'));
 
 export const PUBLIC_ROUTES: IRoute[] = [
   {
-    path: PUBLIC_ROUTERS.SIGN_IN,
-    Component: SignInPage,
-  },
-  {
-    path: PUBLIC_ROUTERS.SIGN_UP,
-    Component: SignUpPage,
+    path: PUBLIC_ROUTERS.ROOT,
+    Component: DashboardPage,
   },
 ];

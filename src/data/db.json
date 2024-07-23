@@ -1,213 +1,103 @@
 {
-  "users": [
-    {
-      "email": "admin@gmail.com",
-      "password": "1@Dzxcvb",
-      "phone": "0931961406",
-      "firstName": "admin",
-      "lastName": "ng",
-      "status": "Active",
-      "createdAt": "2024-06-05 14:46:58",
-      "updatedAt": "2024-06-07T02:52:22.111Z",
-      "id": "39123a24-dab7-4836-93e4-35aa7de21714"
-    },
-    {
-      "email": "vothanhloc406@gmail.com",
-      "phone": "0912312312",
-      "password": "1@Dzxcvb",
-      "firstName": "loc",
-      "lastName": "thanh",
-      "status": "Active",
-      "createdAt": "2024-06-07 11:08:14",
-      "updatedAt": "2024-06-07T04:08:19.003Z",
-      "id": "80e41cdf-9d79-468d-bdda-3242b10da6bc"
-    }
-  ],
-  "companies": [
+  "boards": [
     {
       "id": "93d1f6a8-c312-436a-886f-a646bf424209",
-      "company": "Asnet",
-      "phone": "0938475890",
-      "branch": "NON VIE",
-      "city": "Ho Chi Minh",
-      "commissioner": "Loc Vo Thanh",
-      "website": "http://localhost:5173/controls",
-      "country": "Viet Nam",
-      "mainEmail": "admin@gmail.com",
-      "secondaryEmail": "admin@gmail.com",
-      "gpsLatitude": "latitude",
-      "gpsLongitude": "longitude",
-      "createdAt": "2024-06-10T07:10:28.710Z",
-      "updatedAt": "2024-06-10T07:10:28.710Z"
+      "title": "Todo",
+      "color": "electricPurple"
+    },
+    {
+      "id": "93d1f6a8-c312-436a-886f-a646bf424208",
+      "title": "In Work",
+      "color": "skyBlue"
+    },
+    {
+      "id": "93d1f6a8-c312-436a-886f-a646bf424207",
+      "title": "Review",
+      "color": "yellow"
+    },
+    {
+      "id": "9b1a1aa0-afc0-4bdb-90f7-7d8330ec254b",
+      "title": "Done",
+      "color": "green"
     }
   ],
-  "brigades": [
-    {
-      "id": "550e8400-e29b-41d4-a716-446655440000",
-      "name": "Alpha Brigade",
-      "description": "A highly trained elite brigade specializing in tactical operations.",
-      "createdAt": "2023-01-15T08:00:00Z",
-      "updatedAt": "2024-06-10T12:00:00Z"
-    },
-    {
-      "id": "550e8400-e29b-41d4-a716-446655440001",
-      "name": "Bravo Brigade",
-      "description": "A brigade known for its expertise in reconnaissance and intelligence gathering.",
-      "createdAt": "2023-02-20T09:30:00Z",
-      "updatedAt": "2024-06-10T12:00:00Z"
-    },
-    {
-      "id": "550e8400-e29b-41d4-a716-446655440002",
-      "name": "Charlie Brigade",
-      "description": "A support brigade providing logistical and medical assistance to other units.",
-      "createdAt": "2023-03-25T10:00:00Z",
-      "updatedAt": "2024-06-10T12:00:00Z"
-    },
+  "tasks": [
     {
       "id": "550e8400-e29b-41d4-a716-446655440003",
-      "name": "Delta Brigade",
-      "description": "A brigade specializing in cyber warfare and electronic defense.",
-      "createdAt": "2023-04-30T11:15:00Z",
-      "updatedAt": "2024-06-10T12:00:00Z"
+      "title": "Development Apps",
+      "description": "",
+      "startDate": "",
+      "endDate": "",
+      "label": [
+        {
+          "name": "Space Tasks 2",
+          "value": "space-tasks-2"
+        }
+      ],
+      "boardId": "93d1f6a8-c312-436a-886f-a646bf424207",
+      "members": [],
+      "images": []
     },
     {
-      "id": "550e8400-e29b-41d4-a716-446655440004",
-      "name": "Echo Brigade",
-      "description": "An engineering brigade focused on construction and demolition operations.",
-      "createdAt": "2023-05-15T12:30:00Z",
-      "updatedAt": "2024-06-10T12:00:00Z"
-    }
-  ],
-  "controls": [
-    {
-      "id": "550e8400-e29b-41d4-a716-446655440000",
-      "name": "Alpha Brigade",
-      "description": "A highly trained elite brigade specializing in tactical operations.",
-      "createdAt": "2023-01-15T08:00:00Z",
-      "updatedAt": "2024-06-10T12:00:00Z"
+      "id": "550e8400-e29b-41d4-a716-446655440006",
+      "label": [
+        {
+          "name": "Space Tasks 2",
+          "value": "space-tasks-2"
+        }
+      ],
+      "title": "Astronomy Or Astrology",
+      "description": "Task 3 description",
+      "boardId": "9b1a1aa0-afc0-4bdb-90f7-7d8330ec254b"
     },
     {
-      "id": "550e8400-e29b-41d4-a716-446655440001",
-      "name": "Bravo Brigade",
-      "description": "A brigade known for its expertise in reconnaissance and intelligence gathering.",
-      "createdAt": "2023-02-20T09:30:00Z",
-      "updatedAt": "2024-06-10T12:00:00Z"
+      "id": "g4EWWAu",
+      "title": "Make Money Online Through",
+      "description": "<p>hello</p><p>hi</p>",
+      "startDate": "",
+      "endDate": "",
+      "label": [],
+      "boardId": "93d1f6a8-c312-436a-886f-a646bf424209",
+      "members": [],
+      "images": [
+        "https://i.ibb.co/3R97MPw/Screenshot-2024-05-08-092811.png"
+      ]
     },
     {
-      "id": "550e8400-e29b-41d4-a716-446655440002",
-      "name": "Charlie Brigade",
-      "description": "A support brigade providing logistical and medical assistance to other units.",
-      "createdAt": "2023-03-25T10:00:00Z",
-      "updatedAt": "2024-06-10T12:00:00Z"
-    },
-    {
-      "id": "550e8400-e29b-41d4-a716-446655440003",
-      "name": "Delta Brigade",
-      "description": "A brigade specializing in cyber warfare and electronic defense.",
-      "createdAt": "2023-04-30T11:15:00Z",
-      "updatedAt": "2024-06-10T12:00:00Z"
-    },
-    {
-      "id": "550e8400-e29b-41d4-a716-446655440004",
-      "name": "Echo Brigades",
-      "description": "An engineering brigade focused on construction and demolition operations.",
-      "createdAt": "2024-06-11T07:57:08.670Z",
-      "updatedAt": "2024-06-11T07:57:08.670Z"
-    },
-    {
-      "id": "550e8400-e29b-41d4-a716-446655440777",
-      "name": "Echo Brigade",
-      "description": "An engineering brigade focused on construction and demolition operations.",
-      "createdAt": "2023-05-15T12:30:00Z",
-      "updatedAt": "2024-06-10T12:00:00Z"
-    }
-  ],
-  "stagecoaches": [
-    {
-      "id": "550e8400-e29b-41d4-a716-446655440000",
-      "name": "Alpha Brigade",
-      "description": "A highly trained elite brigade specializing in tactical operations.",
-      "createdAt": "2023-01-15T08:00:00Z",
-      "updatedAt": "2024-06-10T12:00:00Z"
-    },
-    {
-      "id": "550e8400-e29b-41d4-a716-446655440001",
-      "name": "Bravo Brigade",
-      "description": "A brigade known for its expertise in reconnaissance and intelligence gathering.",
-      "createdAt": "2023-02-20T09:30:00Z",
-      "updatedAt": "2024-06-10T12:00:00Z"
-    },
-    {
-      "id": "550e8400-e29b-41d4-a716-446655440002",
-      "name": "Charlie Brigade",
-      "description": "A support brigade providing logistical and medical assistance to other units.",
-      "createdAt": "2023-03-25T10:00:00Z",
-      "updatedAt": "2024-06-10T12:00:00Z"
-    },
-    {
-      "id": "550e8400-e29b-41d4-a716-446655440003",
-      "name": "Delta Brigade",
-      "description": "A brigade specializing in cyber warfare and electronic defense.",
-      "createdAt": "2023-04-30T11:15:00Z",
-      "updatedAt": "2024-06-10T12:00:00Z"
-    },
-    {
-      "id": "550e8400-e29b-41d4-a716-446655440004",
-      "name": "Echo Brigade",
-      "description": "An engineering brigade.",
-      "createdAt": "2024-06-11T08:02:55.034Z",
-      "updatedAt": "2024-06-11T08:02:55.034Z"
-    },
-    {
-      "id": "550e8400-e29b-41d4-a716-446655440777",
-      "name": "Echo Brigade",
-      "description": "An engineering brigade focused on construction and demolition operations.",
-      "createdAt": "2023-05-15T12:30:00Z",
-      "updatedAt": "2024-06-10T12:00:00Z"
-    }
-  ],
-  "crca": [
-    {
-      "id": "550e8400-e29b-41d4-a716-446655440000",
-      "name": "Alpha Brigade",
-      "description": "A highly trained elite brigade specializing in tactical operations.",
-      "createdAt": "2023-01-15T08:00:00Z",
-      "updatedAt": "2024-06-10T12:00:00Z"
-    },
-    {
-      "id": "550e8400-e29b-41d4-a716-446655440001",
-      "name": "Bravo Brigade",
-      "description": "A brigade known for its expertise in reconnaissance and intelligence gathering.",
-      "createdAt": "2023-02-20T09:30:00Z",
-      "updatedAt": "2024-06-10T12:00:00Z"
-    },
-    {
-      "id": "550e8400-e29b-41d4-a716-446655440002",
-      "name": "Charlie Brigade",
-      "description": "A support brigade providing logistical and medical assistance to other units.",
-      "createdAt": "2023-03-25T10:00:00Z",
-      "updatedAt": "2024-06-10T12:00:00Z"
-    },
-    {
-      "id": "550e8400-e29b-41d4-a716-446655440003",
-      "name": "Delta Brigade",
-      "description": "A brigade specializing in cyber warfare and electronic defense.",
-      "createdAt": "2023-04-30T11:15:00Z",
-      "updatedAt": "2024-06-10T12:00:00Z"
-    },
-    {
-      "id": "550e8400-e29b-41d4-a716-446655440004",
-      "name": "Echo Brigade",
-      "description": "An engineering brigade focused on construction and demolition operations.",
-      "createdAt": "2023-05-15T12:30:00Z",
-      "updatedAt": "2024-06-10T12:00:00Z"
-    },
-    {
-      "id": "550e8400-e29b-41d4-a716-446655440777",
-      "name": "Echo Brigade",
-      "description": "An engineering brigade focused on construction and demolition operations.",
-      "createdAt": "2023-05-15T12:30:00Z",
-      "updatedAt": "2024-06-10T12:00:00Z"
+      "id": "WqsKcTy",
+      "title": "Copper Canyon",
+      "description": "<p>hello</p><p>hi</p>",
+      "startDate": "2024-07-19",
+      "endDate": "2024-07-30",
+      "label": [
+        {
+          "name": "Space Tasks 1",
+          "value": "space-tasks-1"
+        },
+        {
+          "name": "Space Tasks 2",
+          "value": "space-tasks-2"
+        }
+      ],
+      "boardId": "93d1f6a8-c312-436a-886f-a646bf424208",
+      "members": [
+        {
+          "name": "Mary Alex",
+          "image": "/src/assets/images/avatar-small-2.png",
+          "value": "mary-alex"
+        },
+        {
+          "name": "Jack Rice",
+          "image": "/src/assets/images/avatar-small-3.png",
+          "value": "jack-rice"
+        },
+        {
+          "name": "Antony Jones",
+          "image": "/src/assets/images/avatar-small-4.png",
+          "value": "antony-jones"
+        }
+      ],
+      "images": []
     }
   ]
 }

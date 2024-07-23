@@ -5,6 +5,16 @@ import { Box } from '@chakra-ui/react';
 // Components
 import NavTab from '.';
 
+// Icons
+import {
+  BarChartIcon,
+  CalendarIcon,
+  ChecklistIcon,
+  HamburgerMenuIcon,
+  StatisticsIcon,
+  BurgerMenuLeftIcon,
+} from '@/components/common/Icons';
+
 const meta: Meta<typeof NavTab> = {
   title: 'Components/NavTab',
   component: NavTab,
@@ -25,12 +35,34 @@ export const Primary: Story = {
   args: {
     tabList: [
       {
-        label: 'Company',
+        label: 'List Tasks',
         component: <Box>Content</Box>,
+        icon: ChecklistIcon,
       },
       {
-        label: 'Setting Control',
-        component: <Box>Content</Box>,
+        label: 'Boards',
+        component: <Box>Content 1</Box>,
+        icon: BarChartIcon,
+      },
+      {
+        label: 'Calendar',
+        component: <Box>Content 1</Box>,
+        icon: CalendarIcon,
+      },
+      {
+        label: 'Gantt',
+        component: <Box>Content 1</Box>,
+        icon: BurgerMenuLeftIcon,
+      },
+      {
+        label: 'Timeline',
+        component: <Box>Content 1</Box>,
+        icon: HamburgerMenuIcon,
+      },
+      {
+        label: 'Activity',
+        component: <Box>Content 1</Box>,
+        icon: StatisticsIcon,
       },
     ],
   },
