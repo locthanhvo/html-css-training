@@ -114,6 +114,8 @@ const CardItem = ({
           borderTopRadius="md"
           src={images?.[0]}
           alt={`${title} image`}
+          w={230}
+          h={129}
         />
 
         <Stack spacing="3" p={3}>
