@@ -51,7 +51,7 @@ const AddTaskForm = ({
   const handleInputChange = useCallback(
     ({ field, data, isError, onChange }: IInputField<TAddTaskForm>) => {
       isError && clearErrors(field);
-      onChange(data);
+      onChange?.(data);
     },
     [clearErrors],
   );
