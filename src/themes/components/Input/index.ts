@@ -11,4 +11,36 @@ export const Input = defineStyleConfig({
       },
     },
   },
+
+  variants: {
+    primary: {
+      field: {
+        color: 'primary',
+        border: '2px solid',
+        borderColor: 'primary',
+        _focus: {
+          borderColor: 'royalBlue',
+        },
+      },
+    },
+
+    secondary: {
+      field: {
+        bgColor: 'white',
+        _focus: {
+          boxShadow: 'none',
+          border: '1px solid',
+          borderColor: 'gray.200',
+        },
+        boxShadow: 'md',
+      },
+    },
+
+    outline: {
+      field: {
+        border: 'none',
+        color: 'primary',
+      },
+    },
+  },
 });

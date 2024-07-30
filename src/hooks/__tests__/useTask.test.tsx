@@ -16,7 +16,7 @@ import {
   useGetTask,
   useGetTasks,
 } from '@/hooks/useTask';
-import { TASK_DETAIL, TASK_DETAIL_2 } from '@/mocks';
+import { MOCK_TASK_DETAIL_FIRST, MOCK_TASK_DETAIL_SECOND } from '@/mocks';
 import { taskQueryKeys } from '@/constants';
 
 const mockFetch = jest.fn().mockResolvedValue({
@@ -70,26 +70,49 @@ describe('useTask', () => {
   });
 
   it('should invalidate queries on successful task creation', async () => {
-    queryClient.invalidateQueries = jest.fn();
+    const oldData = [{ ...MOCK_TASK_DETAIL_SECOND }];
+
+    queryClient.setQueryData = jest
+      .fn()
+      .mockReturnValue([...oldData, MOCK_TASK_DETAIL_FIRST]);
+
+    const setQueryDataSpy = jest.spyOn(queryClient, 'setQueryData');
+    queryClient.getQueryData = jest
+      .fn()
+      .mockReturnValue([...oldData, MOCK_TASK_DETAIL_FIRST]);
 
     const { result } = renderHook(() => useCreateTask(), {
       wrapper: wrapper,
     });
 
     await result.current.handleCreateTask({
-      task: { ...TASK_DETAIL },
+      task: MOCK_TASK_DETAIL_FIRST,
     });
 
     await waitFor(() => {
-      expect(queryClient.invalidateQueries).toHaveBeenCalledWith({
-        queryKey: [{ entity: 'list', scope: 'tasks' }],
-      });
+      expect(queryClient.setQueryData).toHaveBeenCalledWith(
+        taskQueryKeys.lists(),
+        expect.any(Function),
+      );
+
+      const createFn = setQueryDataSpy.mock.calls[0][1] as (
+        data: ITask[],
+      ) => ITask[];
+      const newData = createFn([...oldData, MOCK_TASK_DETAIL_FIRST]);
+
+      expect(newData).toEqual([
+        MOCK_TASK_DETAIL_SECOND,
+        MOCK_TASK_DETAIL_FIRST,
+      ]);
     });
   });
 
   it('should update query data on successful task update', async () => {
-    const oldData = [{ ...TASK_DETAIL }, { ...TASK_DETAIL_2 }];
-    (updateTask as jest.Mock).mockResolvedValue(TASK_DETAIL);
+    const oldData = [
+      { ...MOCK_TASK_DETAIL_FIRST },
+      { ...MOCK_TASK_DETAIL_SECOND },
+    ];
+    (updateTask as jest.Mock).mockResolvedValue(MOCK_TASK_DETAIL_FIRST);
     queryClient.setQueryData = jest.fn();
 
     const setQueryDataSpy = jest.spyOn(queryClient, 'setQueryData');
@@ -99,19 +122,27 @@ describe('useTask', () => {
       wrapper,
     });
 
-    await result.current.handleEditTask({ task: TASK_DETAIL });
+    await result.current.handleEditTask({ task: MOCK_TASK_DETAIL_FIRST });
 
     await waitFor(() => {
+      expect(queryClient.setQueryData).toHaveBeenCalledWith(
+        taskQueryKeys.detail(MOCK_TASK_DETAIL_FIRST.id),
+        MOCK_TASK_DETAIL_FIRST,
+      );
+
       expect(queryClient.setQueryData).toHaveBeenCalledWith(
         taskQueryKeys.lists(),
         expect.any(Function),
       );
 
-      const updateFn = setQueryDataSpy.mock.calls[0][1] as (
+      const updateFn = setQueryDataSpy.mock.calls[1][1] as (
         data: ITask[],
       ) => ITask[];
       const newData = updateFn(oldData);
-      expect(newData).toEqual([TASK_DETAIL, { ...TASK_DETAIL_2 }]);
+      expect(newData).toEqual([
+        MOCK_TASK_DETAIL_FIRST,
+        { ...MOCK_TASK_DETAIL_SECOND },
+      ]);
     });
   });
 
@@ -136,7 +167,10 @@ describe('useTask', () => {
 
   it('should use initial data from the query cache', async () => {
     const mockResponse = { id: '12', title: 'New Brigade' };
-    const oldData = [{ ...TASK_DETAIL }, { ...TASK_DETAIL_2 }];
+    const oldData = [
+      { ...MOCK_TASK_DETAIL_FIRST },
+      { ...MOCK_TASK_DETAIL_SECOND },
+    ];
 
     (getTask as jest.Mock).mockResolvedValue(mockResponse);
 

@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { BrowserRouter } from 'react-router-dom';
 
-import AvatarSmallUrl from '@/assets/images/avatar-small-2.png';
-import AvatarMediumUrl from '@/assets/images/avatar-medium-1.png';
-import AvatarLargeUrl from '@/assets/images/avatar-large.png';
+import AvatarSmallUrl from '@/assets/images/avatar-small-mary-alex.webp';
+import AvatarMediumUrl from '@/assets/images/avatar-medium-paul-doe.webp';
+import AvatarLargeUrl from '@/assets/images/avatar-large-paul-doe.webp';
 
 // Components
 import Avatar from '.';

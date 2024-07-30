@@ -28,10 +28,11 @@ export const useCreateTask = () => {
   const { isPending: isCreateTaskLoading, mutateAsync: handleCreateTask } =
     useMutation({
       mutationFn: createTasks,
-      onSuccess: () =>
-        queryClient.invalidateQueries({
-          queryKey: taskQueryKeys.lists(),
-        }),
+      onSuccess: (newTask) =>
+        queryClient.setQueryData(taskQueryKeys.lists(), (oldData: ITask[]) => [
+          ...oldData,
+          newTask,
+        ]),
     });
 
   return { isCreateTaskLoading, handleCreateTask };
@@ -39,22 +40,27 @@ export const useCreateTask = () => {
 
 export const useEditTask = () => {
   const queryClient = useQueryClient();
-  const {
-    isPending: isEditLoading,
-    data: editedTask,
-    mutateAsync: handleEditTask,
-  } = useMutation({
-    mutationFn: updateTask,
-    onSuccess: (updatedTask) => {
-      queryClient.setQueryData(taskQueryKeys.lists(), (oldData: ITask[]) =>
-        oldData.map((task) =>
-          task.id === updatedTask.id ? updatedTask : task,
-        ),
-      );
-    },
-  });
+  const { isPending: isEditLoading, mutateAsync: handleEditTask } = useMutation(
+    {
+      mutationFn: updateTask,
+      onSuccess: (updatedTask) => {
+        queryClient.setQueryData(
+          taskQueryKeys.detail(updatedTask.id),
+          updatedTask,
+        );
 
-  return { isEditLoading, editedTask, handleEditTask };
+        return queryClient.setQueryData(
+          taskQueryKeys.lists(),
+          (oldData: ITask[]) =>
+            oldData.map((task) =>
+              task.id === updatedTask.id ? updatedTask : task,
+            ),
+        );
+      },
+    },
+  );
+
+  return { isEditLoading, handleEditTask };
 };
 
 export const useDeleteTask = () => {

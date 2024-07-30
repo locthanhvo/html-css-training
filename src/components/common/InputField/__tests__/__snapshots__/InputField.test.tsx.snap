@@ -18,7 +18,7 @@ exports[`InputField component renders correctly with default props 1`] = `
       data-group="true"
     >
       <input
-        class="chakra-input css-1m48l39"
+        class="chakra-input css-1lx593h"
         id="field-:r0:"
         name="search"
         placeholder="Search Tasks"
@@ -51,7 +51,7 @@ exports[`InputField component renders correctly with error message 1`] = `
       <input
         aria-describedby="field-:r4:-feedback"
         aria-invalid="true"
-        class="chakra-input css-1m48l39"
+        class="chakra-input css-1lx593h"
         id="field-:r4:"
         name="search"
         placeholder="Search Tasks"
@@ -104,7 +104,7 @@ exports[`InputField component renders correctly with left icon and right icon 1`
         </svg>
       </div>
       <input
-        class="chakra-input css-1m48l39"
+        class="chakra-input css-1lx593h"
         id="field-:r2:"
         name="search"
         placeholder="Search Tasks"

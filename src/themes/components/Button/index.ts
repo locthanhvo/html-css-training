@@ -21,8 +21,50 @@ export const Button = defineStyleConfig({
       fontSize: 'base',
     },
   },
+
+  variants: {
+    primary: {
+      bg: 'royalBlue',
+      color: 'white',
+      _hover: {
+        bg: 'white',
+        color: 'royalBlue',
+        borderColor: 'royalBlue',
+        border: '1px solid',
+      },
+    },
+    secondary: {
+      bg: 'none',
+      color: 'primary',
+      borderColor: 'primary',
+      border: '1px solid',
+
+      _hover: {
+        bg: 'coolGray',
+        color: 'white',
+      },
+    },
+    ternary: {
+      bg: 'white',
+      color: 'lightRed',
+      border: '1px solid',
+      borderColor: 'lightRed',
+      _hover: {
+        bg: 'lightRed',
+        color: 'white',
+      },
+    },
+    outline: {
+      border: 'none',
+      color: 'primary',
+      _hover: {
+        bg: 'none',
+      },
+    },
+  },
+
   defaultProps: {
     size: 'sm',
-    colorScheme: 'white',
+    variant: 'secondary',
   },
 });

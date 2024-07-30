@@ -70,13 +70,7 @@ const NavTab = ({ tabList, ...rest }: TabProps) => {
             leftIcon={<SearchIcon />}
             placeholder="Search Tasks"
             borderRadius="3xl"
-            bgColor="white"
-            _focus={{
-              boxShadow: 'none',
-              border: '1px solid',
-              borderColor: 'gray.200',
-            }}
-            boxShadow="md"
+            variant="secondary"
             size="lg"
             w={220}
           />

@@ -6,7 +6,7 @@ import {
 } from '@testing-library/react';
 
 import EditTaskForm from '..';
-import { TASK_DETAIL_2 } from '@/mocks';
+import { MOCK_TASK_DETAIL_SECOND } from '@/mocks';
 
 describe('EditTaskForm', () => {
   const mockSubmit = jest.fn();
@@ -15,7 +15,7 @@ describe('EditTaskForm', () => {
   let renderResult: RenderResult;
 
   const defaultProps = {
-    task: TASK_DETAIL_2,
+    task: MOCK_TASK_DETAIL_SECOND,
     isLoading: false,
     onSubmit: mockSubmit,
     onCancel: mockCancel,

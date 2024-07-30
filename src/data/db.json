@@ -23,9 +23,9 @@
   ],
   "tasks": [
     {
-      "id": 1,
+      "id": "93d1f6a8",
       "title": "New task",
-      "description": "",
+      "description": "<p>Hi</p>",
       "startDate": "",
       "endDate": "",
       "label": [
@@ -35,10 +35,28 @@
         }
       ],
       "boardId": "93d1f6a8-c312-436a-886f-a646bf424209",
-      "members": [],
+      "members": [
+        {
+          "name": "Paul Doe",
+          "image": "/src/assets/images/avatar-small-paul-doe.webp",
+          "value": "paul-doe"
+        },
+        {
+          "name": "Mary Alex",
+          "image": "/src/assets/images/avatar-small-mary-alex.webp",
+          "value": "mary-alex"
+        }
+      ],
       "images": [
-        "https://i.ibb.co/yfScpc7/Screenshot-2024-05-08-092811.png"
+        "https://i.ibb.co/5G6FT8g/Screenshot-2024-05-08-092811.png"
       ]
+    },
+    {
+      "title": "New Task",
+      "startDate": "",
+      "endDate": "",
+      "boardId": "93d1f6a8-c312-436a-886f-a646bf424209",
+      "id": "lrec5vP"
     }
   ]
 }

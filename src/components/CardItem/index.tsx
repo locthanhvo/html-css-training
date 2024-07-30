@@ -116,6 +116,7 @@ const CardItem = ({
           alt={`${title} image`}
           w={230}
           h={129}
+          objectFit="contain"
         />
 
         <Stack spacing="3" p={3}>

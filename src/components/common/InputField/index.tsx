@@ -67,7 +67,6 @@ const InputField = (
           py={5}
           type="text"
           onChange={handleChangeValue}
-          border="none"
           ref={ref}
           {...rest}
           isInvalid={isError}

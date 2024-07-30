@@ -1,11 +1,12 @@
 import { HTMLAttributes, memo } from 'react';
-import { Center, Flex, Input, Text } from '@chakra-ui/react';
+import { Button, Flex, Input, Text } from '@chakra-ui/react';
 
 // Icons
 import { AttachmentIcon } from '@/components/common/Icons';
 
 interface UploadFileProps {
   previewURLs?: string[];
+  isDisabled?: boolean;
   variant?: 'icon' | 'button';
   getRootProps?: (
     props?: HTMLAttributes<HTMLElement>,
@@ -17,17 +18,18 @@ interface UploadFileProps {
 
 const UploadFile = ({
   previewURLs = [],
+  isDisabled = false,
   variant = 'icon',
   getInputProps = (props) => ({ ...props }),
   getRootProps = (props) => ({ ...props }),
 }: UploadFileProps) => {
   return (
-    <Center
+    <Button
       gap={3}
+      variant={variant === 'button' ? 'secondary' : 'outline'}
       w={variant === 'button' ? 168 : 'none'}
       h={8}
-      border={variant === 'button' ? '2px solid' : 'none'}
-      borderColor="lightGray"
+      isDisabled={isDisabled}
       borderRadius="md"
       cursor="pointer"
       {...getRootProps()}
@@ -41,12 +43,12 @@ const UploadFile = ({
         )}
       </Flex>
       {variant === 'button' && (
-        <Text fontSize="base" color="primary" textAlign="center">
+        <Text fontSize="base" textAlign="center">
           Attachment
         </Text>
       )}
       <Input display="none" {...getInputProps()} />
-    </Center>
+    </Button>
   );
 };
 

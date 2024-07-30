@@ -1,8 +1,8 @@
-import AvatarUser from '@/assets/images/avatar-small-1.png';
-import AvatarUser2 from '@/assets/images/avatar-small-2.png';
-import AvatarUser3 from '@/assets/images/avatar-small-3.png';
+import AvatarUser from '@/assets/images/avatar-small-paul-doe.webp';
+import AvatarUser2 from '@/assets/images/avatar-small-mary-alex.webp';
+import AvatarUser3 from '@/assets/images/avatar-small-jack-rice.webp';
 
-export const TASK_DETAIL = {
+export const MOCK_TASK_DETAIL_FIRST = {
   id: '1',
   title: 'Global Resorts Network',
   label: [
@@ -23,7 +23,7 @@ export const TASK_DETAIL = {
   boardId: '93d1f6a8-c312-436a-886f-a646bf424209',
 };
 
-export const TASK_DETAIL_2 = {
+export const MOCK_TASK_DETAIL_SECOND = {
   id: '2',
   title: 'Global Suns Network',
   label: [
@@ -55,7 +55,7 @@ export const LIST_TASK = {
   title: 'to do',
   total: 2,
   color: 'electricPurple',
-  tasks: [TASK_DETAIL, TASK_DETAIL_2],
+  tasks: [MOCK_TASK_DETAIL_FIRST, MOCK_TASK_DETAIL_SECOND],
 };
 
 export const MOCK_TASKS = [

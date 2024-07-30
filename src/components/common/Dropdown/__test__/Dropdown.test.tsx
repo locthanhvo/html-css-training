@@ -1,4 +1,4 @@
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, RenderResult } from '@testing-library/react';
 
 // Components
 import Dropdown from '..';
@@ -6,11 +6,28 @@ import Dropdown from '..';
 // Constants
 import { LABELS } from '@/constants';
 
+const handleChange = jest.fn();
+
 describe('Dropdown component', () => {
-  it('renders correctly with given options', () => {
-    const { getByText } = render(
-      <Dropdown options={LABELS} name="Labels" field="id" />,
+  let renderResult: RenderResult;
+
+  beforeEach(() => {
+    renderResult = render(
+      <Dropdown
+        options={LABELS}
+        name="Labels"
+        onChange={handleChange}
+        field="id"
+      />,
     );
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
+  it('renders correctly with given options', () => {
+    const { getByText } = renderResult;
 
     expect(getByText('Labels')).toBeInTheDocument();
     fireEvent.click(getByText('Labels'));
@@ -21,17 +38,9 @@ describe('Dropdown component', () => {
   });
 
   it('handles selecting and deselecting options correctly', () => {
-    const handleChange = jest.fn();
-    const { getByText } = render(
-      <Dropdown
-        options={LABELS}
-        name="Select Tasks"
-        onChange={handleChange}
-        field="id"
-      />,
-    );
+    const { getByText } = renderResult;
 
-    fireEvent.click(getByText('Select Tasks'));
+    fireEvent.click(getByText('Labels'));
     fireEvent.click(getByText('Space Tasks 1'));
 
     expect(handleChange).toHaveBeenCalled();
@@ -42,17 +51,9 @@ describe('Dropdown component', () => {
   });
 
   it('handles selecting new options correctly', () => {
-    const handleChange = jest.fn();
-    const { getByText } = render(
-      <Dropdown
-        options={LABELS}
-        name="Select Tasks"
-        onChange={handleChange}
-        field="id"
-      />,
-    );
+    const { getByText } = renderResult;
 
-    fireEvent.click(getByText('Select Tasks'));
+    fireEvent.click(getByText('Labels'));
     fireEvent.click(getByText('Space Tasks 1'));
 
     expect(handleChange).toHaveBeenCalled();
@@ -63,17 +64,9 @@ describe('Dropdown component', () => {
   });
 
   it('handles no onChange when options are not changed', () => {
-    const handleChange = jest.fn();
-    const { getByText } = render(
-      <Dropdown
-        options={LABELS}
-        name="Select Tasks"
-        onChange={handleChange}
-        field="id"
-      />,
-    );
+    const { getByText } = renderResult;
 
-    fireEvent.click(getByText('Select Tasks'));
+    fireEvent.click(getByText('Labels'));
     fireEvent.click(getByText('Space Tasks 1'));
 
     expect(handleChange).toHaveBeenCalled();
@@ -84,15 +77,7 @@ describe('Dropdown component', () => {
   });
 
   it('calls onChange prop with selected options', () => {
-    const handleChange = jest.fn();
-    const { getByText } = render(
-      <Dropdown
-        options={LABELS}
-        name="Labels"
-        onChange={handleChange}
-        field="id"
-      />,
-    );
+    const { getByText } = renderResult;
 
     fireEvent.click(getByText('Labels'));
     fireEvent.click(getByText('Space Tasks 1'));

@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 // Components
 import Avatar from '..';
 
-import AvatarLargeUrl from '@/assets/images/avatar-large.png';
+import AvatarLargeUrl from '@/assets/images/avatar-large-paul-doe.webp';
 
 describe('Avatar Component', () => {
   it('should match snapshot', () => {

@@ -200,7 +200,7 @@ exports[`NavTab Component Should match snapshot 1`] = `
               </svg>
             </div>
             <input
-              class="chakra-input css-mvaxbz"
+              class="chakra-input css-1iib86v"
               id="field-:r1:"
               placeholder="Search Tasks"
               type="text"

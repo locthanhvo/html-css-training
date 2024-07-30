@@ -5,7 +5,10 @@ import { BrowserRouter } from 'react-router-dom';
 import CardItem from '.';
 
 // Mocks
-import { TASK_DETAIL } from '@/mocks';
+import { MOCK_TASK_DETAIL_FIRST, MOCK_TASK_DETAIL_SECOND } from '@/mocks';
+
+const { id, title, images, description, label, startDate, endDate, members } =
+  MOCK_TASK_DETAIL_SECOND;
 
 export default {
   title: 'Components/CardItem',
@@ -26,8 +29,22 @@ type Story = StoryObj<typeof CardItem>;
 
 export const Default: Story = {
   args: {
-    id: TASK_DETAIL.id,
-    title: TASK_DETAIL.title,
+    id: MOCK_TASK_DETAIL_FIRST.id,
+    title: MOCK_TASK_DETAIL_FIRST.title,
+    onClick: () => {},
+  },
+};
+
+export const FullDetail: Story = {
+  args: {
+    id: id,
+    title: title,
+    images: images,
+    description: description,
+    label: label,
+    startDate: startDate,
+    endDate: endDate,
+    members: members,
     onClick: () => {},
   },
 };

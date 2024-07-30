@@ -35,7 +35,7 @@ const Boards = () => {
   const { boards } = useGetBoards();
   const { tasks } = useGetTasks();
   const { handleCreateTask, isCreateTaskLoading } = useCreateTask();
-  const { handleEditTask, isEditLoading, editedTask } = useEditTask();
+  const { handleEditTask, isEditLoading } = useEditTask();
   const { handleDeleteTask, isDeleteLoading } = useDeleteTask();
   const { taskDetail, isDetailLoading } = useGetTask(taskId);
   const { uploadImages, isLoadingUploadImages } = useUploadImages();
@@ -157,7 +157,7 @@ const Boards = () => {
               <Loading />
             ) : (
               <EditTaskForm
-                task={editedTask || taskDetail}
+                task={taskDetail}
                 isDeleteLoading={isDeleteLoading}
                 isLoading={isEditLoading || isLoadingUploadImages}
                 onSubmit={handleUpdateTask}

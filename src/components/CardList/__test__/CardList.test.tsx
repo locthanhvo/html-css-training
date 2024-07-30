@@ -41,14 +41,6 @@ describe('CardList Component', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should call onClick add icon', async () => {
-    const { getByRole } = renderResult;
-
-    getByRole('button', { name: 'Add' }).click();
-
-    expect(mockOnClick).toHaveBeenCalled();
-  });
-
   it('should call onClick button add task', () => {
     const { getByRole } = renderResult;
 

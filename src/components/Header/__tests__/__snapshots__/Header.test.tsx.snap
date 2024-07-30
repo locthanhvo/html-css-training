@@ -106,7 +106,7 @@ exports[`Header Component should match snapshot 1`] = `
               </svg>
             </div>
             <input
-              class="chakra-input css-p3y5e2"
+              class="chakra-input css-xjgt3w"
               id="field-:r0:"
               placeholder="Search Tasks"
               type="text"
@@ -295,7 +295,7 @@ exports[`Header Component should match snapshot 1`] = `
             </svg>
           </div>
           <input
-            class="chakra-input css-p3y5e2"
+            class="chakra-input css-xjgt3w"
             id="field-:r0:"
             placeholder="Search Tasks"
             type="text"

@@ -3,9 +3,9 @@ import { Flex, VStack } from '@chakra-ui/react';
 
 // Components
 import Avatar from '@/components/common/Avatar';
-import Menu from '@/components/Sidebar/Menu';
-import Social from '@/components/Sidebar/Social';
-import Profile from '@/components/Sidebar/Profile';
+import Menu from '@/components/common/Menu';
+import Social from '@/components/common/Social';
+import Profile from '@/components/common/Profile';
 
 // Icons
 import {

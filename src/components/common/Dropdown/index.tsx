@@ -14,12 +14,14 @@ interface DropdownProps {
   defaultValue?: { name: string; image?: string; value: string }[];
   options: { name: string; image?: string; value: string }[];
   name: string;
+  isDisabled?: boolean;
   onChange?: (selectField: ISelectField<ITask>) => void;
   field: keyof ITask;
 }
 
 const Dropdown = ({
   defaultValue = [],
+  isDisabled = false,
   options,
   name,
   onChange,
@@ -66,11 +68,10 @@ const Dropdown = ({
     <Menu closeOnSelect={false}>
       <MenuButton
         as={Button}
+        variant="secondary"
         w={168}
-        border="2px solid"
-        borderColor="lightGray"
-        color="primary"
         fontSize="md"
+        isDisabled={isDisabled}
       >
         {name}
       </MenuButton>

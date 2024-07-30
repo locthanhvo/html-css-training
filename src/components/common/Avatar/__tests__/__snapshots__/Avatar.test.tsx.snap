@@ -9,7 +9,8 @@ exports[`Avatar Component should match snapshot 1`] = `
         class="css-42900e"
       >
         <img
-          class="chakra-image css-uodor8"
+          alt="test-file-stub"
+          class="chakra-image css-vatc1v"
           src="test-file-stub"
         />
       </div>
@@ -20,7 +21,8 @@ exports[`Avatar Component should match snapshot 1`] = `
       class="css-42900e"
     >
       <img
-        class="chakra-image css-uodor8"
+        alt="test-file-stub"
+        class="chakra-image css-vatc1v"
         src="test-file-stub"
       />
     </div>

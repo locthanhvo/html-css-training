@@ -3,7 +3,7 @@
 exports[`CardItem Component should match snapshot 1`] = `
 <div>
   <div
-    class="chakra-card css-10n423t"
+    class="chakra-card css-12c38m6"
     data-testid="cart-item"
     draggable="true"
   >
@@ -12,7 +12,7 @@ exports[`CardItem Component should match snapshot 1`] = `
     >
       <img
         alt="Global Resorts Network image"
-        class="chakra-image css-1l3628l"
+        class="chakra-image css-1pv0iot"
       />
       <div
         class="chakra-stack css-1kgz9m7"

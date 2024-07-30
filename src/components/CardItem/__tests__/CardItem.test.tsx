@@ -1,17 +1,41 @@
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent, render, RenderResult } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 
 // Components
 import CardItem from '..';
 
 // Mocks
-import { TASK_DETAIL, TASK_DETAIL_2 } from '@/mocks';
+import { MOCK_TASK_DETAIL_FIRST, MOCK_TASK_DETAIL_SECOND } from '@/mocks';
 
 const mockOnDragStart = jest.fn();
+const mockOnClick = jest.fn();
 
 describe('CardItem Component', () => {
+  let renderResult: RenderResult;
+  const { id, title, images, members, label, startDate, endDate, description } =
+    MOCK_TASK_DETAIL_SECOND;
+
+  beforeEach(() => {
+    renderResult = render(
+      <BrowserRouter>
+        <CardItem
+          id={id}
+          title={title}
+          images={images}
+          members={members}
+          label={label}
+          endDate={endDate}
+          startDate={startDate}
+          description={description}
+          onDragStart={mockOnDragStart}
+          onClick={mockOnClick}
+        />
+      </BrowserRouter>,
+    );
+  });
+
   it('should match snapshot', () => {
-    const { id, title, endDate, startDate } = TASK_DETAIL;
+    const { id, title, endDate, startDate } = MOCK_TASK_DETAIL_FIRST;
     const { container } = render(
       <BrowserRouter>
         <CardItem
@@ -27,72 +51,15 @@ describe('CardItem Component', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should render correctly', () => {
-    const {
-      id,
-      title,
-      images,
-      members,
-      label,
-      startDate,
-      endDate,
-      description,
-    } = TASK_DETAIL_2;
-
-    const { container } = render(
-      <BrowserRouter>
-        <CardItem
-          id={id}
-          title={title}
-          images={images}
-          members={members}
-          label={label}
-          endDate={endDate}
-          startDate={startDate}
-          description={description}
-          onDragStart={mockOnDragStart}
-        />
-      </BrowserRouter>,
-    );
-
-    expect(container).toBeInTheDocument();
-  });
-
   it('should call onClick', () => {
-    const { id, title, images } = TASK_DETAIL_2;
-
-    const mockOnClick = jest.fn();
-    const { getByText } = render(
-      <BrowserRouter>
-        <CardItem
-          id={id}
-          title={title}
-          images={images}
-          onClick={mockOnClick}
-          onDragStart={mockOnDragStart}
-        />
-      </BrowserRouter>,
-    );
+    const { getByText } = renderResult;
 
     getByText('Global Suns Network').click();
     expect(mockOnClick).toHaveBeenCalled();
   });
 
   it('should call onDragStart', () => {
-    const { id, title, images } = TASK_DETAIL_2;
-
-    const mockOnClick = jest.fn();
-    const { getByText } = render(
-      <BrowserRouter>
-        <CardItem
-          id={id}
-          title={title}
-          images={images}
-          onClick={mockOnClick}
-          onDragStart={mockOnDragStart}
-        />
-      </BrowserRouter>,
-    );
+    const { getByText } = renderResult;
 
     fireEvent.dragStart(getByText('Global Suns Network'));
 

@@ -9,8 +9,7 @@ exports[`AddTaskForm component should match snapshot 1`] = `
       class="css-r2hvuq"
     >
       <button
-        class="chakra-button css-15p4pos"
-        name=""
+        class="chakra-button css-4xx2wk"
         type="button"
       >
         <span
@@ -40,7 +39,7 @@ exports[`AddTaskForm component should match snapshot 1`] = `
           data-group="true"
         >
           <input
-            class="chakra-input css-1vhs4x2"
+            class="chakra-input css-1g2zu81"
             id="field-:r0:"
             name="title"
             placeholder="Task name or type "
@@ -57,8 +56,7 @@ exports[`AddTaskForm component should match snapshot 1`] = `
         class="css-nn803e"
       >
         <button
-          class="chakra-button css-15p4pos"
-          name=""
+          class="chakra-button css-4xx2wk"
           type="button"
         >
           <span
@@ -83,10 +81,11 @@ exports[`AddTaskForm component should match snapshot 1`] = `
           class="chakra-form-control css-0"
           role="group"
         >
-          <div
-            class="css-hb5mwj"
+          <button
+            class="chakra-button css-8y5phl"
             role="presentation"
             tabindex="0"
+            type="button"
           >
             <div
               class="css-w1wtgb"
@@ -114,18 +113,19 @@ exports[`AddTaskForm component should match snapshot 1`] = `
               tabindex="-1"
               type="file"
             />
-          </div>
+          </button>
         </div>
         <div
           class="chakra-form-control css-0"
           role="group"
         >
-          <div
+          <button
             aria-controls="popover-content-:r4:"
             aria-expanded="false"
             aria-haspopup="dialog"
-            class="css-hb5mwj"
+            class="chakra-button css-8y5phl"
             id="popover-trigger-:r4:"
+            type="button"
           >
             <div
               class="css-w1wtgb"
@@ -144,7 +144,7 @@ exports[`AddTaskForm component should match snapshot 1`] = `
                 />
               </svg>
             </div>
-          </div>
+          </button>
           <div
             class="chakra-popover__popper css-0"
             style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
@@ -180,7 +180,7 @@ exports[`AddTaskForm component should match snapshot 1`] = `
                       data-group="true"
                     >
                       <input
-                        class="chakra-input css-faqimz"
+                        class="chakra-input css-1lx593h"
                         id="field-:r5:"
                         name="startDate"
                         type="date"
@@ -204,7 +204,7 @@ exports[`AddTaskForm component should match snapshot 1`] = `
                       data-group="true"
                     >
                       <input
-                        class="chakra-input css-faqimz"
+                        class="chakra-input css-1lx593h"
                         disabled=""
                         id="field-:r6:"
                         min=""
@@ -221,9 +221,8 @@ exports[`AddTaskForm component should match snapshot 1`] = `
         </div>
       </div>
       <button
-        class="chakra-button css-1exh3ze"
+        class="chakra-button css-4xx2wk"
         disabled=""
-        name="Save"
         type="submit"
       >
         Save

@@ -124,7 +124,8 @@ exports[`Sidebar Component should match snapshot 1`] = `
               class="css-x4gw0v"
             >
               <img
-                class="chakra-image css-uodor8"
+                alt="test-file-stub"
+                class="chakra-image css-xwiu5v"
                 src="test-file-stub"
               />
             </div>
@@ -132,7 +133,8 @@ exports[`Sidebar Component should match snapshot 1`] = `
               class="css-x4gw0v"
             >
               <img
-                class="chakra-image css-uodor8"
+                alt="test-file-stub"
+                class="chakra-image css-xwiu5v"
                 src="test-file-stub"
               />
             </div>
@@ -140,7 +142,8 @@ exports[`Sidebar Component should match snapshot 1`] = `
               class="css-x4gw0v"
             >
               <img
-                class="chakra-image css-uodor8"
+                alt="test-file-stub"
+                class="chakra-image css-xwiu5v"
                 src="test-file-stub"
               />
             </div>
@@ -148,7 +151,8 @@ exports[`Sidebar Component should match snapshot 1`] = `
               class="css-x4gw0v"
             >
               <img
-                class="chakra-image css-uodor8"
+                alt="test-file-stub"
+                class="chakra-image css-xwiu5v"
                 src="test-file-stub"
               />
             </div>
@@ -223,7 +227,7 @@ exports[`Sidebar Component should match snapshot 1`] = `
               >
                 <img
                   alt="avatar"
-                  class="chakra-image css-1ti3h17"
+                  class="chakra-image css-1dvvcro"
                   src="test-file-stub"
                 />
                 <div
@@ -600,7 +604,8 @@ exports[`Sidebar Component should match snapshot 1`] = `
             class="css-x4gw0v"
           >
             <img
-              class="chakra-image css-uodor8"
+              alt="test-file-stub"
+              class="chakra-image css-xwiu5v"
               src="test-file-stub"
             />
           </div>
@@ -608,7 +613,8 @@ exports[`Sidebar Component should match snapshot 1`] = `
             class="css-x4gw0v"
           >
             <img
-              class="chakra-image css-uodor8"
+              alt="test-file-stub"
+              class="chakra-image css-xwiu5v"
               src="test-file-stub"
             />
           </div>
@@ -616,7 +622,8 @@ exports[`Sidebar Component should match snapshot 1`] = `
             class="css-x4gw0v"
           >
             <img
-              class="chakra-image css-uodor8"
+              alt="test-file-stub"
+              class="chakra-image css-xwiu5v"
               src="test-file-stub"
             />
           </div>
@@ -624,7 +631,8 @@ exports[`Sidebar Component should match snapshot 1`] = `
             class="css-x4gw0v"
           >
             <img
-              class="chakra-image css-uodor8"
+              alt="test-file-stub"
+              class="chakra-image css-xwiu5v"
               src="test-file-stub"
             />
           </div>
@@ -699,7 +707,7 @@ exports[`Sidebar Component should match snapshot 1`] = `
             >
               <img
                 alt="avatar"
-                class="chakra-image css-1ti3h17"
+                class="chakra-image css-1dvvcro"
                 src="test-file-stub"
               />
               <div

@@ -1,10 +1,9 @@
 import { DragEvent, memo, useCallback, useMemo } from 'react';
-import { Flex, VStack } from '@chakra-ui/react';
+import { Button, Flex, VStack } from '@chakra-ui/react';
 
 // Components
-import HeaderList from '@/components/CardList/HeaderList';
+import HeaderList from '@/components/common/HeaderList';
 import CardItem from '@/components/CardItem';
-import ActionButton from '@/components/common/ActionButton';
 import { AddTaskForm } from '@/components/Form';
 
 // Types
@@ -102,12 +101,13 @@ const CardList = ({
         total={total}
         color={color}
         onClick={handleOpenAddTask}
+        isDisabled={isActive}
       />
 
       <Flex
         gap={6}
         direction="column"
-        maxH={825}
+        h={825}
         overflowY="scroll"
         css={{ '&::-webkit-scrollbar': { display: 'none' } }}
       >
@@ -120,18 +120,20 @@ const CardList = ({
             onClose={handleOpenAddTask}
           />
         )}
+
+        <Button
+          variant="outline"
+          display={isActive ? 'none' : 'flex'}
+          justifyContent="flex-start"
+          textTransform="uppercase"
+          w={230}
+          border="none"
+          fontSize="base"
+          onClick={handleOpenAddTask}
+        >
+          + new task
+        </Button>
       </Flex>
-      <ActionButton
-        display={isActive ? 'none' : 'flex'}
-        justifyContent="flex-start"
-        textTransform="uppercase"
-        title="+ new task"
-        color="primary"
-        w="full"
-        border="none"
-        fontSize="base"
-        onClick={handleOpenAddTask}
-      />
     </VStack>
   );
 };

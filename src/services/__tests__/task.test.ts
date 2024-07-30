@@ -16,7 +16,7 @@ import { apiRequest } from '@/services/';
 import { HTTP_METHOD, API_PATH } from '@/constants';
 
 // Mocks
-import { TASK_DETAIL, TASK_DETAIL_2 } from '@/mocks';
+import { MOCK_TASK_DETAIL_FIRST, MOCK_TASK_DETAIL_SECOND } from '@/mocks';
 
 jest.mock('@/services', () => ({
   apiRequest: jest.fn(),
@@ -177,16 +177,16 @@ describe('API Task functions', () => {
   });
 
   it('updateTask sends PUT request with correct data', async () => {
-    const mockResponse = { ...TASK_DETAIL };
+    const mockResponse = { ...MOCK_TASK_DETAIL_FIRST };
 
     (apiRequest as jest.Mock).mockResolvedValue(mockResponse);
 
-    const result = await updateTask({ task: TASK_DETAIL });
+    const result = await updateTask({ task: MOCK_TASK_DETAIL_FIRST });
 
     expect(apiRequest).toHaveBeenCalledWith(
       HTTP_METHOD.PUT,
-      `${API_PATH.TASKS}/${TASK_DETAIL.id}`,
-      TASK_DETAIL,
+      `${API_PATH.TASKS}/${MOCK_TASK_DETAIL_FIRST.id}`,
+      MOCK_TASK_DETAIL_FIRST,
     );
     expect(result).toEqual(mockResponse);
   });
@@ -195,14 +195,14 @@ describe('API Task functions', () => {
     const mockError = new Error('Network Error');
     (apiRequest as jest.Mock).mockRejectedValue(mockError);
 
-    await expect(updateTask({ task: TASK_DETAIL_2 })).rejects.toThrow(
+    await expect(updateTask({ task: MOCK_TASK_DETAIL_SECOND })).rejects.toThrow(
       'Network Error',
     );
 
     expect(apiRequest).toHaveBeenCalledWith(
       HTTP_METHOD.PUT,
-      `${API_PATH.TASKS}/${TASK_DETAIL_2.id}`,
-      TASK_DETAIL_2,
+      `${API_PATH.TASKS}/${MOCK_TASK_DETAIL_SECOND.id}`,
+      MOCK_TASK_DETAIL_SECOND,
     );
   });
 });

@@ -6,8 +6,8 @@ import {
   PopoverBody,
   Stack,
   Text,
-  Center,
   Flex,
+  Button,
 } from '@chakra-ui/react';
 import { Controller, Control } from 'react-hook-form';
 
@@ -26,12 +26,14 @@ import { IInputField, ITask } from '@/types';
 interface DatePickerProps {
   control: Control<ITask>;
   variant?: 'icon' | 'button';
+  isDisabled?: boolean;
   onChange?: (inputField: IInputField<ITask>) => void;
 }
 
 const DatePicker = ({
   control,
   variant = 'icon',
+  isDisabled = false,
   onChange,
 }: DatePickerProps) => {
   const [startDate, setStartDate] = useState<string>('');
@@ -40,14 +42,14 @@ const DatePicker = ({
   return (
     <Popover>
       <PopoverTrigger>
-        <Center
+        <Button
           gap={3}
+          variant={variant === 'button' ? 'secondary' : 'outline'}
           w={variant === 'button' ? 168 : 'none'}
           h={8}
-          border={variant === 'button' ? '2px solid' : 'none'}
-          borderColor="lightGray"
           borderRadius="md"
           cursor="pointer"
+          isDisabled={isDisabled}
         >
           <Flex alignItems="center" justifyContent="center" gap={2}>
             {variant === 'icon' && <ClockIcon />}
@@ -59,11 +61,11 @@ const DatePicker = ({
             )}
           </Flex>
           {variant === 'button' && (
-            <Text fontSize="base" color="primary" textAlign="center">
+            <Text fontSize="base" textAlign="center">
               Date
             </Text>
           )}
-        </Center>
+        </Button>
       </PopoverTrigger>
       <PopoverContent w={230}>
         <PopoverBody>
@@ -74,10 +76,7 @@ const DatePicker = ({
               render={({ field }) => (
                 <InputField
                   label="Start Date"
-                  fontSize="base"
-                  color="primary"
-                  border="2px solid"
-                  borderColor="primary"
+                  variant="primary"
                   {...field}
                   onChange={(data) => {
                     setStartDate(data);
@@ -99,10 +98,7 @@ const DatePicker = ({
               render={({ field }) => (
                 <InputField
                   label="End Date"
-                  fontSize="base"
-                  color="primary"
-                  border="2px solid"
-                  borderColor="primary"
+                  variant="primary"
                   {...field}
                   onChange={(data) => {
                     setEndDate(data);

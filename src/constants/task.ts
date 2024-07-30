@@ -1,7 +1,7 @@
-import PaulDoe from '@/assets/images/avatar-small-1.webp';
-import MaryAlex from '@/assets/images/avatar-small-2.webp';
-import JackRice from '@/assets/images/avatar-small-3.webp';
-import AntonyJones from '@/assets/images/avatar-small-4.webp';
+import PaulDoe from '@/assets/images/avatar-small-paul-doe.webp';
+import MaryAlex from '@/assets/images/avatar-small-mary-alex.webp';
+import JackRice from '@/assets/images/avatar-small-jack-rice.webp';
+import AntonyJones from '@/assets/images/avatar-small-antony.webp';
 
 export const LABELS = [
   {

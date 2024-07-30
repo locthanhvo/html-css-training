@@ -1,5 +1,5 @@
 import { Flex, Text, VStack } from '@chakra-ui/react';
-import Navbar from './Navbar';
+import Navbar from '../common/Navbar';
 import InputField from '../common/InputField';
 import {
   UserProfileIcon,
@@ -49,14 +49,8 @@ const Header = ({ w = 1600 }: HeaderProps) => {
         leftIcon={<SearchIcon />}
         rightIcon={<ForwardArrowIcon />}
         placeholder="Search Tasks"
+        variant="secondary"
         borderRadius="2xl"
-        bgColor="white"
-        _focus={{
-          boxShadow: 'none',
-          border: '1px solid',
-          borderColor: 'gray.200',
-        }}
-        boxShadow="md"
         size="lg"
       />
 

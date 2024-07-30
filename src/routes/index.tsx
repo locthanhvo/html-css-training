@@ -3,12 +3,14 @@ import {
   createRoutesFromElements,
   Route,
 } from 'react-router-dom';
+import { Box } from '@chakra-ui/react';
 import { Suspense } from 'react';
 
-// routes
+// Routes
 import { PUBLIC_ROUTES } from './public-routes';
-import { Box } from '@chakra-ui/react';
-import MainLayout from '@/layouts/MainLayout';
+
+// Layouts
+import { MainLayout } from '@/layouts';
 
 export const router = createBrowserRouter(
   createRoutesFromElements(

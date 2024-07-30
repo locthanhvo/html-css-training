@@ -2,20 +2,21 @@
 
 exports[`UploadFile Component should match snapshot 1`] = `
 <div>
-  <div
-    class="css-hmqloq"
+  <button
+    class="chakra-button css-5yhc5p"
+    type="button"
   >
     <div
       class="css-w1wtgb"
     />
     <p
-      class="chakra-text css-15xnlmf"
+      class="chakra-text css-pdsxzy"
     >
       Attachment
     </p>
     <input
       class="chakra-input css-1hyfx7x"
     />
-  </div>
+  </button>
 </div>
 `;

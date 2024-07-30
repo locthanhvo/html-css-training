@@ -1,5 +1,5 @@
 import { memo, useCallback } from 'react';
-import { Card, Flex, FormControl } from '@chakra-ui/react';
+import { Button, Card, Flex, FormControl } from '@chakra-ui/react';
 import { Controller, useForm } from 'react-hook-form';
 
 // Types
@@ -9,7 +9,6 @@ import { IInputField, TAddTaskForm } from '@/types';
 import { TASK_SCHEMA } from '@/constants';
 
 // Components
-import ActionButton from '@/components/common/ActionButton';
 import InputField from '@/components/common/InputField';
 import DatePicker from '@/components/common/DatePicker';
 import UploadFile from '@/components/UploadFile';
@@ -76,12 +75,13 @@ const AddTaskForm = ({
       onSubmit={handleSubmit(handleSubmitForm)}
     >
       <Flex gap={2} alignItems="center">
-        <ActionButton
-          title=""
-          type="button"
+        <Button
+          variant="outline"
           rightIcon={<CloseIcon />}
           onClick={onClose}
+          isDisabled={isLoading || isSubmitting}
         />
+
         <Controller
           name="title"
           rules={TASK_SCHEMA.TITLE}
@@ -89,8 +89,9 @@ const AddTaskForm = ({
           render={({ field, fieldState: { error } }) => (
             <InputField
               fontSize="base"
-              color="primary"
+              variant="outline"
               {...field}
+              isDisabled={isLoading || isSubmitting}
               onChange={(data) =>
                 handleInputChange({
                   field: 'title',
@@ -108,7 +109,7 @@ const AddTaskForm = ({
 
       <Flex justifyContent="space-between" alignItems="center">
         <Flex gap={1}>
-          <ActionButton title="" type="button" rightIcon={<FlagIcon />} />
+          <Button variant="outline" rightIcon={<FlagIcon />} />
 
           <Controller
             name="images"
@@ -116,6 +117,7 @@ const AddTaskForm = ({
             render={() => (
               <FormControl>
                 <UploadFile
+                  isDisabled={isLoading || isSubmitting}
                   previewURLs={previewURLs}
                   getInputProps={getInputProps}
                   getRootProps={getRootProps}
@@ -125,15 +127,22 @@ const AddTaskForm = ({
           />
 
           <FormControl>
-            <DatePicker control={control} onChange={handleInputChange} />
+            <DatePicker
+              control={control}
+              isDisabled={isLoading || isSubmitting}
+              onChange={handleInputChange}
+            />
           </FormControl>
         </Flex>
-        <ActionButton
+
+        <Button
           type="submit"
-          bgColor="royalBlue"
+          variant="primary"
           isDisabled={!isValid && !isSubmitting}
           isLoading={isLoading || isSubmitting}
-        />
+        >
+          Save
+        </Button>
       </Flex>
     </Card>
   );

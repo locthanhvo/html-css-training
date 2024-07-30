@@ -1,8 +1,8 @@
 export interface IInputField<T> {
   field: keyof T;
   data: string;
-  isError: boolean;
-  onChange: (value: string) => void;
+  isError?: boolean;
+  onChange?: (value: string) => void;
 }
 
 export interface ISelectField<T> {
