@@ -65,11 +65,16 @@ const HeaderList = ({
       </Flex>
 
       <Flex>
-        <Button variant="outline">
+        <Button name="menu" variant="outline">
           <MeatballsMenuIcon />
         </Button>
 
-        <Button variant="outline" onClick={onClick} isDisabled={isDisabled}>
+        <Button
+          name="add-task"
+          variant="outline"
+          onClick={onClick}
+          isDisabled={isDisabled}
+        >
           <PlusIcon />
         </Button>
       </Flex>
