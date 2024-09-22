@@ -1,0 +1,2 @@
+cd ./dash-dark
+npx --no -- commitlint --edit ${1}
