@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination component renders the Pagination with children 1`] = `
+<div>
+  <div
+    class="flex w-full items-center justify-between"
+  >
+    <div>
+      <p
+        class="text-white text-xs font-medium"
+      >
+        1 - 10
+         of 
+        100
+      </p>
+    </div>
+    <div
+      class="flex items-center gap-[59px]"
+    >
+      <div
+        class="flex items-center gap-2"
+      >
+        <p
+          class="text-secondary text-xs font-medium"
+        >
+          Rows per page:
+        </p>
+        <select
+          class="bg-transparent text-iceBlue text-[10px]"
+        >
+          <option
+            class="bg-white text-black"
+            selected=""
+            value="10"
+          >
+            10
+          </option>
+          <option
+            class="bg-white text-black"
+            value="25"
+          >
+            25
+          </option>
+          <option
+            class="bg-white text-black"
+            value="50"
+          >
+            50
+          </option>
+          <option
+            class="bg-white text-black"
+            value="100"
+          >
+            100
+          </option>
+        </select>
+      </div>
+      <div
+        class="flex items-center justify-center gap-[7px] mr-5"
+      >
+        <button
+          class="bg-darkBlue p-[6px] rounded-xl border border-midNightBlue disabled:text-iceBlue disabled:cursor-not-allowed"
+          disabled=""
+        >
+          <svg
+            fill="none"
+            height="14"
+            rotate="180deg"
+            style="transform: rotate(180deg);"
+            viewBox="0 0 14 14"
+            width="14"
+          >
+            <path
+              d="M7.35938 1.07817L13 6.71875L7.35938 12.3593"
+              stroke="#7E89AC"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+            />
+            <path
+              d="M12.9999 6.71875L1 6.71875"
+              stroke="#7E89AC"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+            />
+          </svg>
+        </button>
+        <button
+          class="bg-darkBlue p-[6px] rounded-xl border border-midNightBlue disabled:text-iceBlue disabled:cursor-not-allowed"
+        >
+          <svg
+            fill="none"
+            height="14"
+            style="transform: rotate(undefined);"
+            viewBox="0 0 14 14"
+            width="14"
+          >
+            <path
+              d="M7.35938 1.07817L13 6.71875L7.35938 12.3593"
+              stroke="white"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+            />
+            <path
+              d="M12.9999 6.71875L1 6.71875"
+              stroke="white"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

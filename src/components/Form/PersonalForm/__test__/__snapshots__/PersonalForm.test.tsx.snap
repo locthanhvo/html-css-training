@@ -1,0 +1,513 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PersonalForm component renders correctly 1`] = `
+<div>
+  <form>
+    <div>
+      <h3
+        class="text-white text-base font-medium"
+      >
+        Personal information
+      </h3>
+      <p
+        class="text-secondary text-sm font-medium"
+      >
+        Lorem ipsum dolor sit amet consectetur adipiscing.
+      </p>
+    </div>
+    <div
+      class="w-full border border-slateBlue rounded-xl flex flex-col mt-6 p-[34px]"
+    >
+      <div
+        class="py-6 border-b border-slateBlue"
+      >
+        <div
+          class="w-full flex items-start justify-between"
+        >
+          <div
+            class="flex w-[40%] items-center justify-start gap-2"
+          >
+            <span>
+              <svg
+                fill="none"
+                height="15"
+                viewBox="0 0 14 15"
+                width="14"
+              >
+                <path
+                  d="M0.943604 12.7389C0.943604 10.5945 2.68203 8.85605 4.8265 8.85605H9.17356C11.318 8.85605 13.0565 10.5945 13.0565 12.7389C13.0565 13.4538 12.477 14.0332 11.7622 14.0332H2.2379C1.52308 14.0332 0.943604 13.4538 0.943604 12.7389Z"
+                  fill="#AEB9E1"
+                />
+                <path
+                  d="M7.00224 7.86963C8.90843 7.86963 10.4537 6.32435 10.4537 4.41817C10.4537 2.51198 8.90843 0.966705 7.00224 0.966705C5.09605 0.966705 3.55078 2.51198 3.55078 4.41817C3.55078 6.32435 5.09605 7.86963 7.00224 7.86963Z"
+                  fill="#AEB9E1"
+                />
+              </svg>
+            </span>
+            <p
+              class="text-xs text-white font-medium"
+            >
+              Full name
+            </p>
+          </div>
+          <div
+            class="w-full relative flex items-center"
+          >
+            <div
+              class="w-full"
+            >
+              <input
+                aria-label="name"
+                class="w-full p-[14px] block text-xs text-secondary bg-midNightBlue rounded-md border border-slateBlue "
+                name="name"
+                placeholder="Please enter name"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="py-6 border-b border-slateBlue"
+      >
+        <div
+          class="w-full flex items-start justify-between"
+        >
+          <div
+            class="flex w-[40%] items-center justify-start gap-2"
+          >
+            <span>
+              <svg
+                fill="none"
+                height="13"
+                viewBox="0 0 13 13"
+                width="13"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M0.579428 3.12534C0.530234 3.29898 0.503906 3.48223 0.503906 3.67163V9.06266C0.503906 10.1672 1.39934 11.0627 2.50391 11.0627H10.5039C11.6085 11.0627 12.5039 10.1672 12.5039 9.06266V3.67163C12.5039 3.48281 12.4777 3.30009 12.4288 3.12692L7.62411 7.12302C6.97558 7.66239 6.03458 7.66239 5.38606 7.12302L0.579428 3.12534ZM11.5082 1.94166C11.213 1.76996 10.8699 1.67163 10.5039 1.67163H2.50391C2.13844 1.67163 1.79587 1.76966 1.50105 1.94085L6.34522 5.96976C6.43787 6.04681 6.5723 6.04681 6.66494 5.96976L11.5082 1.94166Z"
+                  fill="white"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </span>
+            <p
+              class="text-xs text-white font-medium"
+            >
+              Email address
+            </p>
+          </div>
+          <div
+            class="w-full relative flex items-center"
+          >
+            <div
+              class="w-full"
+            >
+              <input
+                aria-label="email"
+                class="w-full p-[14px] block text-xs text-secondary bg-midNightBlue rounded-md border border-slateBlue "
+                name="email"
+                placeholder="Please enter email"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="py-6 border-b border-slateBlue"
+      >
+        <div
+          class="flex items-start"
+        >
+          <div
+            class="flex w-[40%] items-center justify-start gap-2"
+          >
+            <span>
+              <svg
+                fill="none"
+                height="13"
+                viewBox="0 0 13 13"
+                width="13"
+              >
+                <path
+                  d="M11.5039 0.367188H1.50391C1.23869 0.367188 0.984336 0.472544 0.796799 0.660081C0.609263 0.847617 0.503906 1.10197 0.503906 1.36719V9.36719V11.3672C0.503906 11.6324 0.609263 11.8868 0.796799 12.0743C0.984336 12.2618 1.23869 12.3672 1.50391 12.3672H11.5039C11.7691 12.3672 12.0235 12.2618 12.211 12.0743C12.3985 11.8868 12.5039 11.6324 12.5039 11.3672V1.36719C12.5039 1.10197 12.3985 0.847617 12.211 0.660081C12.0235 0.472544 11.7691 0.367188 11.5039 0.367188ZM9.71016 5.36719C9.52189 5.18169 9.2682 5.0777 9.00391 5.0777C8.73961 5.0777 8.48592 5.18169 8.29766 5.36719L5.50391 8.16094L4.21016 6.86719C4.02189 6.68169 3.76821 6.5777 3.50391 6.5777C3.23961 6.5777 2.98592 6.68169 2.79766 6.86719L1.50391 8.16094V1.36719H11.5039V7.16094L9.71016 5.36719Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+            <p
+              class="text-xs text-white font-medium"
+            >
+              Photo
+            </p>
+          </div>
+          <div
+            class="flex gap-4 justify-center"
+          >
+            <div
+              class="mb-4 w-[300px] p-6 flex flex-col items-center justify-center bg-midNightBlue rounded"
+            >
+              <svg
+                fill="none"
+                height="33"
+                viewBox="0 0 33 33"
+                width="33"
+              >
+                <circle
+                  cx="16.75"
+                  cy="16.5"
+                  fill="#CB3CFF"
+                  opacity="0.2"
+                  r="16"
+                />
+                <path
+                  d="M23.4167 8.5H10.0833C9.72971 8.5 9.39057 8.64048 9.14052 8.89052C8.89048 9.14057 8.75 9.47971 8.75 9.83333V20.5V23.1667C8.75 23.5203 8.89048 23.8594 9.14052 24.1095C9.39057 24.3595 9.72971 24.5 10.0833 24.5H23.4167C23.7703 24.5 24.1094 24.3595 24.3595 24.1095C24.6095 23.8594 24.75 23.5203 24.75 23.1667V9.83333C24.75 9.47971 24.6095 9.14057 24.3595 8.89052C24.1094 8.64048 23.7703 8.5 23.4167 8.5ZM21.025 15.1667C20.774 14.9193 20.4357 14.7807 20.0833 14.7807C19.7309 14.7807 19.3927 14.9193 19.1417 15.1667L15.4167 18.8917L13.6917 17.1667C13.4406 16.9193 13.1024 16.7807 12.75 16.7807C12.3976 16.7807 12.0594 16.9193 11.8083 17.1667L10.0833 18.8917V9.83333H23.4167V17.5583L21.025 15.1667Z"
+                  fill="#CB3CFF"
+                />
+              </svg>
+              <label
+                class="block text-[10px] cursor-pointer font-medium text-secondary mb-2"
+                for="imageInput"
+              >
+                <span
+                  class="text-primary"
+                >
+                  Click to upload
+                </span>
+                 or drag and drop
+              </label>
+              <label
+                class="block text-[10px] cursor-pointer font-medium text-secondary mb-2"
+                for="imageInput"
+              >
+                SVG, PNG, JPG or GIF (max. 800 x 400px)
+              </label>
+              <input
+                accept="image/*"
+                class="border p-2 w-full"
+                hidden=""
+                id="imageInput"
+                required=""
+                type="file"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="py-6"
+      >
+        <div
+          class="w-full flex items-start justify-between"
+        >
+          <div
+            class="flex w-[40%] items-center justify-start gap-2"
+          >
+            <span>
+              <svg
+                fill="none"
+                height="13"
+                viewBox="0 0 13 13"
+                width="13"
+              >
+                <path
+                  d="M11.0947 1.49892C10.9244 1.32932 10.7221 1.19516 10.4997 1.10417C10.2772 1.01318 10.0389 0.967165 9.79856 0.968792C9.55822 0.970419 9.32057 1.01965 9.09936 1.11365C8.87815 1.20764 8.67776 1.34453 8.50975 1.51642L1.64715 8.37912C1.3937 8.63258 1.21301 8.94949 1.12401 9.29671L0.542819 11.5641C0.467311 11.8586 0.735111 12.1264 1.02967 12.0508L3.29714 11.4693C3.64426 11.3802 3.96108 11.1996 4.21448 10.9462L11.0772 4.08338C11.2491 3.91545 11.386 3.7151 11.4801 3.49392C11.5741 3.27275 11.6233 3.03512 11.625 2.7948C11.6266 2.55447 11.5806 2.3162 11.4895 2.09377C11.3985 1.87134 11.2643 1.66916 11.0947 1.49892Z"
+                  fill="#AEB9E1"
+                  stroke="#AEB9E1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <p
+              class="text-xs text-white font-medium"
+            >
+              Short description
+            </p>
+          </div>
+          <div
+            class="w-full relative flex items-center"
+          >
+            <div
+              class="w-full"
+            >
+              <textarea
+                aria-label="description"
+                class="w-full h-[90px] p-[14px] block text-xs text-secondary bg-midNightBlue rounded-md border border-slateBlue "
+                name="description"
+                placeholder="Write a short bio about you..."
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mt-5"
+    >
+      <h3
+        class="text-white text-base font-medium"
+      >
+        Basic information
+      </h3>
+      <p
+        class="text-secondary text-sm font-medium"
+      >
+        Lorem ipsum dolor sit amet consectetur adipiscing.
+      </p>
+    </div>
+    <div
+      class="w-full border border-slateBlue rounded-xl flex flex-col mt-6 p-[34px]"
+    >
+      <div
+        class="py-6 border-b border-slateBlue"
+      >
+        <div
+          class="w-full flex items-start justify-between"
+        >
+          <div
+            class="flex w-[40%] items-center justify-start gap-2"
+          >
+            <span>
+              <svg
+                fill="none"
+                height="11"
+                viewBox="0 0 10 11"
+                width="10"
+              >
+                <path
+                  d="M2.85847 5.46216C3.30669 6.38776 4.05516 7.13431 4.98191 7.58015C5.05027 7.61252 5.12589 7.62653 5.20131 7.6208C5.27673 7.61507 5.34936 7.5898 5.41205 7.54748L6.77322 6.63821C6.83336 6.59742 6.90286 6.57254 6.97522 6.56587C7.04758 6.55921 7.12044 6.57098 7.18702 6.6001L9.73515 7.69449C9.82224 7.73073 9.89499 7.7946 9.94222 7.87626C9.98944 7.95792 10.0085 8.05284 9.99649 8.1464C9.91573 8.77676 9.60805 9.35609 9.13103 9.77599C8.654 10.1959 8.04032 10.4276 7.40481 10.4277C5.44093 10.4277 3.55749 9.64759 2.16882 8.25892C0.780148 6.87024 0 4.9868 0 3.02292C0.000143231 2.38742 0.231844 1.77373 0.651746 1.29671C1.07165 0.819683 1.65098 0.512003 2.28134 0.43124C2.3749 0.419222 2.46981 0.438293 2.55147 0.485517C2.63313 0.532741 2.697 0.605499 2.73325 0.692587L3.82763 3.24616C3.85609 3.31168 3.868 3.3832 3.8623 3.45441C3.8566 3.52563 3.83348 3.59434 3.79497 3.65451L2.8857 5.03747C2.84522 5.10002 2.82146 5.17191 2.81669 5.24626C2.81193 5.32062 2.82631 5.39495 2.85847 5.46216V5.46216Z"
+                  fill="#AEB9E1"
+                />
+              </svg>
+            </span>
+            <p
+              class="text-xs text-white font-medium"
+            >
+              Phone
+            </p>
+          </div>
+          <div
+            class="w-full relative flex items-center"
+          >
+            <div
+              class="w-full"
+            >
+              <input
+                aria-label="phone"
+                class="w-full p-[14px] block text-xs text-secondary bg-midNightBlue rounded-md border border-slateBlue "
+                name="phone"
+                placeholder="Please enter phone"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="py-6 border-b border-slateBlue"
+      >
+        <div
+          class="w-full flex items-start justify-between"
+        >
+          <div
+            class="flex w-[40%] items-center justify-start gap-2"
+          >
+            <span>
+              <svg
+                fill="none"
+                height="13"
+                viewBox="0 0 13 13"
+                width="13"
+              >
+                <path
+                  d="M11.5808 2.90068H9.23275C9.12168 2.25746 8.78697 1.67415 8.28769 1.25369C7.7884 0.833236 7.15665 0.602661 6.50391 0.602661C5.85117 0.602661 5.21941 0.833236 4.72012 1.25369C4.22084 1.67415 3.88613 2.25746 3.77506 2.90068H1.42698C1.18217 2.90068 0.94738 2.99794 0.774269 3.17105C0.601159 3.34416 0.503906 3.57894 0.503906 3.82376V11.2084C0.503906 11.4532 0.601159 11.688 0.774269 11.8611C0.94738 12.0342 1.18217 12.1315 1.42698 12.1315H11.5808C11.8256 12.1315 12.0604 12.0342 12.2335 11.8611C12.4067 11.688 12.5039 11.4532 12.5039 11.2084V3.82376C12.5039 3.57894 12.4067 3.34416 12.2335 3.17105C12.0604 2.99794 11.8256 2.90068 11.5808 2.90068ZM6.50391 1.51607C6.9131 1.51685 7.31051 1.65313 7.63407 1.90363C7.95763 2.15413 8.18911 2.50473 8.29237 2.90068H4.71544C4.8187 2.50473 5.05018 2.15413 5.37374 1.90363C5.6973 1.65313 6.09471 1.51685 6.50391 1.51607Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+            <p
+              class="text-xs text-white font-medium"
+            >
+              Position
+            </p>
+          </div>
+          <div
+            class="w-full relative flex items-center"
+          >
+            <div
+              class="w-full"
+            >
+              <input
+                aria-label="position"
+                class="w-full p-[14px] block text-xs text-secondary bg-midNightBlue rounded-md border border-slateBlue "
+                name="position"
+                placeholder="Please enter position"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="py-6 border-b border-slateBlue"
+      >
+        <div
+          class="w-full flex items-start justify-between"
+        >
+          <div
+            class="flex w-[40%] items-center justify-start gap-2"
+          >
+            <span>
+              <svg
+                fill="none"
+                height="13"
+                viewBox="0 0 13 13"
+                width="13"
+              >
+                <path
+                  d="M6.50451 0.367188C5.25459 0.368605 4.05627 0.865762 3.17244 1.74959C2.28861 2.63342 1.79146 3.83174 1.79004 5.08166C1.79004 9.11574 6.07592 12.1641 6.25807 12.2927C6.33107 12.3413 6.41681 12.3672 6.50451 12.3672C6.59221 12.3672 6.67795 12.3413 6.75095 12.2927C6.9331 12.1641 11.219 9.11574 11.219 5.08166C11.2176 3.83174 10.7204 2.63342 9.83657 1.74959C8.95275 0.865762 7.75443 0.368605 6.50451 0.367188ZM6.50451 3.3673C6.84357 3.3673 7.17503 3.46785 7.45695 3.65622C7.73887 3.8446 7.95861 4.11234 8.08836 4.4256C8.21812 4.73886 8.25207 5.08356 8.18592 5.41611C8.11977 5.74866 7.95649 6.05413 7.71674 6.29389C7.47698 6.53364 7.17151 6.69692 6.83896 6.76307C6.50641 6.82922 6.16171 6.79527 5.84845 6.66551C5.5352 6.53576 5.26745 6.31602 5.07908 6.0341C4.8907 5.75218 4.79016 5.42072 4.79016 5.08166C4.79016 4.62698 4.97077 4.19093 5.29228 3.86943C5.61378 3.54792 6.04983 3.3673 6.50451 3.3673Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+            <p
+              class="text-xs text-white font-medium"
+            >
+              Location
+            </p>
+          </div>
+          <div
+            class="w-full relative flex items-center"
+          >
+            <div
+              class="w-full"
+            >
+              <input
+                aria-label="location"
+                class="w-full p-[14px] block text-xs text-secondary bg-midNightBlue rounded-md border border-slateBlue "
+                name="location"
+                placeholder="Please enter location"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="py-6 border-b border-slateBlue"
+      >
+        <div
+          class="w-full flex items-start justify-between"
+        >
+          <div
+            class="flex w-[40%] items-center justify-start gap-2"
+          >
+            <span>
+              <svg
+                fill="none"
+                height="14"
+                viewBox="0 0 15 14"
+                width="15"
+              >
+                <path
+                  d="M7.50391 13.3672C10.8176 13.3672 13.5039 10.6809 13.5039 7.36719C13.5039 4.05348 10.8176 1.36719 7.50391 1.36719C4.1902 1.36719 1.50391 4.05348 1.50391 7.36719C1.50391 10.6809 4.1902 13.3672 7.50391 13.3672Z"
+                  stroke="white"
+                  stroke-miterlimit="10"
+                  stroke-width="1.2"
+                />
+                <path
+                  d="M1.50391 7.36719H13.5039"
+                  stroke="white"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.2"
+                />
+                <path
+                  d="M7.50281 13.2046C8.88352 13.2046 10.0028 10.591 10.0028 7.36707C10.0028 4.14311 8.88352 1.52957 7.50281 1.52957C6.1221 1.52957 5.00281 4.14311 5.00281 7.36707C5.00281 10.591 6.1221 13.2046 7.50281 13.2046Z"
+                  stroke="white"
+                  stroke-miterlimit="10"
+                  stroke-width="1.2"
+                />
+              </svg>
+            </span>
+            <p
+              class="text-xs text-white font-medium"
+            >
+              Website
+            </p>
+          </div>
+          <div
+            class="w-full relative flex items-center"
+          >
+            <div
+              class="w-full"
+            >
+              <input
+                aria-label="website"
+                class="w-full p-[14px] block text-xs text-secondary bg-midNightBlue rounded-md border border-slateBlue "
+                name="website"
+                placeholder="Please enter website"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="py-6"
+      >
+        <div
+          class="w-full flex items-start justify-between"
+        >
+          <div
+            class="flex w-[40%] items-center justify-start gap-2"
+          >
+            <span>
+              <svg
+                fill="none"
+                height="13"
+                viewBox="0 0 13 13"
+                width="13"
+              >
+                <path
+                  d="M11.5808 2.90068H9.23275C9.12168 2.25746 8.78697 1.67415 8.28769 1.25369C7.7884 0.833236 7.15665 0.602661 6.50391 0.602661C5.85117 0.602661 5.21941 0.833236 4.72012 1.25369C4.22084 1.67415 3.88613 2.25746 3.77506 2.90068H1.42698C1.18217 2.90068 0.94738 2.99794 0.774269 3.17105C0.601159 3.34416 0.503906 3.57894 0.503906 3.82376V11.2084C0.503906 11.4532 0.601159 11.688 0.774269 11.8611C0.94738 12.0342 1.18217 12.1315 1.42698 12.1315H11.5808C11.8256 12.1315 12.0604 12.0342 12.2335 11.8611C12.4067 11.688 12.5039 11.4532 12.5039 11.2084V3.82376C12.5039 3.57894 12.4067 3.34416 12.2335 3.17105C12.0604 2.99794 11.8256 2.90068 11.5808 2.90068ZM6.50391 1.51607C6.9131 1.51685 7.31051 1.65313 7.63407 1.90363C7.95763 2.15413 8.18911 2.50473 8.29237 2.90068H4.71544C4.8187 2.50473 5.05018 2.15413 5.37374 1.90363C5.6973 1.65313 6.09471 1.51685 6.50391 1.51607Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+            <p
+              class="text-xs text-white font-medium"
+            >
+              Company
+            </p>
+          </div>
+          <div
+            class="w-full relative flex items-center"
+          >
+            <div
+              class="w-full"
+            >
+              <input
+                aria-label="company"
+                class="w-full p-[14px] block text-xs text-secondary bg-midNightBlue rounded-md border border-slateBlue "
+                name="company"
+                placeholder="Please enter company"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+`;

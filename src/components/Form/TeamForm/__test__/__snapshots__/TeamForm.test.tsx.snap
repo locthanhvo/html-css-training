@@ -1,0 +1,225 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TeamForm component renders correctly 1`] = `
+<div>
+  <form>
+    <div
+      class="mt-5"
+    >
+      <h3
+        class="text-white text-base font-medium"
+      >
+        Team information
+      </h3>
+      <p
+        class="text-secondary text-sm font-medium"
+      >
+        Lorem ipsum dolor sit amet consectetur adipiscing.
+      </p>
+    </div>
+    <div
+      class="w-full border border-slateBlue rounded-xl flex flex-col mt-6 p-[34px]"
+    >
+      <div
+        class="py-6 border-b border-slateBlue"
+      >
+        <div
+          class="w-full flex items-start justify-between"
+        >
+          <div
+            class="flex w-[40%] items-center justify-start gap-2"
+          >
+            <span>
+              <svg
+                fill="none"
+                height="11"
+                viewBox="0 0 10 11"
+                width="10"
+              >
+                <path
+                  d="M2.85847 5.46216C3.30669 6.38776 4.05516 7.13431 4.98191 7.58015C5.05027 7.61252 5.12589 7.62653 5.20131 7.6208C5.27673 7.61507 5.34936 7.5898 5.41205 7.54748L6.77322 6.63821C6.83336 6.59742 6.90286 6.57254 6.97522 6.56587C7.04758 6.55921 7.12044 6.57098 7.18702 6.6001L9.73515 7.69449C9.82224 7.73073 9.89499 7.7946 9.94222 7.87626C9.98944 7.95792 10.0085 8.05284 9.99649 8.1464C9.91573 8.77676 9.60805 9.35609 9.13103 9.77599C8.654 10.1959 8.04032 10.4276 7.40481 10.4277C5.44093 10.4277 3.55749 9.64759 2.16882 8.25892C0.780148 6.87024 0 4.9868 0 3.02292C0.000143231 2.38742 0.231844 1.77373 0.651746 1.29671C1.07165 0.819683 1.65098 0.512003 2.28134 0.43124C2.3749 0.419222 2.46981 0.438293 2.55147 0.485517C2.63313 0.532741 2.697 0.605499 2.73325 0.692587L3.82763 3.24616C3.85609 3.31168 3.868 3.3832 3.8623 3.45441C3.8566 3.52563 3.83348 3.59434 3.79497 3.65451L2.8857 5.03747C2.84522 5.10002 2.82146 5.17191 2.81669 5.24626C2.81193 5.32062 2.82631 5.39495 2.85847 5.46216V5.46216Z"
+                  fill="#AEB9E1"
+                />
+              </svg>
+            </span>
+            <p
+              class="text-xs text-white font-medium"
+            >
+              Team Name
+            </p>
+          </div>
+          <div
+            class="w-full relative flex items-center"
+          >
+            <div
+              class="w-full"
+            >
+              <input
+                aria-label="teamName"
+                class="w-full p-[14px] block text-xs text-secondary bg-midNightBlue rounded-md border border-slateBlue "
+                name="teamName"
+                placeholder="Please enter team name"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="py-6 border-b border-slateBlue"
+      >
+        <div
+          class="w-full flex items-start justify-between"
+        >
+          <div
+            class="flex w-[40%] items-center justify-start gap-2"
+          >
+            <span>
+              <svg
+                fill="none"
+                height="13"
+                viewBox="0 0 13 13"
+                width="13"
+              >
+                <path
+                  d="M11.5808 2.90068H9.23275C9.12168 2.25746 8.78697 1.67415 8.28769 1.25369C7.7884 0.833236 7.15665 0.602661 6.50391 0.602661C5.85117 0.602661 5.21941 0.833236 4.72012 1.25369C4.22084 1.67415 3.88613 2.25746 3.77506 2.90068H1.42698C1.18217 2.90068 0.94738 2.99794 0.774269 3.17105C0.601159 3.34416 0.503906 3.57894 0.503906 3.82376V11.2084C0.503906 11.4532 0.601159 11.688 0.774269 11.8611C0.94738 12.0342 1.18217 12.1315 1.42698 12.1315H11.5808C11.8256 12.1315 12.0604 12.0342 12.2335 11.8611C12.4067 11.688 12.5039 11.4532 12.5039 11.2084V3.82376C12.5039 3.57894 12.4067 3.34416 12.2335 3.17105C12.0604 2.99794 11.8256 2.90068 11.5808 2.90068ZM6.50391 1.51607C6.9131 1.51685 7.31051 1.65313 7.63407 1.90363C7.95763 2.15413 8.18911 2.50473 8.29237 2.90068H4.71544C4.8187 2.50473 5.05018 2.15413 5.37374 1.90363C5.6973 1.65313 6.09471 1.51685 6.50391 1.51607Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+            <p
+              class="text-xs text-white font-medium"
+            >
+              Rank
+            </p>
+          </div>
+          <div
+            class="w-full relative flex items-center"
+          >
+            <div
+              class="w-full"
+            >
+              <input
+                aria-label="rank"
+                class="w-full p-[14px] block text-xs text-secondary bg-midNightBlue rounded-md border border-slateBlue "
+                name="rank"
+                placeholder="Please enter rank"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="py-6 border-b border-slateBlue"
+      >
+        <div
+          class="w-full flex items-start justify-between"
+        >
+          <div
+            class="flex w-[40%] items-center justify-start gap-2"
+          >
+            <span>
+              <svg
+                fill="none"
+                height="13"
+                viewBox="0 0 13 13"
+                width="13"
+              >
+                <path
+                  d="M6.50451 0.367188C5.25459 0.368605 4.05627 0.865762 3.17244 1.74959C2.28861 2.63342 1.79146 3.83174 1.79004 5.08166C1.79004 9.11574 6.07592 12.1641 6.25807 12.2927C6.33107 12.3413 6.41681 12.3672 6.50451 12.3672C6.59221 12.3672 6.67795 12.3413 6.75095 12.2927C6.9331 12.1641 11.219 9.11574 11.219 5.08166C11.2176 3.83174 10.7204 2.63342 9.83657 1.74959C8.95275 0.865762 7.75443 0.368605 6.50451 0.367188ZM6.50451 3.3673C6.84357 3.3673 7.17503 3.46785 7.45695 3.65622C7.73887 3.8446 7.95861 4.11234 8.08836 4.4256C8.21812 4.73886 8.25207 5.08356 8.18592 5.41611C8.11977 5.74866 7.95649 6.05413 7.71674 6.29389C7.47698 6.53364 7.17151 6.69692 6.83896 6.76307C6.50641 6.82922 6.16171 6.79527 5.84845 6.66551C5.5352 6.53576 5.26745 6.31602 5.07908 6.0341C4.8907 5.75218 4.79016 5.42072 4.79016 5.08166C4.79016 4.62698 4.97077 4.19093 5.29228 3.86943C5.61378 3.54792 6.04983 3.3673 6.50451 3.3673Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+            <p
+              class="text-xs text-white font-medium"
+            >
+              Office
+            </p>
+          </div>
+          <div
+            class="w-full relative flex items-center"
+          >
+            <div
+              class="w-full"
+            >
+              <input
+                aria-label="office"
+                class="w-full p-[14px] block text-xs text-secondary bg-midNightBlue rounded-md border border-slateBlue "
+                name="office"
+                placeholder="Please enter office"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="pt-6"
+      >
+        <div
+          class="w-full flex items-start justify-between"
+        >
+          <div
+            class="flex w-[40%] items-center justify-start gap-2"
+          >
+            <span>
+              <svg
+                fill="none"
+                height="14"
+                viewBox="0 0 15 14"
+                width="15"
+              >
+                <path
+                  d="M7.50391 13.3672C10.8176 13.3672 13.5039 10.6809 13.5039 7.36719C13.5039 4.05348 10.8176 1.36719 7.50391 1.36719C4.1902 1.36719 1.50391 4.05348 1.50391 7.36719C1.50391 10.6809 4.1902 13.3672 7.50391 13.3672Z"
+                  stroke="white"
+                  stroke-miterlimit="10"
+                  stroke-width="1.2"
+                />
+                <path
+                  d="M1.50391 7.36719H13.5039"
+                  stroke="white"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.2"
+                />
+                <path
+                  d="M7.50281 13.2046C8.88352 13.2046 10.0028 10.591 10.0028 7.36707C10.0028 4.14311 8.88352 1.52957 7.50281 1.52957C6.1221 1.52957 5.00281 4.14311 5.00281 7.36707C5.00281 10.591 6.1221 13.2046 7.50281 13.2046Z"
+                  stroke="white"
+                  stroke-miterlimit="10"
+                  stroke-width="1.2"
+                />
+              </svg>
+            </span>
+            <p
+              class="text-xs text-white font-medium"
+            >
+              mail
+            </p>
+          </div>
+          <div
+            class="w-full relative flex items-center"
+          >
+            <div
+              class="w-full"
+            >
+              <input
+                aria-label="teamMail"
+                class="w-full p-[14px] block text-xs text-secondary bg-midNightBlue rounded-md border border-slateBlue "
+                name="teamMail"
+                placeholder="Please enter mail"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+`;

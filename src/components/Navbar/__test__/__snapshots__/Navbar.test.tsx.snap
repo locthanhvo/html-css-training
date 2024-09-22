@@ -1,0 +1,408 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar Component check if path is not id 1`] = `
+<div>
+  <div
+    class="flex min-h-screen"
+  >
+    <div
+      class="flex flex-col items-start p-8 border-r-[0.6px] border-slateBlue"
+    >
+      <p
+        class="text-white text-base mb-6"
+      >
+        Credentials
+      </p>
+      <a
+        href="/users/personal-information"
+      >
+        <button
+          class="text-secondary flex items-center gap-2 text-sm font-normal p-3 w-[250px] text-start"
+        >
+          <svg
+            fill="none"
+            height="13"
+            viewBox="0 0 13 13"
+            width="13"
+          >
+            <path
+              d="M11.0947 1.49892C10.9244 1.32932 10.7221 1.19516 10.4997 1.10417C10.2772 1.01318 10.0389 0.967165 9.79856 0.968792C9.55822 0.970419 9.32057 1.01965 9.09936 1.11365C8.87815 1.20764 8.67776 1.34453 8.50975 1.51642L1.64715 8.37912C1.3937 8.63258 1.21301 8.94949 1.12401 9.29671L0.542819 11.5641C0.467311 11.8586 0.735111 12.1264 1.02967 12.0508L3.29714 11.4693C3.64426 11.3802 3.96108 11.1996 4.21448 10.9462L11.0772 4.08338C11.2491 3.91545 11.386 3.7151 11.4801 3.49392C11.5741 3.27275 11.6233 3.03512 11.625 2.7948C11.6266 2.55447 11.5806 2.3162 11.4895 2.09377C11.3985 1.87134 11.2643 1.66916 11.0947 1.49892Z"
+              fill="#AEB9E1"
+              stroke="#AEB9E1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+           
+          Personal Information
+        </button>
+      </a>
+      <a
+        href="/users/team"
+      >
+        <button
+          class="text-secondary flex items-center gap-2 text-sm font-normal p-3 w-[250px] text-start"
+        >
+          <svg
+            fill="none"
+            height="15"
+            viewBox="0 0 14 15"
+            width="14"
+          >
+            <path
+              d="M0.943604 12.7389C0.943604 10.5945 2.68203 8.85605 4.8265 8.85605H9.17356C11.318 8.85605 13.0565 10.5945 13.0565 12.7389C13.0565 13.4538 12.477 14.0332 11.7622 14.0332H2.2379C1.52308 14.0332 0.943604 13.4538 0.943604 12.7389Z"
+              fill="#AEB9E1"
+            />
+            <path
+              d="M7.00224 7.86963C8.90843 7.86963 10.4537 6.32435 10.4537 4.41817C10.4537 2.51198 8.90843 0.966705 7.00224 0.966705C5.09605 0.966705 3.55078 2.51198 3.55078 4.41817C3.55078 6.32435 5.09605 7.86963 7.00224 7.86963Z"
+              fill="#AEB9E1"
+            />
+          </svg>
+           
+          Team
+        </button>
+      </a>
+      <a
+        href="/users/billing"
+      >
+        <button
+          class="text-white bg-darkBlue flex items-center gap-2 text-sm font-normal p-3 w-[250px] text-start"
+        >
+          <svg
+            fill="none"
+            height="10"
+            viewBox="0 0 13 10"
+            width="13"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M0.358887 1.71855C0.358887 1.08929 0.873119 0.579163 1.50746 0.579163H11.2103C11.8447 0.579163 12.3589 1.08929 12.3589 1.71855V2.59364L0.358887 2.59364V1.71855ZM0.358887 4.04292V8.32938C0.358887 8.95865 0.873119 9.46877 1.50746 9.46877H11.2103C11.8447 9.46877 12.3589 8.95865 12.3589 8.32938V4.04292L0.358887 4.04292Z"
+              fill="#AEB9E1"
+              fill-rule="evenodd"
+            />
+          </svg>
+           
+          Billing
+        </button>
+      </a>
+      <a
+        href="/users/notification"
+      >
+        <button
+          class="text-secondary flex items-center gap-2 text-sm font-normal p-3 w-[250px] text-start"
+        >
+          <svg
+            fill="none"
+            height="12"
+            viewBox="0 0 12 12"
+            width="12"
+          >
+            <path
+              d="M1.68525 4.23572C1.68446 3.67687 1.79425 3.12339 2.00829 2.60715C2.22232 2.09091 2.53638 1.62211 2.93237 1.22777C3.32836 0.833425 3.79845 0.52132 4.31557 0.309432C4.8327 0.0975438 5.38664 -0.00994098 5.94548 -0.00683138C8.27888 0.0108459 10.1468 1.94946 10.1468 4.28875V4.70711C10.1468 6.8166 10.5887 8.04223 10.9776 8.71397C11.0189 8.78551 11.0407 8.86664 11.0408 8.94925C11.0408 9.03186 11.0192 9.11303 10.978 9.18464C10.9369 9.25626 10.8776 9.31579 10.8062 9.35728C10.7347 9.39878 10.6536 9.42077 10.571 9.42106H1.26099C1.17839 9.42077 1.09731 9.39878 1.02588 9.35728C0.954449 9.31579 0.895176 9.25626 0.853999 9.18464C0.812822 9.11303 0.791187 9.03186 0.79126 8.94925C0.791333 8.86664 0.813112 8.78551 0.854416 8.71397C1.24332 8.04223 1.68525 6.8166 1.68525 4.70711V4.23572Z"
+              fill="#AEB9E1"
+            />
+            <path
+              d="M4.02881 8.66693V9.13833C4.02881 9.63841 4.22747 10.118 4.58108 10.4716C4.9347 10.8252 5.4143 11.0239 5.91439 11.0239C6.41447 11.0239 6.89408 10.8252 7.24769 10.4716C7.60131 10.118 7.79997 9.63841 7.79997 9.13833V8.66693"
+              stroke="#AEB9E1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="0.768422"
+            />
+          </svg>
+           
+          Notifications
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Navbar Component match Navbar component 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="flex min-h-screen"
+      >
+        <div
+          class="flex flex-col items-start p-8 border-r-[0.6px] border-slateBlue"
+        >
+          <p
+            class="text-white text-base mb-6"
+          >
+            Credentials
+          </p>
+          <a
+            href="/users/1/personal-information"
+          >
+            <button
+              class="text-secondary flex items-center gap-2 text-sm font-normal p-3 w-[250px] text-start"
+            >
+              <svg
+                fill="none"
+                height="13"
+                viewBox="0 0 13 13"
+                width="13"
+              >
+                <path
+                  d="M11.0947 1.49892C10.9244 1.32932 10.7221 1.19516 10.4997 1.10417C10.2772 1.01318 10.0389 0.967165 9.79856 0.968792C9.55822 0.970419 9.32057 1.01965 9.09936 1.11365C8.87815 1.20764 8.67776 1.34453 8.50975 1.51642L1.64715 8.37912C1.3937 8.63258 1.21301 8.94949 1.12401 9.29671L0.542819 11.5641C0.467311 11.8586 0.735111 12.1264 1.02967 12.0508L3.29714 11.4693C3.64426 11.3802 3.96108 11.1996 4.21448 10.9462L11.0772 4.08338C11.2491 3.91545 11.386 3.7151 11.4801 3.49392C11.5741 3.27275 11.6233 3.03512 11.625 2.7948C11.6266 2.55447 11.5806 2.3162 11.4895 2.09377C11.3985 1.87134 11.2643 1.66916 11.0947 1.49892Z"
+                  fill="#AEB9E1"
+                  stroke="#AEB9E1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+               
+              Personal Information
+            </button>
+          </a>
+          <a
+            href="/users/1/team"
+          >
+            <button
+              class="text-secondary flex items-center gap-2 text-sm font-normal p-3 w-[250px] text-start"
+            >
+              <svg
+                fill="none"
+                height="15"
+                viewBox="0 0 14 15"
+                width="14"
+              >
+                <path
+                  d="M0.943604 12.7389C0.943604 10.5945 2.68203 8.85605 4.8265 8.85605H9.17356C11.318 8.85605 13.0565 10.5945 13.0565 12.7389C13.0565 13.4538 12.477 14.0332 11.7622 14.0332H2.2379C1.52308 14.0332 0.943604 13.4538 0.943604 12.7389Z"
+                  fill="#AEB9E1"
+                />
+                <path
+                  d="M7.00224 7.86963C8.90843 7.86963 10.4537 6.32435 10.4537 4.41817C10.4537 2.51198 8.90843 0.966705 7.00224 0.966705C5.09605 0.966705 3.55078 2.51198 3.55078 4.41817C3.55078 6.32435 5.09605 7.86963 7.00224 7.86963Z"
+                  fill="#AEB9E1"
+                />
+              </svg>
+               
+              Team
+            </button>
+          </a>
+          <a
+            href="/users/1/billing"
+          >
+            <button
+              class="text-white bg-darkBlue flex items-center gap-2 text-sm font-normal p-3 w-[250px] text-start"
+            >
+              <svg
+                fill="none"
+                height="10"
+                viewBox="0 0 13 10"
+                width="13"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M0.358887 1.71855C0.358887 1.08929 0.873119 0.579163 1.50746 0.579163H11.2103C11.8447 0.579163 12.3589 1.08929 12.3589 1.71855V2.59364L0.358887 2.59364V1.71855ZM0.358887 4.04292V8.32938C0.358887 8.95865 0.873119 9.46877 1.50746 9.46877H11.2103C11.8447 9.46877 12.3589 8.95865 12.3589 8.32938V4.04292L0.358887 4.04292Z"
+                  fill="#AEB9E1"
+                  fill-rule="evenodd"
+                />
+              </svg>
+               
+              Billing
+            </button>
+          </a>
+          <a
+            href="/users/1/notification"
+          >
+            <button
+              class="text-secondary flex items-center gap-2 text-sm font-normal p-3 w-[250px] text-start"
+            >
+              <svg
+                fill="none"
+                height="12"
+                viewBox="0 0 12 12"
+                width="12"
+              >
+                <path
+                  d="M1.68525 4.23572C1.68446 3.67687 1.79425 3.12339 2.00829 2.60715C2.22232 2.09091 2.53638 1.62211 2.93237 1.22777C3.32836 0.833425 3.79845 0.52132 4.31557 0.309432C4.8327 0.0975438 5.38664 -0.00994098 5.94548 -0.00683138C8.27888 0.0108459 10.1468 1.94946 10.1468 4.28875V4.70711C10.1468 6.8166 10.5887 8.04223 10.9776 8.71397C11.0189 8.78551 11.0407 8.86664 11.0408 8.94925C11.0408 9.03186 11.0192 9.11303 10.978 9.18464C10.9369 9.25626 10.8776 9.31579 10.8062 9.35728C10.7347 9.39878 10.6536 9.42077 10.571 9.42106H1.26099C1.17839 9.42077 1.09731 9.39878 1.02588 9.35728C0.954449 9.31579 0.895176 9.25626 0.853999 9.18464C0.812822 9.11303 0.791187 9.03186 0.79126 8.94925C0.791333 8.86664 0.813112 8.78551 0.854416 8.71397C1.24332 8.04223 1.68525 6.8166 1.68525 4.70711V4.23572Z"
+                  fill="#AEB9E1"
+                />
+                <path
+                  d="M4.02881 8.66693V9.13833C4.02881 9.63841 4.22747 10.118 4.58108 10.4716C4.9347 10.8252 5.4143 11.0239 5.91439 11.0239C6.41447 11.0239 6.89408 10.8252 7.24769 10.4716C7.60131 10.118 7.79997 9.63841 7.79997 9.13833V8.66693"
+                  stroke="#AEB9E1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="0.768422"
+                />
+              </svg>
+               
+              Notifications
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="flex min-h-screen"
+    >
+      <div
+        class="flex flex-col items-start p-8 border-r-[0.6px] border-slateBlue"
+      >
+        <p
+          class="text-white text-base mb-6"
+        >
+          Credentials
+        </p>
+        <a
+          href="/users/1/personal-information"
+        >
+          <button
+            class="text-secondary flex items-center gap-2 text-sm font-normal p-3 w-[250px] text-start"
+          >
+            <svg
+              fill="none"
+              height="13"
+              viewBox="0 0 13 13"
+              width="13"
+            >
+              <path
+                d="M11.0947 1.49892C10.9244 1.32932 10.7221 1.19516 10.4997 1.10417C10.2772 1.01318 10.0389 0.967165 9.79856 0.968792C9.55822 0.970419 9.32057 1.01965 9.09936 1.11365C8.87815 1.20764 8.67776 1.34453 8.50975 1.51642L1.64715 8.37912C1.3937 8.63258 1.21301 8.94949 1.12401 9.29671L0.542819 11.5641C0.467311 11.8586 0.735111 12.1264 1.02967 12.0508L3.29714 11.4693C3.64426 11.3802 3.96108 11.1996 4.21448 10.9462L11.0772 4.08338C11.2491 3.91545 11.386 3.7151 11.4801 3.49392C11.5741 3.27275 11.6233 3.03512 11.625 2.7948C11.6266 2.55447 11.5806 2.3162 11.4895 2.09377C11.3985 1.87134 11.2643 1.66916 11.0947 1.49892Z"
+                fill="#AEB9E1"
+                stroke="#AEB9E1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+             
+            Personal Information
+          </button>
+        </a>
+        <a
+          href="/users/1/team"
+        >
+          <button
+            class="text-secondary flex items-center gap-2 text-sm font-normal p-3 w-[250px] text-start"
+          >
+            <svg
+              fill="none"
+              height="15"
+              viewBox="0 0 14 15"
+              width="14"
+            >
+              <path
+                d="M0.943604 12.7389C0.943604 10.5945 2.68203 8.85605 4.8265 8.85605H9.17356C11.318 8.85605 13.0565 10.5945 13.0565 12.7389C13.0565 13.4538 12.477 14.0332 11.7622 14.0332H2.2379C1.52308 14.0332 0.943604 13.4538 0.943604 12.7389Z"
+                fill="#AEB9E1"
+              />
+              <path
+                d="M7.00224 7.86963C8.90843 7.86963 10.4537 6.32435 10.4537 4.41817C10.4537 2.51198 8.90843 0.966705 7.00224 0.966705C5.09605 0.966705 3.55078 2.51198 3.55078 4.41817C3.55078 6.32435 5.09605 7.86963 7.00224 7.86963Z"
+                fill="#AEB9E1"
+              />
+            </svg>
+             
+            Team
+          </button>
+        </a>
+        <a
+          href="/users/1/billing"
+        >
+          <button
+            class="text-white bg-darkBlue flex items-center gap-2 text-sm font-normal p-3 w-[250px] text-start"
+          >
+            <svg
+              fill="none"
+              height="10"
+              viewBox="0 0 13 10"
+              width="13"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M0.358887 1.71855C0.358887 1.08929 0.873119 0.579163 1.50746 0.579163H11.2103C11.8447 0.579163 12.3589 1.08929 12.3589 1.71855V2.59364L0.358887 2.59364V1.71855ZM0.358887 4.04292V8.32938C0.358887 8.95865 0.873119 9.46877 1.50746 9.46877H11.2103C11.8447 9.46877 12.3589 8.95865 12.3589 8.32938V4.04292L0.358887 4.04292Z"
+                fill="#AEB9E1"
+                fill-rule="evenodd"
+              />
+            </svg>
+             
+            Billing
+          </button>
+        </a>
+        <a
+          href="/users/1/notification"
+        >
+          <button
+            class="text-secondary flex items-center gap-2 text-sm font-normal p-3 w-[250px] text-start"
+          >
+            <svg
+              fill="none"
+              height="12"
+              viewBox="0 0 12 12"
+              width="12"
+            >
+              <path
+                d="M1.68525 4.23572C1.68446 3.67687 1.79425 3.12339 2.00829 2.60715C2.22232 2.09091 2.53638 1.62211 2.93237 1.22777C3.32836 0.833425 3.79845 0.52132 4.31557 0.309432C4.8327 0.0975438 5.38664 -0.00994098 5.94548 -0.00683138C8.27888 0.0108459 10.1468 1.94946 10.1468 4.28875V4.70711C10.1468 6.8166 10.5887 8.04223 10.9776 8.71397C11.0189 8.78551 11.0407 8.86664 11.0408 8.94925C11.0408 9.03186 11.0192 9.11303 10.978 9.18464C10.9369 9.25626 10.8776 9.31579 10.8062 9.35728C10.7347 9.39878 10.6536 9.42077 10.571 9.42106H1.26099C1.17839 9.42077 1.09731 9.39878 1.02588 9.35728C0.954449 9.31579 0.895176 9.25626 0.853999 9.18464C0.812822 9.11303 0.791187 9.03186 0.79126 8.94925C0.791333 8.86664 0.813112 8.78551 0.854416 8.71397C1.24332 8.04223 1.68525 6.8166 1.68525 4.70711V4.23572Z"
+                fill="#AEB9E1"
+              />
+              <path
+                d="M4.02881 8.66693V9.13833C4.02881 9.63841 4.22747 10.118 4.58108 10.4716C4.9347 10.8252 5.4143 11.0239 5.91439 11.0239C6.41447 11.0239 6.89408 10.8252 7.24769 10.4716C7.60131 10.118 7.79997 9.63841 7.79997 9.13833V8.66693"
+                stroke="#AEB9E1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="0.768422"
+              />
+            </svg>
+             
+            Notifications
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

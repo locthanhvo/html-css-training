@@ -1,0 +1,916 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table Component should render correctly 1`] = `
+<div>
+  <div
+    class="overflow-hidden border-slateBlue border rounded-xl"
+  >
+    <div
+      class="flex items-center justify-between border-slateBlue border p-4 bg-midNightBlue"
+    >
+      <h3
+        class="text-white font-medium"
+      >
+        All Users
+      </h3>
+      <p
+        class="text-white text-xs font-medium"
+      >
+        <span
+          class="text-primary"
+        >
+          1 - 10
+        </span>
+         
+        of 
+        100
+      </p>
+    </div>
+    <table
+      class="min-w-full border-slateBlue"
+    >
+      <thead>
+        <tr
+          class="bg-midNightBlue"
+        >
+          <th
+            class="max-w-[100px] p-4 text-left"
+          >
+            <div
+              class="flex items-center gap-2 text-white font-semibold text-[10px]"
+              style="white-space: pre-wrap;"
+              title="Name"
+            >
+              <svg
+                fill="none"
+                height="10"
+                viewBox="0 0 14 15"
+                width="10"
+              >
+                <path
+                  d="M0.943604 12.7389C0.943604 10.5945 2.68203 8.85605 4.8265 8.85605H9.17356C11.318 8.85605 13.0565 10.5945 13.0565 12.7389C13.0565 13.4538 12.477 14.0332 11.7622 14.0332H2.2379C1.52308 14.0332 0.943604 13.4538 0.943604 12.7389Z"
+                  fill="#AEB9E1"
+                />
+                <path
+                  d="M7.00224 7.86963C8.90843 7.86963 10.4537 6.32435 10.4537 4.41817C10.4537 2.51198 8.90843 0.966705 7.00224 0.966705C5.09605 0.966705 3.55078 2.51198 3.55078 4.41817C3.55078 6.32435 5.09605 7.86963 7.00224 7.86963Z"
+                  fill="#AEB9E1"
+                />
+              </svg>
+              Name
+              <div
+                class="flex flex-col items-center"
+              >
+                <svg
+                  fill="none"
+                  height="8"
+                  style="transform: rotate(90deg);"
+                  viewBox="0 0 12 13"
+                  width="8"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    opacity="0.8"
+                  >
+                    <path
+                      d="M7.49976 3.55957L4.49976 6.55957L7.49976 9.55957"
+                      stroke="#AEB9E1"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="0.8"
+                    />
+                  </g>
+                </svg>
+                <svg
+                  fill="none"
+                  height="8"
+                  style="transform: rotate(270deg);"
+                  viewBox="0 0 12 13"
+                  width="8"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    opacity="0.8"
+                  >
+                    <path
+                      d="M7.49976 3.55957L4.49976 6.55957L7.49976 9.55957"
+                      stroke="#AEB9E1"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="0.8"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </th>
+          <th
+            class="max-w-[100px] p-4 text-left"
+          >
+            <div
+              class="flex items-center gap-2 text-white font-semibold text-[10px]"
+              style="white-space: pre-wrap;"
+              title="Phone"
+            >
+              <svg
+                fill="none"
+                height="11"
+                viewBox="0 0 10 11"
+                width="10"
+              >
+                <path
+                  d="M2.85847 5.46216C3.30669 6.38776 4.05516 7.13431 4.98191 7.58015C5.05027 7.61252 5.12589 7.62653 5.20131 7.6208C5.27673 7.61507 5.34936 7.5898 5.41205 7.54748L6.77322 6.63821C6.83336 6.59742 6.90286 6.57254 6.97522 6.56587C7.04758 6.55921 7.12044 6.57098 7.18702 6.6001L9.73515 7.69449C9.82224 7.73073 9.89499 7.7946 9.94222 7.87626C9.98944 7.95792 10.0085 8.05284 9.99649 8.1464C9.91573 8.77676 9.60805 9.35609 9.13103 9.77599C8.654 10.1959 8.04032 10.4276 7.40481 10.4277C5.44093 10.4277 3.55749 9.64759 2.16882 8.25892C0.780148 6.87024 0 4.9868 0 3.02292C0.000143231 2.38742 0.231844 1.77373 0.651746 1.29671C1.07165 0.819683 1.65098 0.512003 2.28134 0.43124C2.3749 0.419222 2.46981 0.438293 2.55147 0.485517C2.63313 0.532741 2.697 0.605499 2.73325 0.692587L3.82763 3.24616C3.85609 3.31168 3.868 3.3832 3.8623 3.45441C3.8566 3.52563 3.83348 3.59434 3.79497 3.65451L2.8857 5.03747C2.84522 5.10002 2.82146 5.17191 2.81669 5.24626C2.81193 5.32062 2.82631 5.39495 2.85847 5.46216V5.46216Z"
+                  fill="#AEB9E1"
+                />
+              </svg>
+              Phone
+              <div
+                class="flex flex-col items-center"
+              >
+                <svg
+                  fill="none"
+                  height="8"
+                  style="transform: rotate(90deg);"
+                  viewBox="0 0 12 13"
+                  width="8"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    opacity="0.8"
+                  >
+                    <path
+                      d="M7.49976 3.55957L4.49976 6.55957L7.49976 9.55957"
+                      stroke="#AEB9E1"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="0.8"
+                    />
+                  </g>
+                </svg>
+                <svg
+                  fill="none"
+                  height="8"
+                  style="transform: rotate(270deg);"
+                  viewBox="0 0 12 13"
+                  width="8"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    opacity="0.8"
+                  >
+                    <path
+                      d="M7.49976 3.55957L4.49976 6.55957L7.49976 9.55957"
+                      stroke="#AEB9E1"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="0.8"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </th>
+          <th
+            class="max-w-[100px] p-4 text-left"
+          >
+            <div
+              class="flex items-center gap-2 text-white font-semibold text-[10px]"
+              style="white-space: pre-wrap;"
+              title="Location"
+            >
+              <svg
+                fill="none"
+                height="11"
+                viewBox="0 0 11 11"
+                width="11"
+              >
+                <path
+                  d="M5.04152 0.427734C3.99992 0.428916 3.00132 0.843213 2.26479 1.57974C1.52827 2.31626 1.11397 3.31486 1.11279 4.35646C1.11279 7.7182 4.68436 10.2585 4.83615 10.3656C4.89698 10.4061 4.96843 10.4277 5.04152 10.4277C5.1146 10.4277 5.18605 10.4061 5.24688 10.3656C5.39867 10.2585 8.97024 7.7182 8.97024 4.35646C8.96906 3.31486 8.55476 2.31626 7.81824 1.57974C7.08172 0.843213 6.08312 0.428916 5.04152 0.427734V0.427734ZM5.04152 2.92783C5.32407 2.92783 5.60028 3.01162 5.83522 3.1686C6.07016 3.32558 6.25327 3.5487 6.3614 3.80975C6.46953 4.07079 6.49782 4.35804 6.44269 4.63517C6.38757 4.9123 6.25151 5.16685 6.05171 5.36665C5.85191 5.56645 5.59735 5.70251 5.32023 5.75763C5.0431 5.81276 4.75585 5.78447 4.4948 5.67634C4.23376 5.56821 4.01064 5.3851 3.85366 5.15016C3.69668 4.91522 3.61289 4.63901 3.61289 4.35646C3.61289 3.97756 3.76341 3.61419 4.03133 3.34627C4.29924 3.07835 4.66262 2.92783 5.04152 2.92783V2.92783Z"
+                  fill="#AEB9E1"
+                />
+              </svg>
+              Location
+              <div
+                class="flex flex-col items-center"
+              >
+                <svg
+                  fill="none"
+                  height="8"
+                  style="transform: rotate(90deg);"
+                  viewBox="0 0 12 13"
+                  width="8"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    opacity="0.8"
+                  >
+                    <path
+                      d="M7.49976 3.55957L4.49976 6.55957L7.49976 9.55957"
+                      stroke="#AEB9E1"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="0.8"
+                    />
+                  </g>
+                </svg>
+                <svg
+                  fill="none"
+                  height="8"
+                  style="transform: rotate(270deg);"
+                  viewBox="0 0 12 13"
+                  width="8"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    opacity="0.8"
+                  >
+                    <path
+                      d="M7.49976 3.55957L4.49976 6.55957L7.49976 9.55957"
+                      stroke="#AEB9E1"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="0.8"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </th>
+          <th
+            class="max-w-[100px] p-4 text-left"
+          >
+            <div
+              class="flex items-center gap-2 text-white font-semibold text-[10px]"
+              style="white-space: pre-wrap;"
+              title="Company"
+            >
+              <svg
+                fill="none"
+                height="11"
+                viewBox="0 0 11 11"
+                width="11"
+              >
+                <path
+                  d="M10.0062 2.53898H8.04943C7.95687 2.00296 7.67795 1.51687 7.26188 1.16649C6.84581 0.816108 6.31934 0.623962 5.77539 0.623962C5.23144 0.623962 4.70498 0.816108 4.28891 1.16649C3.87284 1.51687 3.59391 2.00296 3.50135 2.53898H1.54462C1.34061 2.53898 1.14495 2.62002 1.00069 2.76428C0.856434 2.90854 0.775391 3.1042 0.775391 3.30821V9.46206C0.775391 9.66607 0.856434 9.86173 1.00069 10.006C1.14495 10.1502 1.34061 10.2313 1.54462 10.2313H10.0062C10.2102 10.2313 10.4058 10.1502 10.5501 10.006C10.6943 9.86173 10.7754 9.66607 10.7754 9.46206V3.30821C10.7754 3.1042 10.6943 2.90854 10.5501 2.76428C10.4058 2.62002 10.2102 2.53898 10.0062 2.53898V2.53898ZM5.77539 1.38513C6.11638 1.38579 6.44756 1.49935 6.71719 1.7081C6.98683 1.91685 7.17973 2.20902 7.26578 2.53898H4.28501C4.37105 2.20902 4.56395 1.91685 4.83359 1.7081C5.10322 1.49935 5.4344 1.38579 5.77539 1.38513V1.38513Z"
+                  fill="#AEB9E1"
+                />
+              </svg>
+              Company
+              <div
+                class="flex flex-col items-center"
+              >
+                <svg
+                  fill="none"
+                  height="8"
+                  style="transform: rotate(90deg);"
+                  viewBox="0 0 12 13"
+                  width="8"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    opacity="0.8"
+                  >
+                    <path
+                      d="M7.49976 3.55957L4.49976 6.55957L7.49976 9.55957"
+                      stroke="#AEB9E1"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="0.8"
+                    />
+                  </g>
+                </svg>
+                <svg
+                  fill="none"
+                  height="8"
+                  style="transform: rotate(270deg);"
+                  viewBox="0 0 12 13"
+                  width="8"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    opacity="0.8"
+                  >
+                    <path
+                      d="M7.49976 3.55957L4.49976 6.55957L7.49976 9.55957"
+                      stroke="#AEB9E1"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="0.8"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </th>
+          <th
+            class="max-w-[100px] p-4 text-left"
+          >
+            <div
+              class="flex items-center gap-2 text-white font-semibold text-[10px]"
+              style="white-space: pre-wrap;"
+              title="Status"
+            >
+              <svg
+                fill="none"
+                height="11"
+                viewBox="0 0 11 11"
+                width="11"
+              >
+                <path
+                  d="M10.1042 0.427734H1.77083C1.54982 0.427734 1.33786 0.515532 1.18158 0.671812C1.0253 0.828092 0.9375 1.04005 0.9375 1.26107V9.5944C0.9375 9.81541 1.0253 10.0274 1.18158 10.1837C1.33786 10.3399 1.54982 10.4277 1.77083 10.4277H10.1042C10.3252 10.4277 10.5371 10.3399 10.6934 10.1837C10.8497 10.0274 10.9375 9.81541 10.9375 9.5944V1.26107C10.9375 1.04005 10.8497 0.828092 10.6934 0.671812C10.5371 0.515532 10.3252 0.427734 10.1042 0.427734V0.427734ZM8.51562 4.47982L5.46354 7.39648C5.38464 7.47071 5.2802 7.51174 5.17188 7.51107C5.06514 7.51147 4.96243 7.47039 4.88542 7.39648L3.35937 5.93815C3.31705 5.90122 3.28263 5.85612 3.25817 5.80555C3.23372 5.75497 3.21975 5.69998 3.2171 5.64387C3.21444 5.58776 3.22316 5.5317 3.24273 5.47904C3.26229 5.42639 3.2923 5.37824 3.33096 5.33748C3.36961 5.29672 3.4161 5.26419 3.46764 5.24186C3.51918 5.21953 3.57471 5.20785 3.63088 5.20752C3.68705 5.2072 3.74271 5.21823 3.7945 5.23996C3.8463 5.26169 3.89317 5.29368 3.93229 5.33398L5.17188 6.51628L7.94271 3.87565C8.02372 3.80497 8.12893 3.76834 8.23632 3.77342C8.34372 3.7785 8.44499 3.8249 8.51898 3.90292C8.59296 3.98093 8.63392 4.08453 8.63329 4.19204C8.63267 4.29955 8.59051 4.40267 8.51562 4.47982Z"
+                  fill="#AEB9E1"
+                />
+              </svg>
+              Status
+              <div
+                class="flex flex-col items-center"
+              >
+                <svg
+                  fill="none"
+                  height="8"
+                  style="transform: rotate(90deg);"
+                  viewBox="0 0 12 13"
+                  width="8"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    opacity="0.8"
+                  >
+                    <path
+                      d="M7.49976 3.55957L4.49976 6.55957L7.49976 9.55957"
+                      stroke="#AEB9E1"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="0.8"
+                    />
+                  </g>
+                </svg>
+                <svg
+                  fill="none"
+                  height="8"
+                  style="transform: rotate(270deg);"
+                  viewBox="0 0 12 13"
+                  width="8"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    opacity="0.8"
+                  >
+                    <path
+                      d="M7.49976 3.55957L4.49976 6.55957L7.49976 9.55957"
+                      stroke="#AEB9E1"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="0.8"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </th>
+          <th
+            class="max-w-[100px] p-4 text-left"
+          >
+            <div
+              class="flex items-center gap-2 text-white font-semibold text-[10px]"
+              style="white-space: pre-wrap;"
+              title=""
+            />
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          class="cursor-pointer bg-midNightBlue"
+        >
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            John Doe
+          </td>
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            123-456-7890
+          </td>
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            New York, NY
+          </td>
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            ABC Company
+          </td>
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            <div
+              class="max-w-[60px] flex items-center justify-center gap-1 px-2 py-1 rounded-sm border-[1px] bg-springGreen border-green-300"
+            >
+              <svg
+                fill="none"
+                height="4"
+                viewBox="0 0 4 4"
+                width="4"
+              >
+                <circle
+                  cx="2.4375"
+                  cy="1.59375"
+                  fill="#05C168"
+                  r="1.5"
+                />
+              </svg>
+              <p
+                class="text-green-500 font-medium text-[10px]"
+              >
+                Online
+              </p>
+            </div>
+          </td>
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            <div
+              class="flex gap-2"
+            >
+              <button
+                data-testid="edit-button"
+              >
+                <svg
+                  fill="none"
+                  height="13"
+                  viewBox="0 0 13 13"
+                  width="13"
+                >
+                  <path
+                    d="M11.0947 1.49892C10.9244 1.32932 10.7221 1.19516 10.4997 1.10417C10.2772 1.01318 10.0389 0.967165 9.79856 0.968792C9.55822 0.970419 9.32057 1.01965 9.09936 1.11365C8.87815 1.20764 8.67776 1.34453 8.50975 1.51642L1.64715 8.37912C1.3937 8.63258 1.21301 8.94949 1.12401 9.29671L0.542819 11.5641C0.467311 11.8586 0.735111 12.1264 1.02967 12.0508L3.29714 11.4693C3.64426 11.3802 3.96108 11.1996 4.21448 10.9462L11.0772 4.08338C11.2491 3.91545 11.386 3.7151 11.4801 3.49392C11.5741 3.27275 11.6233 3.03512 11.625 2.7948C11.6266 2.55447 11.5806 2.3162 11.4895 2.09377C11.3985 1.87134 11.2643 1.66916 11.0947 1.49892Z"
+                    fill="#AEB9E1"
+                    stroke="#AEB9E1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <button>
+                <svg
+                  fill="none"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  width="14"
+                >
+                  <path
+                    d="M11.1486 11.9359C11.1134 12.461 10.6771 12.869 10.1508 12.869H3.84188C3.31558 12.869 2.87936 12.4611 2.84412 11.936L2.27759 3.49448H11.7144L11.1486 11.9359Z"
+                    fill="#AEB9E1"
+                    stroke="#AEB9E1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M1 3.49545H13"
+                    stroke="#AEB9E1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.2"
+                  />
+                  <path
+                    d="M8.52789 1.3186H5.46852C5.19806 1.3186 4.93867 1.43321 4.74742 1.63721C4.55617 1.8412 4.44873 2.11788 4.44873 2.40638V3.49416H9.54768V2.40638C9.54768 2.11788 9.44024 1.8412 9.24899 1.63721C9.05775 1.43321 8.79836 1.3186 8.52789 1.3186Z"
+                    stroke="#AEB9E1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.2"
+                  />
+                </svg>
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="cursor-pointer bg-darkBlue"
+        >
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            John Doe
+          </td>
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            123-456-7890
+          </td>
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            New York, NY
+          </td>
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            ABC Company
+          </td>
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            <div
+              class="max-w-[60px] flex items-center justify-center gap-1 px-2 py-1 rounded-sm border-[1px] bg-ghostWhite border-gray-300"
+            >
+              <svg
+                fill="none"
+                height="4"
+                viewBox="0 0 4 4"
+                width="4"
+              >
+                <circle
+                  cx="2.4375"
+                  cy="1.59375"
+                  fill="#AEB9E1"
+                  r="1.5"
+                />
+              </svg>
+              <p
+                class="text-secondary font-medium text-[10px]"
+              >
+                Offline
+              </p>
+            </div>
+          </td>
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            <div
+              class="flex gap-2"
+            >
+              <button
+                data-testid="edit-button"
+              >
+                <svg
+                  fill="none"
+                  height="13"
+                  viewBox="0 0 13 13"
+                  width="13"
+                >
+                  <path
+                    d="M11.0947 1.49892C10.9244 1.32932 10.7221 1.19516 10.4997 1.10417C10.2772 1.01318 10.0389 0.967165 9.79856 0.968792C9.55822 0.970419 9.32057 1.01965 9.09936 1.11365C8.87815 1.20764 8.67776 1.34453 8.50975 1.51642L1.64715 8.37912C1.3937 8.63258 1.21301 8.94949 1.12401 9.29671L0.542819 11.5641C0.467311 11.8586 0.735111 12.1264 1.02967 12.0508L3.29714 11.4693C3.64426 11.3802 3.96108 11.1996 4.21448 10.9462L11.0772 4.08338C11.2491 3.91545 11.386 3.7151 11.4801 3.49392C11.5741 3.27275 11.6233 3.03512 11.625 2.7948C11.6266 2.55447 11.5806 2.3162 11.4895 2.09377C11.3985 1.87134 11.2643 1.66916 11.0947 1.49892Z"
+                    fill="#AEB9E1"
+                    stroke="#AEB9E1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <button>
+                <svg
+                  fill="none"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  width="14"
+                >
+                  <path
+                    d="M11.1486 11.9359C11.1134 12.461 10.6771 12.869 10.1508 12.869H3.84188C3.31558 12.869 2.87936 12.4611 2.84412 11.936L2.27759 3.49448H11.7144L11.1486 11.9359Z"
+                    fill="#AEB9E1"
+                    stroke="#AEB9E1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M1 3.49545H13"
+                    stroke="#AEB9E1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.2"
+                  />
+                  <path
+                    d="M8.52789 1.3186H5.46852C5.19806 1.3186 4.93867 1.43321 4.74742 1.63721C4.55617 1.8412 4.44873 2.11788 4.44873 2.40638V3.49416H9.54768V2.40638C9.54768 2.11788 9.44024 1.8412 9.24899 1.63721C9.05775 1.43321 8.79836 1.3186 8.52789 1.3186Z"
+                    stroke="#AEB9E1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.2"
+                  />
+                </svg>
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="cursor-pointer bg-midNightBlue"
+        >
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            John Doe
+          </td>
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            123-456-7890
+          </td>
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            New York, NY
+          </td>
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            ABC Company
+          </td>
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            <div
+              class="max-w-[60px] flex items-center justify-center gap-1 px-2 py-1 rounded-sm border-[1px] bg-springGreen border-green-300"
+            >
+              <svg
+                fill="none"
+                height="4"
+                viewBox="0 0 4 4"
+                width="4"
+              >
+                <circle
+                  cx="2.4375"
+                  cy="1.59375"
+                  fill="#05C168"
+                  r="1.5"
+                />
+              </svg>
+              <p
+                class="text-green-500 font-medium text-[10px]"
+              >
+                Online
+              </p>
+            </div>
+          </td>
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            <div
+              class="flex gap-2"
+            >
+              <button
+                data-testid="edit-button"
+              >
+                <svg
+                  fill="none"
+                  height="13"
+                  viewBox="0 0 13 13"
+                  width="13"
+                >
+                  <path
+                    d="M11.0947 1.49892C10.9244 1.32932 10.7221 1.19516 10.4997 1.10417C10.2772 1.01318 10.0389 0.967165 9.79856 0.968792C9.55822 0.970419 9.32057 1.01965 9.09936 1.11365C8.87815 1.20764 8.67776 1.34453 8.50975 1.51642L1.64715 8.37912C1.3937 8.63258 1.21301 8.94949 1.12401 9.29671L0.542819 11.5641C0.467311 11.8586 0.735111 12.1264 1.02967 12.0508L3.29714 11.4693C3.64426 11.3802 3.96108 11.1996 4.21448 10.9462L11.0772 4.08338C11.2491 3.91545 11.386 3.7151 11.4801 3.49392C11.5741 3.27275 11.6233 3.03512 11.625 2.7948C11.6266 2.55447 11.5806 2.3162 11.4895 2.09377C11.3985 1.87134 11.2643 1.66916 11.0947 1.49892Z"
+                    fill="#AEB9E1"
+                    stroke="#AEB9E1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <button>
+                <svg
+                  fill="none"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  width="14"
+                >
+                  <path
+                    d="M11.1486 11.9359C11.1134 12.461 10.6771 12.869 10.1508 12.869H3.84188C3.31558 12.869 2.87936 12.4611 2.84412 11.936L2.27759 3.49448H11.7144L11.1486 11.9359Z"
+                    fill="#AEB9E1"
+                    stroke="#AEB9E1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M1 3.49545H13"
+                    stroke="#AEB9E1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.2"
+                  />
+                  <path
+                    d="M8.52789 1.3186H5.46852C5.19806 1.3186 4.93867 1.43321 4.74742 1.63721C4.55617 1.8412 4.44873 2.11788 4.44873 2.40638V3.49416H9.54768V2.40638C9.54768 2.11788 9.44024 1.8412 9.24899 1.63721C9.05775 1.43321 8.79836 1.3186 8.52789 1.3186Z"
+                    stroke="#AEB9E1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.2"
+                  />
+                </svg>
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="cursor-pointer bg-darkBlue"
+        >
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            John Doe
+          </td>
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            123-456-7890
+          </td>
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            New York, NY
+          </td>
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            ABC Company
+          </td>
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            <div
+              class="max-w-[60px] flex items-center justify-center gap-1 px-2 py-1 rounded-sm border-[1px] bg-ghostWhite border-gray-300"
+            >
+              <svg
+                fill="none"
+                height="4"
+                viewBox="0 0 4 4"
+                width="4"
+              >
+                <circle
+                  cx="2.4375"
+                  cy="1.59375"
+                  fill="#AEB9E1"
+                  r="1.5"
+                />
+              </svg>
+              <p
+                class="text-secondary font-medium text-[10px]"
+              >
+                Offline
+              </p>
+            </div>
+          </td>
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            <div
+              class="flex gap-2"
+            >
+              <button
+                data-testid="edit-button"
+              >
+                <svg
+                  fill="none"
+                  height="13"
+                  viewBox="0 0 13 13"
+                  width="13"
+                >
+                  <path
+                    d="M11.0947 1.49892C10.9244 1.32932 10.7221 1.19516 10.4997 1.10417C10.2772 1.01318 10.0389 0.967165 9.79856 0.968792C9.55822 0.970419 9.32057 1.01965 9.09936 1.11365C8.87815 1.20764 8.67776 1.34453 8.50975 1.51642L1.64715 8.37912C1.3937 8.63258 1.21301 8.94949 1.12401 9.29671L0.542819 11.5641C0.467311 11.8586 0.735111 12.1264 1.02967 12.0508L3.29714 11.4693C3.64426 11.3802 3.96108 11.1996 4.21448 10.9462L11.0772 4.08338C11.2491 3.91545 11.386 3.7151 11.4801 3.49392C11.5741 3.27275 11.6233 3.03512 11.625 2.7948C11.6266 2.55447 11.5806 2.3162 11.4895 2.09377C11.3985 1.87134 11.2643 1.66916 11.0947 1.49892Z"
+                    fill="#AEB9E1"
+                    stroke="#AEB9E1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <button>
+                <svg
+                  fill="none"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  width="14"
+                >
+                  <path
+                    d="M11.1486 11.9359C11.1134 12.461 10.6771 12.869 10.1508 12.869H3.84188C3.31558 12.869 2.87936 12.4611 2.84412 11.936L2.27759 3.49448H11.7144L11.1486 11.9359Z"
+                    fill="#AEB9E1"
+                    stroke="#AEB9E1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M1 3.49545H13"
+                    stroke="#AEB9E1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.2"
+                  />
+                  <path
+                    d="M8.52789 1.3186H5.46852C5.19806 1.3186 4.93867 1.43321 4.74742 1.63721C4.55617 1.8412 4.44873 2.11788 4.44873 2.40638V3.49416H9.54768V2.40638C9.54768 2.11788 9.44024 1.8412 9.24899 1.63721C9.05775 1.43321 8.79836 1.3186 8.52789 1.3186Z"
+                    stroke="#AEB9E1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.2"
+                  />
+                </svg>
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="cursor-pointer bg-midNightBlue"
+        >
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            John Doe
+          </td>
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            123-456-7890
+          </td>
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            New York, NY
+          </td>
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            ABC Company
+          </td>
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            <div
+              class="max-w-[60px] flex items-center justify-center gap-1 px-2 py-1 rounded-sm border-[1px] bg-ghostWhite border-gray-300"
+            >
+              <svg
+                fill="none"
+                height="4"
+                viewBox="0 0 4 4"
+                width="4"
+              >
+                <circle
+                  cx="2.4375"
+                  cy="1.59375"
+                  fill="#AEB9E1"
+                  r="1.5"
+                />
+              </svg>
+              <p
+                class="text-secondary font-medium text-[10px]"
+              >
+                Offline
+              </p>
+            </div>
+          </td>
+          <td
+            class=" relative group p-5 text-xs text-secondary font-medium text-left border-gray-200 break-words"
+          >
+            <div
+              class="flex gap-2"
+            >
+              <button
+                data-testid="edit-button"
+              >
+                <svg
+                  fill="none"
+                  height="13"
+                  viewBox="0 0 13 13"
+                  width="13"
+                >
+                  <path
+                    d="M11.0947 1.49892C10.9244 1.32932 10.7221 1.19516 10.4997 1.10417C10.2772 1.01318 10.0389 0.967165 9.79856 0.968792C9.55822 0.970419 9.32057 1.01965 9.09936 1.11365C8.87815 1.20764 8.67776 1.34453 8.50975 1.51642L1.64715 8.37912C1.3937 8.63258 1.21301 8.94949 1.12401 9.29671L0.542819 11.5641C0.467311 11.8586 0.735111 12.1264 1.02967 12.0508L3.29714 11.4693C3.64426 11.3802 3.96108 11.1996 4.21448 10.9462L11.0772 4.08338C11.2491 3.91545 11.386 3.7151 11.4801 3.49392C11.5741 3.27275 11.6233 3.03512 11.625 2.7948C11.6266 2.55447 11.5806 2.3162 11.4895 2.09377C11.3985 1.87134 11.2643 1.66916 11.0947 1.49892Z"
+                    fill="#AEB9E1"
+                    stroke="#AEB9E1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <button>
+                <svg
+                  fill="none"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  width="14"
+                >
+                  <path
+                    d="M11.1486 11.9359C11.1134 12.461 10.6771 12.869 10.1508 12.869H3.84188C3.31558 12.869 2.87936 12.4611 2.84412 11.936L2.27759 3.49448H11.7144L11.1486 11.9359Z"
+                    fill="#AEB9E1"
+                    stroke="#AEB9E1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M1 3.49545H13"
+                    stroke="#AEB9E1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.2"
+                  />
+                  <path
+                    d="M8.52789 1.3186H5.46852C5.19806 1.3186 4.93867 1.43321 4.74742 1.63721C4.55617 1.8412 4.44873 2.11788 4.44873 2.40638V3.49416H9.54768V2.40638C9.54768 2.11788 9.44024 1.8412 9.24899 1.63721C9.05775 1.43321 8.79836 1.3186 8.52789 1.3186Z"
+                    stroke="#AEB9E1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.2"
+                  />
+                </svg>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

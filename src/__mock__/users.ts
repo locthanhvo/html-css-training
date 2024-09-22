@@ -1,0 +1,107 @@
+import { DotsOptionIcon, HeartIcon, UserGroupIcon, UserIcon } from '@/icons';
+
+export const MOCK_USERS = [
+  {
+    id: '1',
+    name: 'John Doe',
+    phone: '123-456-7890',
+    location: 'New York, NY',
+    company: 'ABC Company',
+    status: 'online',
+  },
+  {
+    id: '2',
+    name: 'John Doe',
+    phone: '123-456-7890',
+    location: 'New York, NY',
+    company: 'ABC Company',
+    status: 'offline',
+  },
+  {
+    id: '3',
+    name: 'John Doe',
+    phone: '123-456-7890',
+    location: 'New York, NY',
+    company: 'ABC Company',
+    status: 'online',
+  },
+  {
+    id: '4',
+    name: 'John Doe',
+    phone: '123-456-7890',
+    location: 'New York, NY',
+    company: 'ABC Company',
+    status: 'offline',
+  },
+  {
+    id: '5',
+    name: 'John Doe',
+    phone: '123-456-7890',
+    location: 'New York, NY',
+    company: 'ABC Company',
+    status: 'offline',
+  },
+];
+
+export const MOCK_USERS_SUMMARY = (
+  total: number,
+  newUsers: number,
+  topUsers: number,
+  otherUsers: number,
+) => [
+  {
+    id: '1',
+    title: 'Total Users',
+    total: total,
+    icon: UserGroupIcon,
+  },
+  {
+    id: '2',
+    title: 'New Users',
+    total: newUsers,
+    icon: UserIcon,
+  },
+  {
+    id: '3',
+    title: 'Top Users',
+    total: topUsers,
+    icon: HeartIcon,
+  },
+  {
+    id: '4',
+    title: 'Other Users',
+    total: otherUsers,
+    icon: DotsOptionIcon,
+  },
+];
+
+export const MOCK_USER_DETAIL = {
+  name: 'loc thanh vo',
+  avatar: 'https://i.ibb.co/5nMCPDM/Avatar-Circle.png',
+  email: 'vothanhloc406@gmail.com',
+  phone: '0912312312',
+  location: 'asdasd',
+  company: 'Asnets',
+  status: 'online',
+  id: '1',
+  position: 'asdsa',
+  website: 'asdsada',
+  teamName: 'sadsadsa',
+  rank: 'ádasdsadsa',
+  office: 'asdasd',
+  teamMail: 'asdasdsad',
+  payment: 'visa',
+  billName: 'loc thanh vo',
+  billAddress: '18 Bùi Xương Trạch',
+  state: 'Vietnam (+84)',
+  zipCode: '11111',
+  mentionMessage: 'in-app',
+  replyMessage: 'in-app',
+  assignTask: 'in-app',
+  taskOverdue: 'in-app',
+  dailySummary: 'in-app',
+  weeklySummary: 'email',
+  monthlySummary: 'email',
+  annuallySummary: 'email',
+  description: 'hello',
+};
